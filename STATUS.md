@@ -2,17 +2,15 @@
 
 **What it is:** the WoW Forever-only, do-everything Mage companion for Parzelle Starfall (High Order Skyborne, Alliance). It follows the final structure, window design, README and website style of Andric's Addon v0.2.2.
 
-**Repo:** local `/home/tim/Projects/parzelles-addon`, branch `feature/initial-addon`, one commit and not pushed.
-**GitHub repo NOT created yet.** The `gh repo create ninepointlabs/parzelles-addon --public` call was blocked by Claude Code's permission classifier ("Create Public Surface"). Because of that there is no remote and no PR.
-- To finish:
-  1. Run `gh repo create ninepointlabs/parzelles-addon --public --add-readme --description "Parzelle's Addon: the do-everything Mage companion for World of Warcraft: Forever"`. The `--add-readme` flag creates `main` with GitHub's "Initial commit", the same way Andric's repo started.
-  2. Rebase the branch onto `origin/main`.
-  3. Push `feature/initial-addon` and open the PR to `main`.
-- Approve that step, or run it yourself.
-- **PR URL:** none yet (blocked above).
-- Do not set topics yet.
+**Repo:** `ninepointlabs/parzelles-addon` (public; topics not set yet). Local checkout: `/home/tim/Projects/parzelles-addon`.
+**Branching:** Tim decided on 2026-11-10 (8:11 AM CT) to commit straight to `main`, like Andric's later changes, with no PR. `feature/initial-addon` was fast-forwarded into `main`.
+**Not done (not authorized):** no tag, no release, no custom domain, DNS records or Pages custom-domain setting (only `docs/CNAME` exists), no email or social posts. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
 
-**Not done (not authorized):** no push to main, no merge, no tag, no release. No custom domain, DNS records or Pages custom-domain setting (`docs/CNAME` only). No email or social posts.
+**Tim's decisions (2026-11-10, 8:11 AM CT):**
+1. Keep the name Parzelle's Addon, the slash commands `/parzelle` and `/mage`, and the repo `ninepointlabs/parzelles-addon`.
+2. Commit straight to `main`, with no tag or release until Tim asks.
+3. Leveling focus is Frost (the picker recommends it). TBC-only rows such as Water Elemental and the Shattrath portals stay out.
+4. The Conjure button makes whatever she's lowest on: mana gem first, then water, then food. This is the built behaviour: gem if she has none, otherwise water below its target, otherwise food.
 
 ## What works (verified headlessly, 2026-11-10)
 
