@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: Parzelle's Addon
-## Notes: The do-everything Mage companion for WoW Forever: spec-aware rotation help, conjure button, portals, crowd control, talents, gear upgrade tips, leveling, class quests, reminders and a full Learn the Mage mode.
+## Notes: The do-everything Mage companion for WoW Forever: spec-aware rotation help, conjure, Arcane Intellect and food & water hand-out buttons, portals, crowd control, talents, gear upgrade tips, leveling, class quests, reminders and a full Learn the Mage mode.
 ## Author: Nine Point Labs
 ## Version: @project-version@
 ## X-Website: https://github.com/ninepointlabs/parzelles-addon
@@ -31,6 +31,7 @@ Modules\Training.lua
 Modules\Progress.lua
 Modules\Travel.lua
 Modules\Conjure.lua
+Modules\Share.lua
 Modules\Reminders.lua
 Modules\Rotation.lua
 Modules\CC.lua
@@ -57,6 +58,9 @@ UI\Panels\Sources.lua
 UI\Panels\Options.lua
 UI\Hud.lua
 UI\Bags.lua
+UI\MageBar.lua
 UI\ConjureButton.lua
+UI\IntellectButton.lua
+UI\ShareButton.lua
 UI\Minimap.lua
 Core\Boot.lua

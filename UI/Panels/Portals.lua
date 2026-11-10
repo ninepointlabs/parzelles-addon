@@ -5,7 +5,9 @@
 -- buttons live on a separate small travel bar (secure action buttons, one cast
 -- per click). It's its own top-level frame, built and re-filled only out of
 -- combat, so the main window never holds protected buttons (it stays closable
--- in combat). No macros, no /click.
+-- in combat). Each button runs its own "/cast <spell>" line (what worked for
+-- Andric's Addon on Forever, where type "spell" didn't cast); no player macros,
+-- no /click.
 local _, ns = ...
 local UI = ns.UI
 
@@ -85,8 +87,8 @@ function Bar.Fill()
         local b = button(i)
         b:ClearAllPoints()
         b:SetPoint("TOPLEFT", bar, "TOPLEFT", 8 + (i - 1) * (Bar.SIZE + Bar.GAP), -20)
-        b:SetAttribute("type", "spell")
-        b:SetAttribute("spell", e.rec.name)
+        b:SetAttribute("type", "macro")
+        b:SetAttribute("macrotext", ns.MageBar.CastText(e.rec.name))
         b.spellId, b.spellName = e.rec.spell_id, e.rec.name
         b.icon:SetTexture(ns.Rotation.Icon(e.rec.name))
         local r = ns.Travel.Reagent(e.rec.reagent)
@@ -96,7 +98,7 @@ function Bar.Fill()
     for i = #list + 1, #buttons do
         buttons[i]:Hide()
         buttons[i]:SetAttribute("type", nil)
-        buttons[i]:SetAttribute("spell", nil)
+        buttons[i]:SetAttribute("macrotext", nil)
     end
     bar:SetWidth(math.max(140, 16 + #list * (Bar.SIZE + Bar.GAP)))
     bar.count = #list

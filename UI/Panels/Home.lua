@@ -69,7 +69,7 @@ UI.RegisterPanel({
         for _, r in ipairs(ns.Reminders.Missing()) do
             any = true
             local chip = (r.id == "conjured" or r.id == "reagents") and { text = "Stock", kind = "warn" } or { text = "Buff", kind = "warn" }
-            local btn = r.id == "conjured" and { label = "Conjure", onClick = function() UI.Select("settings", "Conjure button") end } or nil
+            local btn = r.id == "conjured" and { label = "Conjure", onClick = function() UI.Select("settings", "Mage buttons") end } or nil
             L:Row({ chip = chip, title = r.label .. ((r.id == "conjured" or r.id == "reagents") and " running low" or (r.id == "wand" and ": none" or " is missing")),
                 sub = r.detail, button = btn })
         end

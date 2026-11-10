@@ -75,3 +75,13 @@ function Auras.HealthPct(unit)
     if not ok or not ok2 or secret(cur) or secret(max) or not max or max == 0 then return nil end
     return cur / max * 100
 end
+
+-- Does this unit's class use mana? (Arcane Intellect and water are wasted on
+-- Warriors and Rogues.) Class, not current power type: a Druid in Bear Form
+-- still wants water. Unknown class -> true (don't skip anyone by mistake).
+Auras.NO_MANA = { WARRIOR = true, ROGUE = true, DEATHKNIGHT = true, DEMONHUNTER = true }
+function Auras.UsesMana(unit)
+    local ok, _, class = pcall(UnitClass, unit)
+    if not ok or not class or secret(class) then return true end
+    return not Auras.NO_MANA[class]
+end

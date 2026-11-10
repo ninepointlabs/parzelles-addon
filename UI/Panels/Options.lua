@@ -1,11 +1,11 @@
--- Settings: General · Conjure button · Tooltips & bags · Reminders · About the data.
+-- Settings: General · Mage buttons · Tooltips & bags · Reminders · About the data.
 local _, ns = ...
 local UI = ns.UI
 
 UI.SettingsSections = UI.SettingsSections or {}
 local S = UI.SettingsSections
 
-local TABS = { "General", "Conjure button", "Tooltips & bags", "Reminders", "About the data", "About" }
+local TABS = { "General", "Mage buttons", "Tooltips & bags", "Reminders", "About the data", "About" }
 local tab = "General"
 
 S.General = function(L, c)
@@ -47,12 +47,37 @@ S.General = function(L, c)
     L:Check("Hint the first time I learn a spell", ch.learn.hints, function(v) ch.learn.hints = v end)
     L:Check("Show minimap button", not g.minimap.hide, function(v) g.minimap.hide = not v ns.Fire("MINIMAP_TOGGLE") end)
     L:Check("Debug messages", g.debug, function(v) g.debug = v end)
-    L:Text(UI.Hex(UI.C.dim) .. "Slash: /parzelle (or /mage) · /parzelle spec arcane|fire|frost · /parzelle rotation · /parzelle portals · /parzelle conjure key|r", { size = 12 })
+    L:Text(UI.Hex(UI.C.dim) .. "Slash: /parzelle (or /mage) · /parzelle spec arcane|fire|frost · /parzelle rotation · /parzelle portals · /parzelle conjure|buff key · /parzelle share|r", { size = 12 })
 end
 
-S["Conjure button"] = function(L, c)
-    local cfg = ns.db.char.conjure
-    L:Text("One button for conjured food, water and mana gems. It shows what's in your bags, and each press casts the highest rank you know of whatever you're shortest on: a mana gem if you have none, then water up to your target, then food.", { size = 13 })
+-- Cycle a setting through steps (button label "Keep 20" -> next value).
+local function cycle(cfgT, key, steps, after)
+    return function()
+        local nextV = steps[1]
+        for i, v in ipairs(steps) do if v == cfgT[key] then nextV = steps[i + 1] or steps[1] end end
+        cfgT[key] = nextV
+        if after then after() end
+        UI.Refresh()
+    end
+end
+
+local function keyRow(L, key, what, startCapture, clear)
+    L:Row({ title = what .. " key", sub = key and "Pressing it presses the button, even if the key is bound to something else in Blizzard's menu." or "No key set (none by default).",
+        right = key and (UI.Hex(UI.C.good) .. key .. "|r") or (UI.Hex(UI.C.dim) .. "none|r") })
+    L:Buttons({
+        { label = "Set key", onClick = startCapture, tip = "Press any key (Shift/Ctrl/Alt combos work). Esc cancels." },
+        { label = "Clear key", onClick = function() clear(nil) UI.Refresh() end },
+    })
+end
+
+S["Mage buttons"] = function(L, c)
+    local cfg, ai, sh = ns.db.char.conjure, ns.db.char.intellect, ns.db.char.share
+    L:Text("Three buttons side by side on one small bar: Conjure, Arcane Intellect and Hand out (food & water). Drag the strip above them to move the bar. Each shows up once you know its spell.", { size = 13 })
+    L:Buttons({ { label = "Reset bar position", onClick = function() ns.MageBar.ResetPosition() end } })
+
+    -- Conjure
+    L:Label("Conjure")
+    L:Text("Each press casts the highest rank you know of whatever you're shortest on: a mana gem if you have none, then water up to your target, then food.", { size = 12 })
     L:Check("Show the Conjure button", cfg.enabled, function(v)
         if InCombatLockdown() then ns.Print("Out of combat only.") return end
         cfg.enabled = v
@@ -60,34 +85,57 @@ S["Conjure button"] = function(L, c)
     end)
     L:Check("Remind me after login when I'm low", cfg.loginNudge, function(v) cfg.loginNudge = v end)
     local counts = ns.Conjure.Counts()
-    L:Label("Stock and targets")
     for _, kind in ipairs({ "water", "food", "gem" }) do
         local spell = ns.Conjure.KnownSpell(kind)
-        local steps = kind == "gem" and { 0, 1 } or { 0, 10, 20, 40, 60, 80 }
         L:Row({ icon = ns.Conjure.ICONS[kind], title = (ns.Conjure.LABELS[kind]:gsub("^%l", string.upper)) .. ": " .. (counts[kind] or 0) .. " in bags",
             sub = spell and ("Casts " .. spell) or "You don't know this conjure spell yet.",
-            button = { label = "Keep " .. (cfg[kind] or 0), onClick = function()
-                local nextV = steps[1]
-                for i, v in ipairs(steps) do if v == cfg[kind] then nextV = steps[i + 1] or steps[1] end end
-                cfg[kind] = nextV
-                if not InCombatLockdown() then ns.ConjureButton.Update() end
-                UI.Refresh()
-            end } })
+            button = { label = "Keep " .. (cfg[kind] or 0), onClick = cycle(cfg, kind, kind == "gem" and { 0, 1 } or { 0, 10, 20, 40, 60, 80 },
+                function() if not InCombatLockdown() then ns.ConjureButton.Update() end end) } })
     end
-    L:Label("Key")
-    L:Row({ title = "Key", sub = cfg.key and "Pressing it presses the button, even if the key is bound to something else in Blizzard's menu." or "No key set (none by default).",
-        right = cfg.key and (UI.Hex(UI.C.good) .. cfg.key .. "|r") or (UI.Hex(UI.C.dim) .. "none|r") })
-    L:Buttons({
-        { label = "Set key", onClick = function() ns.ConjureButton.StartKeyCapture() end, tip = "Press any key (Shift/Ctrl/Alt combos work). Esc cancels." },
-        { label = "Clear key", onClick = function() ns.ConjureButton.SetKey(nil) UI.Refresh() end },
-        { label = "Reset button position", onClick = function() cfg.point = nil ns.ConjureButton.Place() end },
-    })
-    L:Text(UI.Hex(UI.C.dim) .. "Pick a key your desktop doesn't use (on Omarchy, Super combos belong to the desktop, so they're never offered). Drag the small bar above the button to move it. What it casts and its key only change out of combat (Blizzard rule). Giving water to others is up to you: trading can't be automated.|r", { size = 12 })
+    keyRow(L, cfg.key, "Conjure", ns.ConjureButton.StartKeyCapture, ns.ConjureButton.SetKey)
+
+    -- Arcane Intellect
+    L:Label("Arcane Intellect")
+    L:Text("One press buffs the nearest friendly player who's missing Arcane Intellect: you, your group, your target, then players with friendly nameplates shown (Shift+V). Warriors and Rogues are skipped (no mana).", { size = 12 })
+    L:Check("Show the Arcane Intellect button", ai.enabled, function(v)
+        if InCombatLockdown() then ns.Print("Out of combat only.") return end
+        ai.enabled = v
+        ns.Intellect.Refresh()
+    end)
+    L:Check("Use Arcane Brilliance when " .. ai.brillianceMin .. "+ of my party need it", ai.brilliance, function(v) ai.brilliance = v end,
+        "Only if your spellbook has Arcane Brilliance. Party only, not raids.")
+    L:Note("Arcane Brilliance: no WoW Forever source mentions it (only a Burning Crusade level-70 trainer list does). The button uses it only if your spellbook has it.")
+    keyRow(L, ai.key, "Arcane Intellect", ns.Intellect.StartKeyCapture, ns.Intellect.SetKey)
+
+    -- Hand out
+    L:Label("Hand out food & water")
+    L:Text("Left-click the Hand out button to open a trade with your target, or the next person in your group who hasn't had any yet. The trade window fills itself with the amounts below; you press Trade. Right-click picks someone from your group (with their mana).", { size = 12 })
+    L:Check("Show the Hand out button", sh.enabled, function(v)
+        if InCombatLockdown() then ns.Print("Out of combat only.") return end
+        sh.enabled = v
+        ns.ShareButton.Refresh()
+    end)
+    local totals = ns.Share.Totals()
+    L:Row({ icon = ns.Conjure.ICONS.water, title = "Water per trade", sub = totals.water .. " conjured water in your bags. Never given to Warriors or Rogues.",
+        button = { label = "Give " .. sh.water, onClick = cycle(sh, "water", { 0, 5, 10, 20, 40, 60 }) } })
+    L:Row({ icon = ns.Conjure.ICONS.food, title = "Food per trade", sub = totals.food .. " conjured food in your bags.",
+        button = { label = "Give " .. sh.food, onClick = cycle(sh, "food", { 0, 5, 10, 20, 40 }) } })
+    L:Check("Fill the trade when someone in my group opens a trade with me", sh.autoOffer, function(v) sh.autoOffer = v end)
+    L:Check("...and when anyone else does", sh.autoOfferAnyone, function(v) sh.autoOfferAnyone = v end,
+        "Off by default: strangers who open a trade with you get nothing added unless you press \"Add food & water\" on the trade window.")
+    L:Check("Group line (Hand out menu > Tell the group; whispers people who are too far)", sh.announce, function(v) sh.announce = v end,
+        "Off by default. Only ever sent when you click.")
+    L:Text(UI.Hex(UI.C.dim) .. "The line: \"" .. sh.message .. "\"|r", { size = 12, indent = 30 })
+    L:Text(UI.Hex(UI.C.dim) .. "Each person gets the best rank they can use (the item's required level). The final Trade click is always yours (Blizzard rule). If the game won't let the addon fill the window, press \"Add food & water\" under the trade window.|r", { size = 12 })
+
+    L:Space(6)
+    L:Text(UI.Hex(UI.C.dim) .. "Pick keys your desktop doesn't use (on Omarchy, Super combos belong to the desktop, so they're never offered). What the secure buttons cast and their keys only change out of combat (Blizzard rule).|r", { size = 12 })
     for _, cf in ipairs(ns.Data.Conflicts or {}) do
         local t = (cf.topic or ""):lower()
         if t:find("gem") or t:find("conjure") then L:Note(cf.topic .. ": " .. cf.detail) end
     end
     L:Note("Conjured items are recognised by their tooltip ('Conjured Item' plus what they restore), because Forever's conjured food and water names aren't in the research yet.")
+    L:Note("Ritual of Refreshment (the conjured table) isn't included: the only source is a Burning Crusade level-70 trainer list, nothing for Forever.")
 end
 
 S["Tooltips & bags"] = function(L, c)

@@ -28,7 +28,7 @@ UI.ALIASES = {
     reminders = { "settings", "Reminders" }, options = { "settings" }, config = { "settings" }, trainer = { "leveling", "Trainer" }, riding = { "leveling", "Riding & gold" },
     sources = { "settings", "About the data" }, about = { "settings", "About" }, changes = { "news" },
     portals = { "leveling", "Portals & teleports" }, cc = { "rotation", "Crowd control" }, mana = { "rotation", "Mana" },
-    conjure = { "settings", "Conjure button" },
+    conjure = { "settings", "Mage buttons" }, buff = { "settings", "Mage buttons" }, share = { "settings", "Mage buttons" },
 }
 
 local W, H, SIDE, HEAD = 980, 660, 210, 56

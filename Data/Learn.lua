@@ -1160,7 +1160,7 @@ ns.Data.Learn = {
     {
       id = "water-for-group",
       title = "Water and food for the group",
-      body = "Conjure Food and Water make you welcome in every group, especially with casters who drink often. Hand out a stack before the first pull; some players tip for it.",
+      body = "Conjure Food and Water make you welcome in every group, especially with casters who drink often. Hand out a stack before the first pull; some players tip for it. The Hand out button on your mage bar opens the trade and fills it for you (lowest mana first); you just press Trade.",
       unconfirmed = false,
       flag = "",
       sources = { "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities", "https://www.icy-veins.com/wow-forever/frost-mage-leveling", "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide" },
@@ -1168,7 +1168,7 @@ ns.Data.Learn = {
     {
       id = "arcane-intellect-group",
       title = "Arcane Intellect for everyone",
-      body = "Buff every party member who uses mana with Arcane Intellect before the first pull and after deaths.",
+      body = "Buff every party member who uses mana with Arcane Intellect before the first pull and after deaths. The Arcane Intellect button on your mage bar picks the next person who needs it: just keep pressing.",
       unconfirmed = false,
       flag = "",
       sources = { "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide", "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities", "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities" },

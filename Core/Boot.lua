@@ -4,6 +4,13 @@ local ADDON, ns = ...
 local f = CreateFrame("Frame")
 ns.EventFrame = f
 
+-- Conjure, Arcane Intellect and Hand out buttons (out of combat only).
+function ns.RefreshMageBar()
+    pcall(ns.ConjureButton.Refresh)
+    pcall(ns.Intellect.Refresh)
+    pcall(ns.ShareButton.Refresh)
+end
+
 local function OnLogin()
     if ns.disabled then
         ns.Print(("This addon is for WoW Forever only (needs WOW_PROJECT_ID %d, this client reports %s). It will stay off."):format(
@@ -18,12 +25,13 @@ local function OnLogin()
     ns.UI.RegisterSettings()
     ns.Tooltip.Install() -- gear tips follow the active profile's spec
     pcall(ns.Bags.Install)
-    pcall(ns.ConjureButton.Refresh)
+    ns.RefreshMageBar()
     ns.DualSpec.Register(f)
 
     for _, ev in ipairs({ "PLAYER_LEVEL_UP", "PLAYER_REGEN_DISABLED", "PLAYER_REGEN_ENABLED", "UNIT_AURA",
         "PLAYER_EQUIPMENT_CHANGED", "BAG_UPDATE_DELAYED", "SPELLS_CHANGED", "PLAYER_TARGET_CHANGED", "GET_ITEM_INFO_RECEIVED", "GROUP_ROSTER_UPDATE",
-        "UI_ERROR_MESSAGE", "ADDON_ACTION_BLOCKED", "ADDON_ACTION_FORBIDDEN" }) do
+        "UI_ERROR_MESSAGE", "ADDON_ACTION_BLOCKED", "ADDON_ACTION_FORBIDDEN",
+        "TRADE_SHOW", "TRADE_CLOSED", "TRADE_ACCEPT_UPDATE", "UI_INFO_MESSAGE" }) do
         pcall(f.RegisterEvent, f, ev)
     end
     pcall(f.RegisterEvent, f, "NAME_PLATE_UNIT_ADDED")
@@ -143,7 +151,7 @@ f:SetScript("OnEvent", function(_, event, ...)
             for _, t in ipairs(fight.tips) do print("  |cffffd200>|r " .. t) end
         end
         ns.Hud.Refresh()
-        pcall(ns.ConjureButton.Refresh)
+        ns.RefreshMageBar()
         C_Timer.After(2, function() CheckReminders(false) end)
         SoftRefresh()
         BagRefresh()
@@ -155,7 +163,7 @@ f:SetScript("OnEvent", function(_, event, ...)
         end
     elseif event == "SPELLS_CHANGED" then
         ns.Learn.ScanSpells(false)
-        pcall(ns.ConjureButton.Refresh)
+        ns.RefreshMageBar()
     elseif event == "PLAYER_TARGET_CHANGED" or event == "PLAYER_FOCUS_CHANGED" or event == "NAME_PLATE_UNIT_ADDED" then
         pcall(ns.CC.Scan)
     elseif event == "UNIT_AURA" then
@@ -172,6 +180,10 @@ f:SetScript("OnEvent", function(_, event, ...)
         SoftRefresh()
         BagRefresh()
         if not InCombatLockdown() then pcall(ns.ConjureButton.Update) end
+        pcall(ns.ShareButton.Update)
+    elseif event == "GROUP_ROSTER_UPDATE" then
+        if not InCombatLockdown() then pcall(ns.Intellect.Update) end
+        pcall(ns.ShareButton.Update)
     end
 end)
 f:RegisterEvent("ADDON_LOADED")
@@ -232,13 +244,37 @@ local function Slash(msg)
             ns.ConjureButton.Refresh()
             ns.Print("Conjure button " .. (cfg.enabled and "shown" or "hidden") .. ".")
         end
+    elseif cmd == "buff" or cmd == "int" or cmd == "ai" then
+        if arg == "key" then ns.Intellect.StartKeyCapture()
+        elseif arg == "debug" then ns.Intellect.Debug()
+        else
+            local cfg = ns.db.char.intellect
+            if InCombatLockdown() then ns.Print("Can't show or hide the buff button in combat.") return end
+            cfg.enabled = not cfg.enabled
+            ns.Intellect.Refresh()
+            ns.Print("Arcane Intellect button " .. (cfg.enabled and "shown" or "hidden") .. ".")
+        end
+    elseif cmd == "share" or cmd == "handout" or cmd == "give" then
+        if arg == "menu" or arg == "list" then ns.ShareButton.ShowMenu()
+        elseif arg == "reset" then ns.Share.ResetQueue() ns.Print("Hand-out list starts over.")
+        elseif arg == "toggle" then
+            local cfg = ns.db.char.share
+            if InCombatLockdown() then ns.Print("Can't show or hide the Hand out button in combat.") return end
+            cfg.enabled = not cfg.enabled
+            ns.ShareButton.Refresh()
+            ns.Print("Hand out button " .. (cfg.enabled and "shown" or "hidden") .. ".")
+        else ns.Share.HandOut() end
+    elseif cmd == "bar" then
+        ns.MageBar.ResetPosition()
+        ns.Print("Mage buttons moved back to the default spot.")
     elseif cmd == "remind" then
         CheckReminders(true)
     elseif tabs[cmd] then
         ns.UI.Open(tabs[cmd])
     else
         ns.Print("/parzelle [home|rotation|gear|leveling|talents|learn|news|settings] · also: trainer quests riding portals cc mana reminders sources about")
-        ns.Print("/parzelle spec [arcane|fire|frost] · /parzelle profile [A|B] · /parzelle hud · /parzelle reset-hud · /parzelle remind · /parzelle conjure [key|debug]")
+        ns.Print("/parzelle spec [arcane|fire|frost] · /parzelle profile [A|B] · /parzelle hud · /parzelle reset-hud · /parzelle remind")
+        ns.Print("/parzelle conjure [key|debug] · /parzelle buff [key|debug] · /parzelle share [menu|reset|toggle] · /parzelle bar (reset position)")
     end
 end
 

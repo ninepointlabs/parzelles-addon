@@ -60,6 +60,10 @@ DB.charDefaults = {
     summary = { enabled = true },
     -- Conjure button: stock targets are per character (Settings > Conjure button).
     conjure = { enabled = true, point = nil, key = nil, water = 20, food = 20, gem = 1, loginNudge = true },
+    intellect = { enabled = true, key = nil, brilliance = true, brillianceMin = 3 },
+    share = { enabled = true, water = 20, food = 20, autoOffer = true, autoOfferAnyone = false, announce = false,
+        message = "Water's up! Open a trade with me and I'll fill it." },
+    mageBar = { point = nil },
     cc = { enabled = true },
     travelBar = { shown = false, point = nil },
     window = { tab = "overview" },

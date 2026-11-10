@@ -168,15 +168,15 @@ G.C_TooltipInfo = {
         return { lines = out }
     end,
 }
-G.UnitLevel = function() return S.level end
+G.UnitLevel = function(u) if u and u ~= "player" and S.units[u] and S.units[u].level then return S.units[u].level end return S.level end
 G.UnitRace = function() return S.race, S.race end
-G.UnitClass = function() return "Mage", S.class end
+G.UnitClass = function(u) local x = u and u ~= "player" and S.units[u] if x and x.class then return x.class, x.class end return "Mage", S.class end
 G.UnitFactionGroup = function() return S.faction, S.faction end
 G.UnitExists = function(u) return u == "player" or (u == "target" and S.target) or (S.units[u] ~= nil) end
 G.UnitCanAttack = function() return true end
 G.UnitIsDead = function() return false end
 G.UnitAffectingCombat = function() return S.combat end
-G.UnitPower = function() return S.mana end
+G.UnitPower = function(u) local x = u and u ~= "player" and S.units[u] if x and x.mana then return x.mana end return S.mana end
 G.UnitPowerMax = function() return 100 end
 G.UnitHealth = function() return S.targetHp end
 G.UnitHealthMax = function() return 100 end
@@ -278,6 +278,18 @@ G.GetUnitName = function(u, withRealm) local x = S.units[u] if not x then return
 G.IsMetaKeyDown = function() return S.meta or false end
 G.GetBindLocation = function() return S.bind end
 G.SecureCmdOptionParse = function(s) local unit = s:match("^%[@([%w]+),") return (unit and G.UnitExists(unit)) and "x" or nil, unit end
+-- Trading: S.units.NPC is the trade partner; S.tradeSlots[i] = item placed.
+M.trades, M.chat = {}, {}
+S.tradeSlots = {}
+G.CheckInteractDistance = function(u) local x = U(u) if not x then return false end if x.tradeRange == nil then return true end return x.tradeRange end
+G.InitiateTrade = function(u) table.insert(M.trades, u) end
+G.GetTradePlayerItemInfo = function(i) return S.tradeSlots[i] end
+G.ClickTradeButton = function(i) if M.cursor then S.tradeSlots[i] = M.cursor M.cursor = nil end end
+G.CursorHasItem = function() return M.cursor ~= nil end
+G.ClearCursor = function() M.cursor = nil end
+G.C_Container.PickupContainerItem = function(bag, slot) M.cursor = { bag = bag, slot = slot, count = "all" } end
+G.C_Container.SplitContainerItem = function(bag, slot, n) M.cursor = { bag = bag, slot = slot, count = n } end
+G.C_ChatInfo = { SendChatMessage = function(msg, chatType, _, target) table.insert(M.chat, { msg = msg, chatType = chatType, target = target }) end }
 G.C_SpecializationInfo = { GetActiveSpecGroup = function() return S.specGroup or 1 end }
 G.GetNumSpecGroups = function() return S.numSpecGroups or 1 end
 

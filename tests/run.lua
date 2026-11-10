@@ -42,7 +42,7 @@ end
 local SUBS = {
     leveling = { "Path", "Zones & dungeons", "Trainer", "Class quests", "Riding & gold", "Portals & teleports" },
     gear = { "For my level", "Best overall", "By bracket", "Consumables", "Weights" },
-    settings = { "General", "Conjure button", "Tooltips & bags", "Reminders", "About the data", "About" },
+    settings = { "General", "Mage buttons", "Tooltips & bags", "Reminders", "About the data", "About" },
     learn = { "Lessons", "Spells", "Talents", "How the class works", "In a group", "Leveling", "Common mistakes" },
     rotation = { "Solo", "Dungeon", "Raid", "Crowd control", "Mana" },
 }
@@ -382,7 +382,7 @@ test("conjure: classify tooltips, count stock, pick what's needed", function()
     eq(#ns.Conjure.LowStock(c, { water = 20, food = 20, gem = 0 }, knowsAll), 1)
 end)
 
-test("conjure button: secure spell button, highest rank by name, key binding, combat freeze", function()
+test("conjure button: secure /cast button, highest rank by name, key binding, combat freeze", function()
     forget()
     eq(ns.ConjureButton.ShouldShow(), false, "hidden until you know a conjure spell")
     local water = ns.Conjure.Spells("water")[1]
@@ -391,8 +391,8 @@ test("conjure button: secure spell button, highest rank by name, key binding, co
     ns.ConjureButton.Refresh()
     local b = _G.ParzellesConjureButton
     truthy(b, "button exists")
-    eq(b:GetAttribute("type"), "spell")
-    eq(b:GetAttribute("spell"), water.display, "casts by name: highest known rank")
+    eq(b:GetAttribute("type"), "macro")
+    eq(b:GetAttribute("macrotext"), "/cast " .. water.display, "casts by name: highest known rank")
     eq(b:GetAttribute("useOnKeyDown"), nil, "acts on release")
     truthy(b.stock:GetText():find("W 12", 1, true), "stock count shown")
     -- stocked up: disarmed
@@ -408,7 +408,8 @@ test("conjure button: secure spell button, highest rank by name, key binding, co
     S.combat = false
     ns.db.char.conjure.water = 20
     ns.ConjureButton.Update()
-    eq(b:GetAttribute("type"), "spell")
+    eq(b:GetAttribute("type"), "macro")
+    truthy(_G.ParzellesMageBar:IsShown(), "mage bar shown")
     -- key binding via override click; Super/Meta refused; no key by default
     eq(ns.db.char.conjure.key, nil)
     eq(ns.ConjureButton.KeyString("LSHIFT"), nil, "modifier alone ignored")
@@ -428,12 +429,160 @@ test("conjure button: secure spell button, highest rank by name, key binding, co
     eq(ns.db.char.conjure.key, nil, "can't rebind in combat")
     S.combat = false
     ns.ConjureButton.StartKeyCapture()
-    local cap = _G.ParzellesConjureKeyCapture
+    local cap = _G.ParzellesKeyCapture
     cap.__scripts.OnKeyDown(cap, "G")
     eq(ns.db.char.conjure.key, "G", "captured key saved")
     ns.ConjureButton.SetKey(nil)
     ns.ConjureButton.Debug()
     for _, m in ipairs(M.macros) do error("no macros may be created: " .. m.name) end
+    forget()
+end)
+
+test("arcane intellect button: next player missing it, skips warriors, brilliance only if known", function()
+    forget()
+    eq(ns.Intellect.ShouldShow(), false, "hidden until you know Arcane Intellect")
+    know("Arcane Intellect")
+    S.spellNames = { [ns.Intellect.SpellId()] = "Arcane Intellect" }
+    S.auras["Arcane Intellect"] = true -- you're buffed
+    S.target = false
+    S.units = {
+        party1 = { guid = "G1", name = "Brann", player = true, friend = true, range = true, class = "WARRIOR", buffs = {} },
+        party2 = { guid = "G2", name = "Tilly", player = true, friend = true, range = true, class = "PRIEST", buffs = {} },
+        party3 = { guid = "G3", name = "Far", player = true, friend = true, range = false, class = "MAGE", buffs = {} },
+    }
+    ns.Intellect.Refresh()
+    local b = _G.ParzellesIntellectButton
+    truthy(b, "button exists")
+    eq(b:GetAttribute("type"), "macro")
+    eq(b:GetAttribute("macrotext"), "/cast [@party2,help,nodead] Arcane Intellect", "warrior skipped, priest next")
+    eq(b:GetAttribute("useOnKeyDown"), nil, "acts on release")
+    local shown = ns.MageBar.Shown()
+    truthy(shown.intellect, "on the mage bar")
+    -- everyone buffed / out of range
+    S.units.party2.buffs["Arcane Intellect"] = true
+    ns.Intellect.Update()
+    eq(b:GetAttribute("type"), nil, "nobody to buff -> disarmed")
+    eq(b.reason, "1 player(s) need it but are out of range")
+    -- Brilliance: only when known and 3+ party members need it
+    S.units.party2.buffs = {}
+    S.units.party3.range = true
+    S.auras["Arcane Intellect"] = nil
+    ns.Intellect.Update()
+    truthy(b:GetAttribute("macrotext"):find("Arcane Intellect", 1, true), "Brilliance not known -> Intellect")
+    know("Arcane Brilliance")
+    ns.Intellect.Update()
+    eq(b:GetAttribute("macrotext"), "/cast [@player,help,nodead] Arcane Brilliance", "3 need it + known -> Brilliance")
+    ns.db.char.intellect.brilliance = false
+    ns.Intellect.Update()
+    truthy(b:GetAttribute("macrotext"):find("Arcane Intellect", 1, true), "Brilliance turned off")
+    ns.db.char.intellect.brilliance = true
+    -- combat: keeps its target
+    S.combat = true
+    S.auras["Arcane Intellect"] = true
+    ns.Intellect.Update()
+    truthy(b:GetAttribute("macrotext"):find("@player", 1, true), "doesn't re-aim in combat")
+    S.combat = false
+    -- strangers by name
+    eq(ns.Intellect.MacroText("nameplate3", "Zed", true), "/targetexact Zed\n/cast [@target,help,nodead] Arcane Intellect\n/targetlasttarget")
+    -- key
+    ns.Intellect.SetKey("ALT-B")
+    eq(M.overrides["ALT-B"], "ParzellesIntellectButton:LeftButton")
+    ns.Intellect.SetKey(nil)
+    ns.Intellect.Debug()
+    for _, m in ipairs(M.macros) do error("no macros may be created: " .. m.name) end
+    S.units, S.auras, S.target = {}, {}, true
+    S.spellNames = nil
+    forget()
+end)
+
+test("hand out: plan picks usable ranks and amounts, queue by mana, trade fills, final click is yours", function()
+    local P = ns.Share.Plan
+    local stacks = {
+        { bag = 0, slot = 1, kind = "water", count = 20, minLevel = 35 },
+        { bag = 0, slot = 2, kind = "water", count = 20, minLevel = 15 },
+        { bag = 0, slot = 3, kind = "water", count = 5, minLevel = 15 },
+        { bag = 0, slot = 4, kind = "food", count = 20, minLevel = 15 },
+    }
+    local items, totals = P(stacks, { level = 40, water = 20, food = 20, manaUser = true })
+    eq(items[1].slot, 1, "best rank they can use first"); eq(items[1].split, false)
+    eq(totals.water, 20); eq(totals.food, 20)
+    items, totals = P(stacks, { level = 20, water = 22, food = 0, manaUser = true })
+    eq(items[1].slot, 2, "level 20 can't use the level 35 water"); eq(items[2].count, 2); eq(items[2].split, true)
+    eq(totals.water, 22); eq(totals.food, 0)
+    items, totals = P(stacks, { level = 40, water = 20, food = 20, manaUser = false })
+    eq(totals.water, 0, "no water for warriors and rogues"); eq(totals.food, 20)
+    local _, _, short = P(stacks, { level = 10, water = 20, food = 20, manaUser = true })
+    eq(#short, 2, "nothing low enough for level 10")
+    items = P(stacks, { level = 40, water = 60, food = 20, manaUser = true, slots = 2 })
+    eq(#items, 2, "never more than the free trade slots")
+
+    local q = ns.Share.Sort({ { name = "A", manaUser = false }, { name = "B", manaUser = true, manaPct = 80 },
+        { name = "C", manaUser = true, manaPct = 10 }, { name = "D", manaUser = true, manaPct = 5, served = true } })
+    eq(q[1].name, "C"); eq(q[2].name, "B"); eq(q[3].name, "A"); eq(q[4].name, "D")
+
+    -- In game: bags with conjured water/food, a party, a trade.
+    forget()
+    know(ns.Conjure.Spells("water")[1].display)
+    S.itemLines["item:9001"] = { "Conjured Water", "Conjured Item", "Use: Restores 1344 mana over 30 sec." }
+    S.itemLines["item:9002"] = { "Conjured Bread", "Conjured Item", "Use: Restores 874 health over 27 sec." }
+    S.itemInfo[9001] = { minLevel = 15 }; S.itemInfo[9002] = { minLevel = 15 }
+    S.bagSlots = { [0] = { "item:9001", "item:9002" } }
+    S.bagStacks = { ["item:9001"] = 30, ["item:9002"] = 20 }
+    ns.Conjure.ClearCache()
+    S.target = false
+    S.units = {
+        party1 = { guid = "G1", name = "Brann", player = true, friend = true, class = "WARRIOR", level = 24 },
+        party2 = { guid = "G2", name = "Tilly", player = true, friend = true, class = "PRIEST", level = 24, mana = 20 },
+    }
+    ns.ShareButton.Refresh()
+    truthy(_G.ParzellesHandOutButton, "hand out button exists")
+    truthy(ns.MageBar.Shown().share, "on the mage bar")
+    eq(ns.Share.Next().name, "Tilly", "lowest mana first")
+    M.trades = {}
+    _G.ParzellesHandOutButton.__scripts.OnClick(_G.ParzellesHandOutButton, "LeftButton")
+    eq(M.trades[1], "party2", "one click opens the trade")
+    -- the trade window opens: it fills itself
+    S.units.NPC = S.units.party2
+    S.tradeSlots = {}
+    M.Fire("TRADE_SHOW")
+    M.RunTimers(); M.RunTimers()
+    truthy(S.tradeSlots[1] and S.tradeSlots[1].count == 20, "20 water split off the stack of 30")
+    truthy(S.tradeSlots[2] and S.tradeSlots[2].count == "all", "whole stack of 20 food")
+    M.Fire("TRADE_ACCEPT_UPDATE", 1, 1)
+    M.Fire("TRADE_CLOSED")
+    truthy(ns.Share.IsServed("G2"), "Tilly marked done after the trade completes")
+    eq(ns.Share.Next().name, "Brann", "next in the list")
+    -- someone outside the group opens a trade: nothing added unless you ask
+    S.units.NPC = { guid = "X", name = "Stranger", player = true, friend = true, level = 30 }
+    S.tradeSlots = {}
+    M.Fire("TRADE_SHOW")
+    M.RunTimers()
+    eq(S.tradeSlots[1], nil, "strangers get nothing automatically")
+    ns.Share.Fill(true)
+    M.RunTimers(); M.RunTimers()
+    truthy(S.tradeSlots[1], "the trade-window button fills it")
+    M.Fire("TRADE_CLOSED")
+    truthy(not ns.Share.IsServed("X"), "cancelled trade isn't marked")
+    -- too far: no trade; whisper only if the line is turned on
+    S.units.party1.tradeRange = false
+    M.trades, M.chat = {}, {}
+    ns.Share.TradeWith("party1")
+    eq(#M.trades, 0, "too far: no trade")
+    eq(#M.chat, 0, "no whisper unless turned on")
+    ns.db.char.share.announce = true
+    ns.Share.TradeWith("party1")
+    eq(M.chat[1].chatType, "WHISPER")
+    ns.Share.Announce()
+    eq(M.chat[2].chatType, "PARTY")
+    ns.db.char.share.announce = false
+    local rows = ns.ShareButton.ShowMenu()
+    truthy(#rows >= 3, "menu lists the group + actions")
+    ns.Share.ResetQueue()
+    eq(ns.Share.IsServed("G2"), false)
+    for _, m in ipairs(M.macros) do error("no macros may be created: " .. m.name) end
+    S.units, S.target, S.tradeSlots = {}, true, {}
+    S.bagSlots, S.bagStacks = {}, nil
+    ns.Conjure.ClearCache()
     forget()
 end)
 
@@ -450,8 +599,8 @@ test("portals & teleports: own faction only, travel bar of secure buttons", func
     ns.TravelBar.Show()
     truthy(ns.TravelBar.IsShown(), "bar shown")
     local b1 = _G.ParzellesTravelButton1
-    eq(b1:GetAttribute("type"), "spell")
-    eq(b1:GetAttribute("spell"), t.teleport[1].rec.name)
+    eq(b1:GetAttribute("type"), "macro")
+    eq(b1:GetAttribute("macrotext"), "/cast " .. t.teleport[1].rec.name)
     S.bind = t.teleport[1].rec.city or t.teleport[1].rec.name:match(":%s*(.+)$")
     local refreshed = ns.Travel.ForFaction("Alliance", 40)
     truthy(ns.Travel.HearthHint(refreshed.teleport), "hearth hint when bound to a teleport city")
@@ -682,7 +831,7 @@ test("slash commands", function()
     SlashCmdList.PARZELLESADDON("profile")
     eq(ns.DB.ActiveId(), "B")
     SlashCmdList.PARZELLESADDON("profile A")
-    for _, cmd in ipairs({ "gear", "portals", "cc", "mana", "conjure", "conjure debug", "bogus", "" }) do SlashCmdList.PARZELLESADDON(cmd) end
+    for _, cmd in ipairs({ "gear", "portals", "cc", "mana", "conjure", "conjure debug", "buff debug", "share menu", "share reset", "bar", "bogus", "" }) do SlashCmdList.PARZELLESADDON(cmd) end
 end)
 
 test("events: level up, combat, casts", function()
