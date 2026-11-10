@@ -19,7 +19,7 @@ that shows you what to do next.
 **[Website](https://parzellesaddon.myazerothlife.com)** ·
 **[Install](#install)** ·
 **[Features](#features)** ·
-**[The Conjure Button](#the-conjure-button)** ·
+**[The mage buttons](#the-mage-buttons)** ·
 **[Commands](#slash-commands)** ·
 **[FAQ](#faq)**
 
@@ -36,7 +36,7 @@ that shows you what to do next.
 - [Getting started](#getting-started)
 - [Features](#features)
   - [Home](#home)
-  - [The Conjure Button](#the-conjure-button)
+  - [The mage buttons](#the-mage-buttons)
   - [Rotation, crowd control and mana](#rotation-crowd-control-and-mana)
   - [Gear: tooltips, bags and where to get it](#gear-tooltips-bags-and-where-to-get-it)
   - [Leveling](#leveling)
@@ -87,8 +87,8 @@ omaforge update -c forever     # later, to pick up new releases
 1. Type **`/parzelle`** (or `/mage`). The first time, you pick **Arcane**, **Fire** or **Frost**.
    Talents start at level 10, so if you haven't decided yet, pick the spec you plan to level as.
 2. Start on **Home**: it tells you what to do next.
-3. Optional: bind a key to the [Conjure Button](#the-conjure-button) under
-   **Settings › Conjure button › Set key**. No key is bound by default.
+3. Optional: bind keys to the [mage buttons](#the-mage-buttons) (Conjure, Arcane Intellect) under
+   **Settings › Mage buttons › Set key**. No key is bound by default.
 
 You can change spec at any time with the spec pill at the top of the window. With dual spec, talent
 spec 1 and 2 each keep their own profile (see [Settings, specs and dual spec](#settings-specs-and-dual-spec)).
@@ -113,7 +113,11 @@ What matters right now, every time you open the window:
   bags, unread news and new lessons, each with a button that takes you there.
 - **Your rotation at a glance**, and the latest changes.
 
-### The Conjure Button
+### The mage buttons
+
+Three buttons on one small bar: **Conjure**, **Arcane Intellect** and **Hand out**.
+
+#### Conjure
 
 A small button on your screen that shows how much **conjured water, food and mana gem** you have in
 your bags. **Each press casts the highest rank you know of whatever you're shortest on**, then the
@@ -125,17 +129,46 @@ button moves on to the next thing. Keep pressing until you're stocked up.
 2. **Water**, until you reach your target.
 3. **Food**, until you reach your target.
 
-Targets are yours to set under *Settings › Conjure button* (by default 20 water, 20 food and 1 gem).
+Targets are yours to set under *Settings › Mage buttons* (by default 20 water, 20 food and 1 gem).
 It only uses conjure spells you know, and it shows up once you know one. When you're running low,
 Home and a short line after login remind you.
 
-**Make it yours:** no key is bound by default. Pick one under *Settings › Conjure button › Set key*
-(or `/parzelle conjure key`). Shift, Ctrl, Alt and extra mouse buttons work; Super/Meta combos are
-never used. Drag the small bar above the button to move it, and use `/parzelle conjure` to show or
-hide it.
+#### Arcane Intellect: buff next
 
-**Blizzard's rules, kept:** one press, one cast; the addon never casts on its own and uses no macros.
-What the button casts only changes out of combat, and in combat it's disarmed. Conjure between pulls.
+**One press buffs the nearest friendly player who's missing Arcane Intellect:** you first, then your
+group (nearest first), your target, then players with friendly nameplates shown (Shift+V). Warriors
+and Rogues are skipped, because they have no mana. The name under the button is who's next, with a
+"+2" when more people are waiting. Out-of-range and already-buffed players are skipped.
+
+If your spellbook has **Arcane Brilliance**, the button uses it when 3 or more of your party need the
+buff (you can turn this off). No WoW Forever source mentions Arcane Brilliance, so it's only used once
+you actually have it.
+
+#### Hand out: food and water for your group
+
+- **Left-click** opens a trade with your target (a friendly player), or the next person in your
+  group who hasn't had any yet. People low on mana go first. **The trade window fills itself**: by
+  default 20 water and 20 food, in the best rank that person can use. **You press Trade.**
+- **Right-click** lists your group with everyone's mana. Click a name to trade them. You can also
+  tell the group your water's up, or start the list over.
+- **Anyone in your group who opens a trade with you** gets the same offer automatically (this can be
+  turned off). Players outside your group get nothing unless you press **Add food & water** under the
+  trade window.
+- Warriors and Rogues get food only. Amounts, auto-offer and the optional chat line ("Water's up!
+  Open a trade with me and I'll fill it.") are under *Settings › Mage buttons*. The chat line is off
+  by default and only ever sent when you click.
+
+#### Make them yours
+
+The three buttons sit side by side on one small bar. Drag the strip above them to move it
+(`/parzelle bar` puts it back). No key is bound by default. Set one for Conjure or Arcane Intellect
+under *Settings › Mage buttons › Set key* (or `/parzelle conjure key`, `/parzelle buff key`). Shift,
+Ctrl, Alt and extra mouse buttons work; Super/Meta combos are never used.
+
+**Blizzard's rules, kept:** one press, one cast; the addon never casts on its own. The buttons run
+their own `/cast` line (no macros in your macro list, no `/click`). What they cast and who they target
+only change out of combat. Trading needs your clicks too: the addon opens and fills the trade
+window, but the final **Trade** click is always yours.
 
 <sub>There's a [live demo](https://parzellesaddon.myazerothlife.com/#conjure) of the order on the website.</sub>
 
@@ -235,7 +268,7 @@ Anything the sources couldn't confirm is marked as such.
   choice. With **dual spec** (learned at level 40), profile A follows talent spec 1 and B follows
   talent spec 2. Swap specs and the addon switches with you. You can also switch by hand from the
   header.
-- **Settings** sub-tabs: General · Conjure button · Tooltips & bags · Reminders · About the data
+- **Settings** sub-tabs: General · Mage buttons · Tooltips & bags · Reminders · About the data
   (research gaps, conflicts between sources, assumptions, and every source link) · About (version,
   links, credits, and Parzelle Starfall, the Mage it's named for).
 
@@ -253,6 +286,12 @@ Anything the sources couldn't confirm is marked as such.
 | `/parzelle conjure` | Show or hide the Conjure Button |
 | `/parzelle conjure key` | Bind a key to the Conjure Button |
 | `/parzelle conjure debug` | Show what the Conjure Button is set to cast and why |
+| `/parzelle buff` | Show or hide the Arcane Intellect button (`key` binds it, `debug` explains it) |
+| `/parzelle share` | Hand out: trade your target or the next person in your group |
+| `/parzelle share menu` | Pick who to hand out to (with everyone's mana) |
+| `/parzelle share reset` | Start the hand-out list over |
+| `/parzelle share toggle` | Show or hide the Hand out button |
+| `/parzelle bar` | Move the mage buttons back to the default spot |
 | `/parzelle hud` | Show or hide the on-screen rotation helper |
 | `/parzelle reset-hud` | Move the rotation helper back to its default spot |
 | `/parzelle remind` | Check your buffs, conjured stock and wand now |
@@ -285,8 +324,9 @@ The full list is under *Settings › About the data*.
 <summary><b>Is it allowed?</b></summary>
 
 Yes. It's advice and information, and it follows Blizzard's addon rules. The only things that ever
-cast a spell are your own clicks or key presses on the Conjure Button and the travel bar, one cast
-each, out of combat. No macros, nothing automatic.
+cast a spell are your own clicks or key presses on the Conjure, Arcane Intellect and travel bar
+buttons, one cast each. The Hand out button opens and fills a trade window, but the final Trade click
+is yours. No macros, nothing automatic.
 </details>
 
 <details>
@@ -300,19 +340,20 @@ talents, quests and gear all differ from Classic.
 <summary><b>Will it play the game for me?</b></summary>
 
 No. Blizzard doesn't allow that. The rotation helper suggests, the Polymorph tracker watches, and the
-Conjure Button and travel bar cast once per press. Everything else is information.
+Conjure, Arcane Intellect and travel bar buttons cast once per press, and you press Trade yourself.
+Everything else is information.
 </details>
 
 <details>
-<summary><b>Why doesn't the Conjure Button have a key?</b></summary>
+<summary><b>Why don't the buttons have keys?</b></summary>
 
 None is bound by default, so it never takes over a key you already use. Pick one under
-*Settings › Conjure button › Set key*. Super/Meta combos are never offered: on many Linux desktops
+*Settings › Mage buttons › Set key*. Super/Meta combos are never offered: on many Linux desktops
 they belong to the desktop.
 </details>
 
 <details>
-<summary><b>Can I put the Conjure Button on my action bar?</b></summary>
+<summary><b>Can I put the buttons on my action bar?</b></summary>
 
 Not as a macro: Forever's `/click` command won't press addon buttons. Bind it to a key instead.
 </details>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Parzelle's Addon · the Mage companion for WoW Forever</title>
-<meta name="description" content="Parzelle's Addon: the do-everything Mage companion for World of Warcraft: Forever. Rotation help, a Conjure button for water, food and mana gems, Polymorph tracking, portals and teleports, gear upgrade tips, leveling, talents and a full Learn the Mage mode.">
+<meta name="description" content="Parzelle's Addon: the do-everything Mage companion for World of Warcraft: Forever. Rotation help, a Conjure button for water, food and mana gems, an Arcane Intellect buff button, one-click food and water hand-outs, Polymorph tracking, portals and teleports, gear upgrade tips, leveling, talents and a full Learn the Mage mode.">
 <meta name="theme-color" content="#0b0806">
 <link rel="icon" href="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,14 +108,19 @@
       </ul>
       <p class="steps-title">Make it yours</p>
       <ul class="rules">
-        <li>No key is bound by default. Pick one under <em>Settings › Conjure button › Set key</em>, or type <code>/parzelle conjure key</code>. Shift, Ctrl, Alt and extra mouse buttons work; Super combos are never used.</li>
-        <li>Drag the small bar above it to move it. <code>/parzelle conjure</code> shows or hides it.</li>
+        <li>No key is bound by default. Pick one under <em>Settings › Mage buttons › Set key</em>, or type <code>/parzelle conjure key</code>. Shift, Ctrl, Alt and extra mouse buttons work; Super combos are never used.</li>
+        <li>It shares a small bar with the Arcane Intellect and Hand out buttons. Drag the strip above them to move it. <code>/parzelle conjure</code> shows or hides it.</li>
         <li>It appears once you know a conjure spell. When you're low, Home and a line after login remind you.</li>
       </ul>
       <p class="steps-title">Blizzard's rules, kept</p>
       <ul class="rules">
-        <li>One press, one cast. The addon never casts on its own, and it uses no macros.</li>
+        <li>One press, one cast. The addon never casts on its own, and it adds no macros to your macro list.</li>
         <li>Out of combat only: in combat the button is disarmed. Conjure between pulls.</li>
+      </ul>
+      <p class="steps-title">Next to it on the bar</p>
+      <ul class="rules">
+        <li><b>Arcane Intellect, buff next:</b> one press buffs the nearest friendly player who's missing it: you, then your group, your target, then nearby players. Warriors and Rogues are skipped. If you know Arcane Brilliance, it's used when three or more of your party need the buff.</li>
+        <li><b>Hand out:</b> one click opens a trade with your target, or with whoever in your group is lowest on mana and hasn't had any yet. The trade window fills itself with water and food they can use, and you press Trade. Right-click lists your group with everyone's mana. Group members who open a trade with you get the same offer.</li>
       </ul>
     </div>
 
@@ -604,10 +609,10 @@
           you do.</p>
       </details>
       <details>
-        <summary>Why doesn't the Conjure button have a key?</summary>
+        <summary>Why don't the buttons have keys?</summary>
         <p>None is bound by default, so it never steals a key you already use. Pick one under
-          <em>Settings › Conjure button › Set key</em>, or type
-          <code>/parzelle conjure key</code>. Super combos are never offered: on many Linux
+          <em>Settings › Mage buttons › Set key</em>, or type
+          <code>/parzelle conjure key</code> or <code>/parzelle buff key</code>. Super combos are never offered: on many Linux
           desktops they belong to the desktop.</p>
       </details>
       <details>

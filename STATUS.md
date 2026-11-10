@@ -10,6 +10,8 @@
 - Topics `wow-addon` and `world-of-warcraft` are set, and `omaforge search parzelle` finds `github:ninepointlabs/parzelles-addon`.
 - **Install:** `omaforge install -c forever github:ninepointlabs/parzelles-addon`, then `omaforge update -c forever` for later versions.
 
+**Since v0.1.0, on `main`, not released (2026-11-10, Tim's 10:19 AM CT brief `designer-briefs/parzelle-buff-and-share.md`):** the Arcane Intellect buff button and the food & water Hand out button, on a shared mage bar with the Conjure button. Conjure and travel-bar buttons now cast via `/cast` macrotext (see below). No tag or release: Admin releases after Tim OKs.
+
 **Not done (not authorized):** no custom domain, DNS records or Pages custom-domain setting (only `docs/CNAME` exists), no email or social posts. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
 
 **Tim's decisions (2026-11-10, 8:11 AM CT):**
@@ -22,7 +24,7 @@
 
 | Check | Result |
 |---|---|
-| `lua5.1 tests/run.lua` | **35/35 pass**. A strict WoW mock loads every TOC file. It renders all 8 screens and every sub-tab for Arcane, Fire and Frost at levels 8, 24 and 60, plus a level-8 character with no talents and no spec. |
+| `lua5.1 tests/run.lua` | **37/37 pass**. A strict WoW mock loads every TOC file. It renders all 8 screens and every sub-tab for Arcane, Fire and Frost at levels 8, 24 and 60, plus a level-8 character with no talents and no spec. |
 | `python3 tools/mage-changes-poller/tests/test_poller.py` | **4/4 pass** |
 | `python3 tools/build_data.py --check` | up to date |
 | `python3 tools/ivcalc.py` | all 22 build links decode. Every level-60 build totals exactly 51 points; Wowhead's Frost "Leveling 1-33" is a 24-point build by design. |
@@ -37,6 +39,8 @@
 - Every rotation step's condition and spell name, plus the level-8 "known spells only" rule.
 - Conjure classification, stock counts and pick order; the conjure button's secure attributes, key binding and combat freeze; Super/Meta refused.
 - Portals: own faction only, the secure travel bar, and the hearth tip.
+- Arcane Intellect button: next player missing it, Warriors/Rogues skipped, out-of-range reason, Brilliance only when known and 3+ need it, combat freeze, strangers by `/targetexact`, key binding.
+- Hand out: the trade plan (best usable rank by required level, split stacks, slot limit, no water for non-mana classes), queue order (unserved, then lowest mana), one click → `InitiateTrade`, the trade fills on `TRADE_SHOW`, a completed trade marks the person done, strangers get nothing automatically, too-far handling, the opt-in whisper/party line, and the menu.
 - Polymorph timer, early-break warning and hidden-aura fallback.
 - Fight summary, reminders, What's new, lessons, the map pin, Settings › About (Parzelle Starfall), slash commands and events.
 - A check that no "Priest" or "Andric" text appears anywhere in the window.
@@ -46,18 +50,29 @@
 - **Window:** same as Andric's v0.2.x. 8 grouped screens: Home · Play (Rotation, Gear) · Progress (Leveling, Talents) · Learn the Mage · What's new · Settings. It keeps the search box, the "Sources & notes" popups, and the spec pill plus A/B profile in the header.
   - Rotation sub-tabs: Solo · Dungeon · Raid · **Crowd control** · **Mana**.
   - Leveling sub-tabs: Path · Zones & dungeons · Trainer · Class quests · Riding & gold · **Portals & teleports**.
-  - Settings sub-tabs: General · **Conjure button** · Tooltips & bags · Reminders · About the data · About.
+  - Settings sub-tabs: General · **Mage buttons** · Tooltips & bags · Reminders · About the data · About.
   - Palette per spec: Arcane violet/blue, Fire ember orange/gold, Frost ice blue/white.
 - **Conjure button** (`UI/ConjureButton.lua`, `Modules/Conjure.lua`):
-  - It's a secure action button, `type=spell`, casting by spell name, so you get your highest known rank.
+  - It's a secure action button running its own `/cast <spell>` line (`type=macro` + `macrotext`), so you get your highest known rank. v0.1.0 used `type=spell`, which is what failed to cast for Andric on Forever (his v0.1.4 → v0.1.5 fix); switched to match his working button. Not a player macro, no `/click`.
   - Order: mana gem if you have none, then water below its target, then food. Default targets are 20/20/1, set in Settings.
   - It's re-aimed out of combat only and shows stock counts.
-  - Key: Settings › Conjure button › Set key, applied with `SetOverrideBindingClick`. No key is bound by default, Super/Meta combos are refused, and there are no macros, no `/click` and no `Bindings.xml`.
+  - Key: Settings › Mage buttons › Set key, applied with `SetOverrideBindingClick`. No key is bound by default, Super/Meta combos are refused, and there are no macros, no `/click` and no `Bindings.xml`.
   - It nudges you on Home and after login when stock is low.
+- **Mage bar** (`UI/MageBar.lua`): Conjure · Arcane Intellect · Hand out side by side, one drag strip, position in `mageBar.point` (takes over v0.1.0's `conjure.point`). Layout changes only out of combat. `/parzelle bar` resets it.
+- **Arcane Intellect button** (`UI/IntellectButton.lua`), ported from Andric's Fortitude button:
+  - Same order (you, group nearest first, target, friendly nameplates), same `/cast [@unit,help,nodead]` macrotext, `/targetexact` for strangers, re-aimed out of combat only, the same per-press diagnostics and `debug`.
+  - Mage changes: skips Warriors and Rogues (class, not current power type). Uses **Arcane Brilliance** only if the spellbook has it and 3+ party members need the buff (party only, not raid); a setting turns this off.
+  - Key: Settings › Mage buttons › Set key or `/parzelle buff key`; none by default.
+- **Hand out button** (`UI/ShareButton.lua`, `Modules/Share.lua`):
+  - Left-click: `InitiateTrade` with your target (a friendly player) or the next unserved group member, lowest mana first. Right-click: a menu of the group with mana %, "Tell the group" (only if turned on), "Start over" and Settings.
+  - On `TRADE_SHOW` it fills the trade: the best rank each person can use (item required level vs `UnitLevel("NPC")`), default 20 water + 20 food, food only for Warriors and Rogues, splitting stacks as needed, max 6 slots. You press Trade.
+  - Auto-offer: on for group members who open a trade with her, off for strangers. Strangers can still be filled with the "Add food & water" button under the trade window, which also covers any refused auto-fill.
+  - A completed trade marks the person done for 15 minutes (`TRADE_ACCEPT_UPDATE` 1/1 or `ERR_TRADE_COMPLETE`, then `TRADE_CLOSED`).
+  - Optional chat line, off by default: "Tell the group" in the menu, plus a whisper when you click someone who's too far. Only ever sent from a click.
 - **Portals & teleports:**
   - Your faction only; the other faction's spells are never listed.
   - Each entry shows "Known", "Train it" or "Unlock at N", plus reagent counts flagged "not confirmed for Forever" and a hearthstone tip.
-  - Clicking is done on a separate **travel bar** of secure buttons. It is its own top-level frame, so the main window never holds protected frames and stays closable in combat.
+  - Clicking is done on a separate **travel bar** of secure buttons (now `/cast` macrotext, same reason as the Conjure button). It is its own top-level frame, so the main window never holds protected frames and stays closable in combat.
 - **CC tracker** (`Modules/CC.lua`):
   - Shows your Polymorph target and time left on the on-screen helper, and warns if it breaks early.
   - Lists Frost Nova, Counterspell and Cone of Cold cooldowns.
@@ -72,7 +87,7 @@
   - Learn the Mage: 49 spells, 36 talents, 25 mechanics, 44 lessons, and leveling tips per spec.
   - Reminders: Arcane Intellect, armor, Ice Barrier (Frost), conjured stock, reagents and wand, plus a Dampen/Amplify Magic tip.
   - What's new: change poller in `tools/mage-changes-poller`, with an example systemd timer that is **not enabled**.
-- **Slash:** `/parzelle` (alias `/mage`). Includes `spec arcane|fire|frost`, `profile A|B`, `portals`, `cc`, `mana`, `conjure [key|debug]` and `about`.
+- **Slash:** `/parzelle` (alias `/mage`). Includes `spec arcane|fire|frost`, `profile A|B`, `portals`, `cc`, `mana`, `conjure [key|debug]`, `buff [key|debug]`, `share [menu|reset|toggle]`, `bar` and `about`.
 
 ## Install / test in game on TUF
 
@@ -139,14 +154,26 @@ Re-run `omaforge clients` before any tag.
   - Flavour names (Innkeeper "Emberwick", item names) are invented for the site.
 - **autonomix-cli** isn't listed, because this addon ships no Linux executables.
 
+## API limits for buff & share (checked against wow-ui-source@forever, 2026-11-10)
+
+- `InitiateTrade`, `C_Container.PickupContainerItem` and `SplitContainerItem`, and `CheckInteractDistance`: not restricted (`SecretArguments = "AllowedWhenUntainted"` only).
+- `ClickTradeButton`: not in the generated API docs, so its restrictions are unknown. The automatic fill runs from a timer after `TRADE_SHOW`, not from a click. If Forever refuses it, the addon prints a line and the "Add food & water" button under the trade window does the same fill from a click.
+- `AcceptTrade` is `C_SecureTransfer.AcceptTrade`, `HasRestrictions = true`: the final Trade click stays the player's. The addon never calls it.
+- `SendChatMessage` has `HasRestrictions = true`: the party/whisper line is click-only and off by default.
+- Trade range is `CheckInteractDistance(unit, 2)` (about 11 yards); out of range, nothing opens.
+- **Arcane Brilliance:** no Forever source mentions it. It appears only in Wowhead's TBC 61–70 trainer table (rank 2 at 70) and as a recorded research gap. It's used only if the spellbook has it, by name.
+- **Ritual of Refreshment:** same TBC table only (level 70). Not added.
+
 ## Still to check in game
 
 1. **Conjure button:**
-   - Does `type=spell` with a bare spell name cast the highest rank on Forever?
+   - Does the `/cast` macrotext cast the highest rank on Forever (as it does for Andric's Fortitude)?
    - Does the override key binding work?
    - Does the tooltip classifier recognise Forever's conjured water, food and gems? `/parzelle conjure debug` shows counts and spells.
 2. **Travel bar:** does a click cast each teleport/portal?
-3. **Polymorph tracker:** are aura `expirationTime` values readable on Forever, or secret?
-4. **Rotation stacks:** is the Arcane Blast stack a buff or a debuff (a recorded conflict)? The engine checks both. Also check the Heating Up stack count.
-5. **Race token** for High Order Skyborne (`/run print(UnitRace("player"))`) and the Skyborne class quests' IDs (93791, 93797) being marked done.
-6. **Dual spec at 40,** the window layout, bag overlays, map pins, and Lua errors (`/console scriptErrors 1`).
+3. **Arcane Intellect button:** casts on self, party and a stranger (`/targetexact`); Warriors/Rogues skipped; the key binding works.
+4. **Hand out:** does a click open the trade? Does the automatic fill work after `TRADE_SHOW`, or does the game refuse `ClickTradeButton` without a click (then the "Add food & water" button must be used)? Does the required-level rank pick give a low-level friend the right water? Does "done" get marked after a completed trade?
+5. **Polymorph tracker:** are aura `expirationTime` values readable on Forever, or secret?
+6. **Rotation stacks:** is the Arcane Blast stack a buff or a debuff (a recorded conflict)? The engine checks both. Also check the Heating Up stack count.
+7. **Race token** for High Order Skyborne (`/run print(UnitRace("player"))`) and the Skyborne class quests' IDs (93791, 93797) being marked done.
+8. **Dual spec at 40,** the window layout, bag overlays, map pins, and Lua errors (`/console scriptErrors 1`).
