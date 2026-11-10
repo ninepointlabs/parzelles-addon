@@ -4,13 +4,12 @@
 
 **Repo:** `ninepointlabs/parzelles-addon` (public; topics `wow-addon`, `world-of-warcraft`). Local checkout: `/home/tim/Projects/parzelles-addon`.
 **Branching:** Tim decided on 2026-11-10 (8:11 AM CT) to commit straight to `main`, like Andric's later changes, with no PR. `feature/initial-addon` was fast-forwarded into `main`.
-**Current release:** `v0.1.0` (2026-11-10, at Tim's request), https://github.com/ninepointlabs/parzelles-addon/releases/tag/v0.1.0. Tag `v0.1.0` is on `1bed857`.
-- Before tagging, `omaforge clients` reported Forever `1.60.1.70862` / Interface `16001`, matching both `.toc` files.
-- The release workflow passed. Its assets are `ParzellesAddon-v0.1.0.zip` (170 KB; `docs/`, `research/`, `tools/` and `tests/` excluded; TOC `## Version: v0.1.0`) and `release.json` = `{"flavor":"forever","interface":16001}`.
-- Topics `wow-addon` and `world-of-warcraft` are set, and `omaforge search parzelle` finds `github:ninepointlabs/parzelles-addon`.
-- **Install:** `omaforge install -c forever github:ninepointlabs/parzelles-addon`, then `omaforge update -c forever` for later versions.
-
-**Since v0.1.0, on `main`, not released (2026-11-10, Tim's 10:19 AM CT brief `designer-briefs/parzelle-buff-and-share.md`):** the Arcane Intellect buff button and the food & water Hand out button, on a shared mage bar with the Conjure button. Conjure and travel-bar buttons now cast via `/cast` macrotext (see below). No tag or release: Admin releases after Tim OKs.
+**Current release:** `v0.1.1` (2026-11-10, at Tim's request), https://github.com/ninepointlabs/parzelles-addon/releases/tag/v0.1.1. Tag `v0.1.1` is on `cfd36e3`.
+- It adds the Arcane Intellect buff button and the food & water Hand out button on a shared mage bar with the Conjure button (Tim's 10:19 AM CT brief, `designer-briefs/parzelle-buff-and-share.md`). The Conjure and travel-bar buttons now cast via `/cast` macrotext (see Features).
+- Before tagging, `omaforge clients` reported Forever `1.60.1.70888` / Interface `16001`. The build moved from 70862, but the Interface didn't, so the `.toc` files were left alone.
+- The release workflow (run 42856517256) passed. Its assets are `ParzellesAddon-v0.1.1.zip` (188 KB; TOC `## Version: v0.1.1`, Interface 16001; no `docs/`, `research/`, `tools/` or `tests/`) and `release.json` (flavor `forever`, interface 16001). `omaforge search parzelle` still finds it.
+- **Install / update:** `omaforge install -c forever github:ninepointlabs/parzelles-addon`, or `omaforge update -c forever` if v0.1.0 is installed.
+- Previous: `v0.1.0` on `1bed857` (first release; topics `wow-addon`, `world-of-warcraft` set then).
 
 **Not done (not authorized):** no custom domain, DNS records or Pages custom-domain setting (only `docs/CNAME` exists), no email or social posts. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
 
