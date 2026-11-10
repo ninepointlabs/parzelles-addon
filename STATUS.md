@@ -11,7 +11,9 @@
 - **Install / update:** `omaforge install -c forever github:ninepointlabs/parzelles-addon`, or `omaforge update -c forever` if v0.1.0 is installed.
 - Previous: `v0.1.0` on `1bed857` (first release; topics `wow-addon`, `world-of-warcraft` set then).
 
-**Not done (not authorized):** no custom domain, DNS records or Pages custom-domain setting (only `docs/CNAME` exists), no email or social posts. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
+**Website:** https://parzelles-addon.myazerothlife.com, live since 2026-11-10 (Tim's Pages brief, `designer-briefs/parzelle-pages-readme.md`). GitHub Pages is on, serving `main` `/docs`, with custom domain `parzelles-addon.myazerothlife.com`. DNS already pointed at GitHub. The certificate is approved and HTTPS is enforced, the same as Andric's site. No GoatCounter: Andric's site has none.
+
+**Not done (not authorized):** no email or social posts, and no more tags or releases until Admin says so. v0.1.0 and v0.1.1 went out without Tim's OK. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
 
 **Tim's decisions (2026-11-10, 8:11 AM CT):**
 1. Keep the name Parzelle's Addon, the slash commands `/parzelle` and `/mage`, and the repo `ninepointlabs/parzelles-addon`.
