@@ -1,0 +1,4747 @@
+{
+ "meta": {
+  "game": "World of Warcraft: Forever",
+  "launch": "2026-11-04 15:00 PST",
+  "client_version": "1.60.1",
+  "latest_build_seen": "1.60.1.70862 (wow-ui-source forever branch commit 2026-11-07T04:46Z = Nov 6, 10:46 PM CST)",
+  "launch_build": "1.60.1.70790",
+  "toc_interface": 16001,
+  "wow_project_id": "18 (WOW_PROJECT_CAMELOT)",
+  "toc_suffixes": [
+   "_Forever.toc",
+   "_Camelot.toc"
+  ],
+  "toc_game_type": [
+   "forever",
+   "camelot"
+  ],
+  "toc_family": "mainline",
+  "api_note": "Mainline (modern) UI architecture; Midnight addon restrictions (secret values) apply per Tautellini doc - verify in client",
+  "max_level": 60,
+  "notes": "Interface/suffix/game-type values from Tautellini doc (community) cross-checked with Questie_Forever.toc, Details_Camelot.toc, BigWigs and DBM TOCs listing 16001.",
+  "class": "Mage",
+  "talent_calc_version": "70862-e74d4f16",
+  "talent_calc_note": "Icy Veins calculator data 70862-e74d4f16 (research/talents_mage.json) is byte-identical for Mage to 70755-d1899b7d, the version all Icy Veins Mage build links use (research/talents_mage_70755.json).",
+  "source_url": "https://github.com/Gethe/wow-ui-source/tree/forever",
+  "checked": "2026-11-09"
+ },
+ "sources": {
+  "bz_deep": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+  "bz_dev": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+  "bz_hotfix": "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026",
+  "iv_overview": "https://www.icy-veins.com/wow-forever/mage-class-overview",
+  "iv_quests": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+  "iv_calc": "https://www.icy-veins.com/wow-forever/mage-talent-calculator",
+  "iv_calc_index": "https://static.icy-veins.com/r2/icydb/wowf/talents/index.json",
+  "iv_calc_70862": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+  "iv_calc_70755": "https://static.icy-veins.com/r2/icydb/wowf/talents/70755-d1899b7d/mage.json",
+  "iv_calc_js": "https://static.icy-veins.com/javascript/forever-talent-calculator-b94ba8132c852960488634adf9ed4141.js",
+  "iv_skyborne": "https://www.icy-veins.com/wow-forever/skyborne",
+  "ivdb_dalaran": "https://db.icy-veins.com/wow-forever/spells/1297659",
+  "iv_arcane_lvl": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+  "iv_arcane_guide": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+  "iv_arcane_rot": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+  "iv_arcane_tal": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents",
+  "iv_arcane_stats": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority",
+  "iv_fire_lvl": "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+  "iv_fire_guide": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+  "iv_fire_rot": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+  "iv_fire_tal": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
+  "iv_fire_stats": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-stat-priority",
+  "iv_frost_lvl": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+  "iv_frost_guide": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
+  "iv_frost_rot": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+  "iv_frost_tal": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
+  "iv_frost_stats": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-stat-priority",
+  "wh_arcane_ov": "https://www.wowhead.com/forever/guide/classes/mage/arcane/overview-pve-dps",
+  "wh_arcane_abil": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+  "wh_arcane_lvl": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+  "wh_arcane_tal": "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+  "wh_arcane_stats": "https://www.wowhead.com/forever/guide/classes/mage/arcane/stat-priority-pve-dps",
+  "wh_arcane_rot": "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+  "wh_fire_ov": "https://www.wowhead.com/forever/guide/classes/mage/fire/overview-pve-dps",
+  "wh_fire_abil": "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-abilities",
+  "wh_fire_lvl": "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+  "wh_fire_tal": "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+  "wh_fire_stats": "https://www.wowhead.com/forever/guide/classes/mage/fire/stat-priority-pve-dps",
+  "wh_fire_rot": "https://www.wowhead.com/forever/guide/classes/mage/fire/rotation-cooldowns-pve-dps",
+  "wh_frost_ov": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+  "wh_frost_abil": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+  "wh_frost_lvl": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips",
+  "wh_frost_tal": "https://www.wowhead.com/forever/guide/classes/mage/frost/talent-builds-pve-dps",
+  "wh_frost_stats": "https://www.wowhead.com/forever/guide/classes/mage/frost/stat-priority-pve-dps",
+  "wh_frost_rot": "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+  "wh_search": "https://www.wowhead.com/forever/search?q=<quest name>",
+  "foreverguide": "https://foreverguide.net/classes/mage/",
+  "bindonforever": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+  "playbook": "https://wowforeverplaybook.com/wow-forever-mage-changes"
+ },
+ "spells_by_level": [
+  {
+   "name": "Fireball",
+   "wowhead_base_spell_id": 133,
+   "ivdb_max_rank_id": 25306,
+   "rank_learn_levels": [
+    1,
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48,
+    54,
+    60
+   ],
+   "school": "Fire",
+   "category": "damage",
+   "notes": "Learn level + new ranks from the Wowhead Fire leveling trainer table.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips (base 133); https://www.icy-veins.com/wow-forever/fire-mage-leveling (25306)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frost Armor",
+   "wowhead_base_spell_id": 168,
+   "ivdb_max_rank_id": 7301,
+   "rank_learn_levels": [
+    1,
+    10,
+    20
+   ],
+   "school": "Frost",
+   "category": "buff",
+   "notes": "Wowhead table row links spell 7300; rank 1 id 168 from the Wowhead Frost abilities page.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities (168); https://www.icy-veins.com/wow-forever/frost-mage-leveling (7301)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Intellect",
+   "wowhead_base_spell_id": 1459,
+   "ivdb_max_rank_id": 10157,
+   "rank_learn_levels": [
+    1,
+    14,
+    28,
+    42,
+    56
+   ],
+   "school": "Arcane",
+   "category": "buff",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (1459); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10157)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Conjure Water",
+   "wowhead_base_spell_id": 5504,
+   "ivdb_max_rank_id": 10140,
+   "rank_learn_levels": [
+    4,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+   ],
+   "category": "conjure",
+   "notes": "Icy Veins Arcane guide gives the same ranks (4/10/20/30/40/50/60, conjuring level 1/5/15/25/35/45/55 water); rank 7 now makes 10 water per cast. Wowhead Frost rotation links Conjure Water as spell 468766.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (5504); https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide (10140)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frostbolt",
+   "wowhead_base_spell_id": 116,
+   "ivdb_max_rank_id": 25304,
+   "rank_learn_levels": [
+    4,
+    8,
+    14,
+    20,
+    26,
+    32,
+    38,
+    44,
+    50,
+    56,
+    60
+   ],
+   "school": "Frost",
+   "category": "damage",
+   "notes": "Wowhead table row links 25304 (top rank).",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities (116); https://www.icy-veins.com/wow-forever/frost-mage-leveling (25304)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Conjure Food",
+   "wowhead_base_spell_id": 587,
+   "ivdb_max_rank_id": 28612,
+   "rank_learn_levels": [
+    6,
+    12,
+    22,
+    32,
+    42,
+    52,
+    60
+   ],
+   "category": "conjure",
+   "notes": "Wowhead Frost abilities page links Conjure Food as 597 instead of 587.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (587); https://www.icy-veins.com/wow-forever/frost-mage-leveling (28612)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Fire Blast",
+   "wowhead_base_spell_id": 2136,
+   "ivdb_max_rank_id": 10199,
+   "rank_learn_levels": [
+    6,
+    14,
+    22,
+    30,
+    38,
+    46,
+    54
+   ],
+   "school": "Fire",
+   "category": "damage",
+   "notes": "Launch: 8 s cooldown shared with Ice Lance; every Fire Blast grants a Heating Up stack (2 on crit).",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (2136); https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities (10199)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Missiles",
+   "wowhead_base_spell_id": 5143,
+   "ivdb_max_rank_id": 25345,
+   "rank_learn_levels": [
+    8,
+    16,
+    24,
+    32,
+    40,
+    58,
+    56
+   ],
+   "school": "Arcane",
+   "category": "damage",
+   "notes": "Kept exactly as published: the Wowhead table reads '16; 24; 32; 40; 58; 56' (out of order, probably a typo for 48; 56). See conflicts.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (5143); https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities (25345)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Polymorph",
+   "wowhead_base_spell_id": 118,
+   "ivdb_max_rank_id": 12826,
+   "rank_learn_levels": [
+    8,
+    20,
+    40,
+    60
+   ],
+   "school": "Arcane",
+   "category": "cc",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (118); https://www.icy-veins.com/wow-forever/frost-mage-leveling (12826)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frost Nova",
+   "wowhead_base_spell_id": 122,
+   "ivdb_max_rank_id": 10230,
+   "rank_learn_levels": [
+    10,
+    26,
+    40,
+    54
+   ],
+   "school": "Frost",
+   "category": "cc",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (122); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10230)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Explosion",
+   "wowhead_base_spell_id": 1449,
+   "ivdb_max_rank_id": 10202,
+   "rank_learn_levels": [
+    14,
+    22,
+    30,
+    38,
+    46,
+    54
+   ],
+   "school": "Arcane",
+   "category": "aoe",
+   "notes": "Icy Veins leveling milestone tables also list Arcane Explosion at 14.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (1449); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10202)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Blink",
+   "wowhead_base_spell_id": 1953,
+   "ivdb_max_rank_id": 1953,
+   "rank_learn_levels": [
+    20
+   ],
+   "school": "Arcane",
+   "category": "utility",
+   "notes": "Wowhead table: learn 20, 'new ranks: 20' (single rank). Icy Veins milestones: 20.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Evocation",
+   "wowhead_base_spell_id": 12051,
+   "ivdb_max_rank_id": 12051,
+   "rank_learn_levels": [
+    20
+   ],
+   "school": "Arcane",
+   "category": "mana",
+   "notes": "Icy Veins: restores most of your Mana over an 8-second channel; Spirit improves it.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Remove Lesser Curse",
+   "wowhead_base_spell_id": 475,
+   "ivdb_max_rank_id": 475,
+   "rank_learn_levels": [
+    20
+   ],
+   "school": "Arcane",
+   "category": "utility",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Blizzard",
+   "wowhead_base_spell_id": 10,
+   "ivdb_max_rank_id": 10187,
+   "rank_learn_levels": [
+    20,
+    28,
+    36,
+    44,
+    52,
+    60
+   ],
+   "school": "Frost",
+   "category": "aoe",
+   "notes": "Launch: Blizzard keeps the low-rank penalty (reduced chance to trigger Arcane Concentration, Frostbite, Fingers of Frost when cast at a rank learned >12 levels below you).",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (10); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10187)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Blast (talent)",
+   "wowhead_base_spell_id": 400574,
+   "ivdb_max_rank_id": 400574,
+   "rank_learn_levels": [
+    20,
+    30,
+    40,
+    50,
+    60
+   ],
+   "rank_spell_ids": [
+    400574,
+    1239696,
+    1239697,
+    1239699,
+    1239700
+   ],
+   "rank_ids_source": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "school": "Arcane",
+   "category": "damage",
+   "talent_tree": "Arcane",
+   "notes": "11-point Arcane gold-medal talent; later ranks trained. Wowhead: 'learn 20 or 15 with Talented [1225474]' (Legacy reward). Rank ids from bindonforever.com (client build 70291 files, community).",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips; https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Wrath (talent)",
+   "wowhead_base_spell_id": 1326079,
+   "rank_learn_levels": [
+    25,
+    36,
+    48,
+    60
+   ],
+   "school": "Arcane",
+   "category": "damage",
+   "talent_tree": "Arcane",
+   "notes": "16-point Arcane talent (3.5 s cast, 6 s CD, scales with max mana). Wowhead: 'learn 25 or 20 with Talented'. Wowhead overview links 1326082.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips; https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Counterspell",
+   "wowhead_base_spell_id": 2139,
+   "ivdb_max_rank_id": 2139,
+   "rank_learn_levels": [
+    24
+   ],
+   "school": "Arcane",
+   "category": "utility",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Pyroblast (talent)",
+   "wowhead_base_spell_id": 11366,
+   "ivdb_max_rank_id": 18809,
+   "rank_learn_levels": [
+    24,
+    30,
+    36,
+    42,
+    48,
+    54
+   ],
+   "school": "Fire",
+   "category": "damage",
+   "talent_tree": "Fire",
+   "notes": "Fire row-3 talent; Wowhead Fire trainer table lists learn 24, new ranks 30-54. Heating Up cuts its cast time 25%/stack (3 stacks = 1.5 s).",
+   "id_source": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json (talent 11366); https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities (18809)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Cone of Cold",
+   "wowhead_base_spell_id": 120,
+   "ivdb_max_rank_id": 10161,
+   "rank_learn_levels": [
+    26,
+    34,
+    42,
+    50,
+    58
+   ],
+   "rank_spell_ids": [
+    120,
+    8492,
+    10159,
+    10160,
+    10161
+   ],
+   "rank_ids_source": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "school": "Frost",
+   "category": "aoe",
+   "notes": "Duration decreased in Forever (Blizzard deep dive); bindonforever reads 6 s (Classic 8 s) and a 40% slow from beta build 70291 files. Oct 16 beta notes: first 4 targets slowed 10% more and 3 s longer. Icy Veins milestones: 26.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (120); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10161)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Conjure Mana Agate",
+   "wowhead_base_spell_id": 759,
+   "ivdb_max_rank_id": 759,
+   "rank_learn_levels": [
+    28
+   ],
+   "category": "conjure",
+   "notes": "Conjures a Mana Agate (restores 375-425 Mana). Wowhead's trainer table lists it as 'Conjure Mana Agate, learn 28, new ranks 38; 48; 58'. Icy Veins leveling pages call it 'Conjure Mana Gem' / 'Mana Gems' (1318827) - see conflicts and mana_gems.",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Conjure Mana Jade",
+   "wowhead_base_spell_id": 3552,
+   "ivdb_max_rank_id": 3552,
+   "rank_learn_levels": [
+    38
+   ],
+   "category": "conjure",
+   "notes": "Conjures a Mana Jade (550-650 Mana).",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Conjure Mana Citrine",
+   "wowhead_base_spell_id": 10053,
+   "ivdb_max_rank_id": 10053,
+   "rank_learn_levels": [
+    48
+   ],
+   "category": "conjure",
+   "notes": "Conjures a Mana Citrine (775-925 Mana).",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Conjure Mana Ruby",
+   "wowhead_base_spell_id": 10054,
+   "ivdb_max_rank_id": 10054,
+   "rank_learn_levels": [
+    58
+   ],
+   "category": "conjure",
+   "notes": "Conjures a Mana Ruby (1,000-1,200 Mana); item Mana Ruby 8008 (Wowhead Frost rotation).",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ice Armor",
+   "ivdb_max_rank_id": 10220,
+   "rank_learn_levels": [
+    30,
+    40,
+    50,
+    60
+   ],
+   "school": "Frost",
+   "category": "buff",
+   "notes": "Rank-1 spell id not on any Forever page (gap). Mutually exclusive with Frost Armor / Mage Armor.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (row links 10220); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10220)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Mage Armor",
+   "wowhead_base_spell_id": 6117,
+   "ivdb_max_rank_id": 22783,
+   "rank_learn_levels": [
+    34,
+    46,
+    58
+   ],
+   "rank_spell_ids": [
+    6117,
+    22782,
+    22783
+   ],
+   "rank_ids_source": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "school": "Arcane",
+   "category": "buff",
+   "notes": "Lets 50% of Spirit mana regen continue while casting (Classic 30%). With Arcane Meditation 3/3 = 100% in combat (Icy Veins, 'by level 34').",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (6117); https://www.icy-veins.com/wow-forever/frost-mage-leveling (22783)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Slow Fall",
+   "wowhead_base_spell_id": 130,
+   "ivdb_max_rank_id": 130,
+   "rank_learn_levels": [
+    12
+   ],
+   "school": "Arcane",
+   "category": "utility",
+   "notes": "Needs a Light Feather (Icy Veins / Wowhead).",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Dampen Magic",
+   "wowhead_base_spell_id": 604,
+   "ivdb_max_rank_id": 10174,
+   "rank_learn_levels": [
+    12,
+    24,
+    36,
+    48,
+    60
+   ],
+   "school": "Arcane",
+   "category": "buff",
+   "notes": "Wowhead lists it as optional.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (604); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10174)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Amplify Magic",
+   "wowhead_base_spell_id": 1008,
+   "ivdb_max_rank_id": 10170,
+   "rank_learn_levels": [
+    18,
+    30,
+    42,
+    54
+   ],
+   "school": "Arcane",
+   "category": "buff",
+   "notes": "Wowhead lists it as optional.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (1008); https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities (10170)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Mana Shield",
+   "wowhead_base_spell_id": 1463,
+   "ivdb_max_rank_id": 10193,
+   "rank_learn_levels": [
+    20,
+    28,
+    36,
+    44,
+    52,
+    60
+   ],
+   "school": "Arcane",
+   "category": "defense",
+   "notes": "Wowhead table row links 10191. Optional per Wowhead.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities (1463); https://www.icy-veins.com/wow-forever/frost-mage-leveling (10193)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Fire Ward",
+   "wowhead_base_spell_id": 543,
+   "ivdb_max_rank_id": 10225,
+   "rank_learn_levels": [
+    20,
+    30,
+    40,
+    50,
+    60
+   ],
+   "school": "Fire",
+   "category": "defense",
+   "notes": "Optional per Wowhead.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (543); https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide (10225)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frost Ward",
+   "wowhead_base_spell_id": 6143,
+   "rank_learn_levels": [
+    22,
+    32,
+    42,
+    52,
+    60
+   ],
+   "school": "Frost",
+   "category": "defense",
+   "notes": "Optional per Wowhead.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (6143); Wowhead abilities pages link 28609",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Scorch",
+   "wowhead_base_spell_id": 2948,
+   "ivdb_max_rank_id": 10207,
+   "rank_learn_levels": [
+    22,
+    28,
+    34,
+    40,
+    46,
+    52,
+    58
+   ],
+   "school": "Fire",
+   "category": "damage",
+   "notes": "Wowhead lists it as optional for Arcane/Fire leveling; Fire raid builds use it to keep 5 Improved Scorch stacks.",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips (2948); https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities (10207)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Flamestrike",
+   "wowhead_base_spell_id": 2120,
+   "ivdb_max_rank_id": 10216,
+   "school": "Fire",
+   "category": "aoe",
+   "notes": "Not in the Wowhead trainer tables; learn levels unsourced (gap). Ground effect lasts 8 s; different ranks no longer stack (Wowhead).",
+   "id_source": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities (2120); https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities (10216)",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frostfire Bolt",
+   "wowhead_base_spell_id": 401502,
+   "ivdb_max_rank_id": 1237313,
+   "rank_learn_levels": [
+    40,
+    50,
+    60
+   ],
+   "rank_spell_ids": [
+    401502,
+    1237312,
+    1237313
+   ],
+   "rank_ids_source": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "category": "damage",
+   "notes": "School: Fire AND Frost (uses the higher of Fire/Frost spell damage and the lower target resistance). 3 s cast, DoT + 40% slow. Level 40 per Blizzard deep dive and Icy Veins; ranks 2/3 at 50/60 only from bindonforever (beta build 70291 files).",
+   "id_source": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities (401502); https://www.wowhead.com/forever/guide/classes/mage/fire/overview-pve-dps (1237313)",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Comprehend Scroll",
+   "wowhead_base_spell_id": 1296017,
+   "ivdb_max_rank_id": 1296017,
+   "rank_learn_levels": [
+    6
+   ],
+   "category": "utility",
+   "notes": "Mage-only minor tradeskill Comprehension (General tab). Level 6 per bindonforever (client files); Blizzard gives no level.",
+   "id_source": "https://www.icy-veins.com/wow-forever/mage-class-overview",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Stormwind",
+   "wowhead_base_spell_id": 3561,
+   "ivdb_max_rank_id": 3561,
+   "rank_learn_levels": [
+    20
+   ],
+   "category": "teleport",
+   "faction": "Alliance",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Ironforge",
+   "wowhead_base_spell_id": 3562,
+   "ivdb_max_rank_id": 3562,
+   "rank_learn_levels": [
+    20
+   ],
+   "category": "teleport",
+   "faction": "Alliance",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Darnassus",
+   "wowhead_base_spell_id": 3565,
+   "ivdb_max_rank_id": 3565,
+   "rank_learn_levels": [
+    30
+   ],
+   "category": "teleport",
+   "faction": "Alliance",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Orgrimmar",
+   "wowhead_base_spell_id": 3567,
+   "ivdb_max_rank_id": 3567,
+   "rank_learn_levels": [
+    20
+   ],
+   "category": "teleport",
+   "faction": "Horde",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Undercity",
+   "wowhead_base_spell_id": 3563,
+   "ivdb_max_rank_id": 3563,
+   "rank_learn_levels": [
+    20
+   ],
+   "category": "teleport",
+   "faction": "Horde",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Thunder Bluff",
+   "wowhead_base_spell_id": 3566,
+   "ivdb_max_rank_id": 3566,
+   "rank_learn_levels": [
+    30
+   ],
+   "category": "teleport",
+   "faction": "Horde",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Dalaran",
+   "wowhead_base_spell_id": 1297659,
+   "ivdb_max_rank_id": 1297659,
+   "rank_learn_levels": [
+    50
+   ],
+   "school": "Arcane",
+   "category": "teleport",
+   "faction": "Alliance",
+   "notes": "db.icy-veins: Requires Level 50, Faction Alliance, Reagents: Rune of Teleportation, 10 s cast, 120 Mana, added in 1.60.1.70532. Icy Veins Frost leveling milestones list it at 40 (conflict).",
+   "id_source": "https://db.icy-veins.com/wow-forever/spells/1297659",
+   "source_url": "https://db.icy-veins.com/wow-forever/spells/1297659",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Stormwind",
+   "wowhead_base_spell_id": 10059,
+   "ivdb_max_rank_id": 10059,
+   "rank_learn_levels": [
+    40
+   ],
+   "category": "portal",
+   "faction": "Alliance",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Ironforge",
+   "wowhead_base_spell_id": 11416,
+   "ivdb_max_rank_id": 11416,
+   "rank_learn_levels": [
+    40
+   ],
+   "category": "portal",
+   "faction": "Alliance",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Darnassus",
+   "wowhead_base_spell_id": 11419,
+   "ivdb_max_rank_id": 11419,
+   "rank_learn_levels": [
+    50
+   ],
+   "category": "portal",
+   "faction": "Alliance",
+   "notes": "50 per Icy Veins Frost leveling milestones and Wowhead leveling/abilities pages; the Icy Veins Arcane/Fire PvE guides say all three portals at 40 (conflict).",
+   "id_source": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Orgrimmar",
+   "wowhead_base_spell_id": 11417,
+   "ivdb_max_rank_id": 11417,
+   "rank_learn_levels": [
+    40
+   ],
+   "category": "portal",
+   "faction": "Horde",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Undercity",
+   "wowhead_base_spell_id": 11418,
+   "ivdb_max_rank_id": 11418,
+   "rank_learn_levels": [
+    40
+   ],
+   "category": "portal",
+   "faction": "Horde",
+   "id_source": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Thunder Bluff",
+   "wowhead_base_spell_id": 11420,
+   "ivdb_max_rank_id": 11420,
+   "rank_learn_levels": [
+    50
+   ],
+   "category": "portal",
+   "faction": "Horde",
+   "notes": "50 per Icy Veins Frost leveling milestones and Wowhead leveling/abilities pages; the Icy Veins Arcane/Fire PvE guides say 40 (conflict).",
+   "id_source": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  }
+ ],
+ "talent_and_other_spell_ids": [
+  {
+   "name": "Arcane Blast",
+   "spell_id": 400574,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "11-pt gold medal. Launch: +12% of Intellect as spell damage per stack (all spells), +100% own mana cost per stack, 4 stacks, 18 s from first application (Nov 2 notes; duration bug fixed Nov 6 hotfix).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Blast",
+   "spell_id": 400573,
+   "tree": "Arcane",
+   "kind": "related spell (unlabelled)",
+   "notes": "Listed by bindonforever next to the Arcane Blast ranks without a rank label; may be the stacking aura - verify in game. Icy Veins calls the stack a 'debuff', Wowhead a 'buff'; detect by name 'Arcane Blast'.",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Blast",
+   "spell_id": 1239700,
+   "tree": "Arcane",
+   "kind": "rank",
+   "notes": "Wowhead Forever links this id (rank 5 per bindonforever).",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Missile Barrage",
+   "spell_id": 400588,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "Row 2, 2 ranks at launch: Arcane Blast 20/40%, Arcane Wrath/Fireball/Frostbolt/Frostfire Bolt 10/20% chance; next Arcane Missiles 50% faster channel, free, missiles every 0.5 s. Proc aura id unsourced; detect by name.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Concentration",
+   "spell_id": 11213,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "2-10% chance for Clearcasting (next damage spell costs no mana). Clearcasting aura id not on a Forever page; detect by name 'Clearcasting'.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Wrath",
+   "spell_id": 1326079,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "16-pt slot at launch. Wowhead Forever overview links 1326082.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Meditation",
+   "spell_id": 18462,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "17/33/50% of mana regen continues while casting; requires Arcane Concentration.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Mind",
+   "spell_id": 11232,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "+Intellect and +20-100% Arcane crit damage bonus.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Presence of Mind",
+   "spell_id": 12043,
+   "tree": "Arcane",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Power",
+   "spell_id": 12042,
+   "tree": "Arcane",
+   "kind": "talent",
+   "notes": "Requires Presence of Mind. +30% damage and mana cost for 15 s (Wowhead abilities).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Improved Channeling",
+   "spell_id": 11237,
+   "tree": "Arcane",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Subtlety",
+   "spell_id": 11210,
+   "tree": "Arcane",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Heating Up",
+   "spell_id": 400624,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "Requires Pyroblast. Each stack cuts next Pyroblast cast 25% (3 stacks = 1.5 s); Fire Blast always grants a stack (2 on crit).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Heating Up",
+   "spell_id": 400625,
+   "tree": "Fire",
+   "kind": "buff",
+   "notes": "Buff id per bindonforever (client files): up to 3 stacks, 20 s. Also linked by Wowhead Forever pages.",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Pyroblast",
+   "spell_id": 11366,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "Talent spell; Icy Veins links trained rank 18809.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Combustion",
+   "spell_id": 11129,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "Charges returned to 3 (Oct 1 beta notes).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Blast Wave",
+   "spell_id": 11113,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "No longer requires Pyroblast. Icy Veins links 13021.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ignite",
+   "spell_id": 11119,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "Per-Mage debuff (40% of crit damage over 4 s).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ignite",
+   "spell_id": 412538,
+   "tree": "Fire",
+   "kind": "debuff",
+   "notes": "Season of Discovery Ignite debuff present in Forever client files (bindonforever).",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Improved Scorch",
+   "spell_id": 11095,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "Debuff benefits only the casting Mage.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Fire Vulnerability",
+   "spell_id": 22959,
+   "tree": "Fire",
+   "kind": "debuff",
+   "notes": "Improved Scorch debuff: 'Increases Fire damage taken from the Mage by 3% per stack' (bindonforever).",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Impact",
+   "spell_id": 11103,
+   "tree": "Fire",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Fire Power",
+   "spell_id": 11124,
+   "tree": "Fire",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Accelerant",
+   "spell_id": 11069,
+   "tree": "Fire",
+   "kind": "talent",
+   "notes": "Formerly Improved Fireball; also speeds Frostfire Bolt and Arcane Wrath.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Incineration",
+   "spell_id": 18459,
+   "tree": "Fire",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Improved Fire Blast",
+   "spell_id": 11078,
+   "tree": "Fire",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Master of Elements",
+   "spell_id": 29074,
+   "tree": "Fire",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ice Lance",
+   "spell_id": 1312002,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "11-pt gold medal. Launch: 8 s cooldown shared with Fire Blast, +300% vs Frozen. Icy Veins guides link 400640; Wowhead Frost leveling page links 1240047.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Fingers of Frost",
+   "spell_id": 400647,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "Requires Ice Lance. Chill effects: 15% chance for 1/2 charges; spells treat target as Frozen.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Fingers of Frost",
+   "spell_id": 400669,
+   "tree": "Frost",
+   "kind": "buff",
+   "notes": "Proc buff id per bindonforever; Wowhead Frost rotation timeline labels 400669 'FingersofFrostProc'.",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frostbite",
+   "spell_id": 11071,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "Freeze proc on chill hits. Freeze aura id unsourced; detect by name.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Winter's Chill",
+   "spell_id": 11180,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "Launch: stacks to 5, consumed by Cone of Cold (+20% CoC damage per stack, Nov 2 notes).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Winter's Chill",
+   "spell_id": 12579,
+   "tree": "Frost",
+   "kind": "debuff",
+   "notes": "Debuff id per bindonforever (client files).",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Shatter",
+   "spell_id": 11170,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ice Block",
+   "spell_id": 11958,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "16-pt Frost gold medal.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Cold Snap",
+   "spell_id": 12472,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "21-pt Frost gold medal, 10 min cooldown.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ice Barrier",
+   "spell_id": 11426,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "31-pt Frost. Launch: +15% Frost damage for 1 min on cast and +5% while the barrier holds. Icy Veins links 13033; Wowhead links 13032/13033.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frigid Power",
+   "spell_id": 1326891,
+   "tree": "Frost",
+   "kind": "buff",
+   "notes": "Ice Barrier damage buff; Icy Veins: recast Ice Barrier when Frigid Power has <=3 s left.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Precision",
+   "spell_id": 29438,
+   "tree": "Frost",
+   "kind": "talent",
+   "notes": "Launch: 2/4/6% hit with all spells. Some Icy Veins pages link 13705 instead.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Improved Blizzard",
+   "spell_id": 11185,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Permafrost",
+   "spell_id": 11175,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ice Shards",
+   "spell_id": 11207,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frost Channeling",
+   "spell_id": 11160,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Improved Cone of Cold",
+   "spell_id": 11190,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arctic Reach",
+   "spell_id": 16757,
+   "tree": "Frost",
+   "kind": "talent",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Evocation",
+   "spell_id": 12051,
+   "kind": "spell",
+   "notes": "8 s channel.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Mana Gems",
+   "spell_id": 1318827,
+   "kind": "spell",
+   "notes": "Forever spell named 'Mana Gems' on Icy Veins leveling pages; relation to Conjure Mana Agate/Jade/Citrine/Ruby unclear (conflict).",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frostfire Bolt",
+   "spell_id": 401502,
+   "kind": "spell",
+   "notes": "Rank 1 (level 40); DoT + slow debuff name not sourced.",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Comprehend Scroll",
+   "spell_id": 1296017,
+   "kind": "spell",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-overview",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Polymorph: Pig",
+   "spell_id": 28285,
+   "kind": "spell",
+   "notes": "Reward from Fragmented Magic (level 60 class quest); cosmetic Polymorph variant.",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Mage Armor",
+   "spell_id": 22783,
+   "kind": "buff",
+   "notes": "Top rank; 50% regen while casting.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ice Armor",
+   "spell_id": 10220,
+   "kind": "buff",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Frost Armor",
+   "spell_id": 7301,
+   "kind": "buff",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Intellect",
+   "spell_id": 10157,
+   "kind": "buff",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Shoot",
+   "spell_id": 5019,
+   "kind": "spell",
+   "notes": "Wand auto-attack.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  }
+ ],
+ "teleports_portals": [
+  {
+   "name": "Teleport: Stormwind",
+   "spell_id": 3561,
+   "kind": "teleport",
+   "faction": "Alliance",
+   "level": 20,
+   "city": "Stormwind",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Ironforge",
+   "spell_id": 3562,
+   "kind": "teleport",
+   "faction": "Alliance",
+   "level": 20,
+   "city": "Ironforge",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Darnassus",
+   "spell_id": 3565,
+   "kind": "teleport",
+   "faction": "Alliance",
+   "level": 30,
+   "city": "Darnassus",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Orgrimmar",
+   "spell_id": 3567,
+   "kind": "teleport",
+   "faction": "Horde",
+   "level": 20,
+   "city": "Orgrimmar",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Undercity",
+   "spell_id": 3563,
+   "kind": "teleport",
+   "faction": "Horde",
+   "level": 20,
+   "city": "Undercity",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Thunder Bluff",
+   "spell_id": 3566,
+   "kind": "teleport",
+   "faction": "Horde",
+   "level": 30,
+   "city": "Thunder Bluff",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Teleport: Dalaran",
+   "spell_id": 1297659,
+   "kind": "teleport",
+   "faction": "Alliance",
+   "level": 50,
+   "city": "Dalaran",
+   "reagent": "Rune of Teleportation",
+   "reagent_status": "confirmed",
+   "notes": "db.icy-veins: Requires Level 50, Faction Alliance, Reagents: Rune of Teleportation, 10 s cast, 120 Mana, added in 1.60.1.70532. Icy Veins Frost leveling milestones list it at 40 (conflict).",
+   "source_url": "https://db.icy-veins.com/wow-forever/spells/1297659",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Stormwind",
+   "spell_id": 10059,
+   "kind": "portal",
+   "faction": "Alliance",
+   "level": 40,
+   "city": "Stormwind",
+   "reagent": "Rune of Portals",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Ironforge",
+   "spell_id": 11416,
+   "kind": "portal",
+   "faction": "Alliance",
+   "level": 40,
+   "city": "Ironforge",
+   "reagent": "Rune of Portals",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Darnassus",
+   "spell_id": 11419,
+   "kind": "portal",
+   "faction": "Alliance",
+   "level": 50,
+   "city": "Darnassus",
+   "reagent": "Rune of Portals",
+   "reagent_status": "classic-only",
+   "notes": "50 per Icy Veins Frost leveling milestones and Wowhead leveling/abilities pages; the Icy Veins Arcane/Fire PvE guides say all three portals at 40 (conflict). Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Orgrimmar",
+   "spell_id": 11417,
+   "kind": "portal",
+   "faction": "Horde",
+   "level": 40,
+   "city": "Orgrimmar",
+   "reagent": "Rune of Portals",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Undercity",
+   "spell_id": 11418,
+   "kind": "portal",
+   "faction": "Horde",
+   "level": 40,
+   "city": "Undercity",
+   "reagent": "Rune of Portals",
+   "reagent_status": "classic-only",
+   "notes": "Faction and level from the Icy Veins Arcane PvE guide (Alliance/Horde lists); level also matches the Icy Veins Frost leveling milestones. Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Portal: Thunder Bluff",
+   "spell_id": 11420,
+   "kind": "portal",
+   "faction": "Horde",
+   "level": 50,
+   "city": "Thunder Bluff",
+   "reagent": "Rune of Portals",
+   "reagent_status": "classic-only",
+   "notes": "50 per Icy Veins Frost leveling milestones and Wowhead leveling/abilities pages; the Icy Veins Arcane/Fire PvE guides say 40 (conflict). Reagent not confirmed on a Forever page (Wowhead only says portals/teleports 'require more reagents').",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  }
+ ],
+ "milestones": {
+  "items": [
+   {
+    "level": 4,
+    "what": "Conjure Water, Frostbolt (Wowhead trainer table)",
+    "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 10,
+    "what": "Talents start (Blizzard). Skyborne class quest Boughs in the Wind (breadcrumb Speak with Belann from Anathamaas Aetherwind, Valanaar) - Windbough Wand",
+    "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 13,
+    "what": "Greater Magic Wand (Icy Veins milestone)",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 14,
+    "what": "Arcane Explosion",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 15,
+    "what": "Class quest chain Manaweave Robe (Stormwind)",
+    "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 20,
+    "what": "Blink, Evocation, Teleport: Stormwind + Ironforge (Alliance) / Orgrimmar + Undercity (Horde); Arcane Blast (11-pt Arcane talent)",
+    "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 25,
+    "what": "16-point gold-medal talents (Arcane Wrath / Ice Block); Icy Veins Arcane table still lists Missile Barrage here",
+    "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 26,
+    "what": "Cone of Cold; class quest chain Astral Knot Garment",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 27,
+    "what": "Ice Lance (11-pt Frost talent, Icy Veins Frost leveling build)",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 28,
+    "what": "Conjure Mana Agate / 'Mana Gems'",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 30,
+    "what": "Teleport: Darnassus (Alliance) / Thunder Bluff (Horde); Ice Armor (Wowhead table); 21-point talent; Mage's Wand class chain (Icefury / Nether Force / Ragefire Wand)",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 34,
+    "what": "Mage Armor (Wowhead table); Arcane Meditation + Mage Armor = 100% Spirit regen in combat (Icy Veins)",
+    "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 35,
+    "what": "Celestial Power class chain (Celestial Orb / Celestial Stave)",
+    "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 37,
+    "what": "Fingers of Frost (21-pt Frost talent, Icy Veins Frost leveling build)",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 38,
+    "what": "Conjure Mana Jade",
+    "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 40,
+    "what": "Frostfire Bolt; Portal: Stormwind/Ironforge (Alliance), Orgrimmar/Undercity (Horde); 31-point talent; Dual Specialization",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 47,
+    "what": "Ice Barrier (31-pt Frost talent, Icy Veins Frost leveling build)",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 48,
+    "what": "Conjure Mana Citrine",
+    "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 50,
+    "what": "Portal: Darnassus / Thunder Bluff; Teleport: Dalaran (Alliance, db.icy-veins); Destroy Morphaz class chain",
+    "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 58,
+    "what": "Conjure Mana Ruby",
+    "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "checked": "2026-11-10"
+   },
+   {
+    "level": 60,
+    "what": "Fragmented Magic class chain (Polymorph: Pig)",
+    "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+    "checked": "2026-11-10"
+   }
+  ],
+  "talent_milestones": "11/16/21/31 points (gold medal); 16-point milestone is new in Forever (Blizzard deep dive)",
+  "trainer_costs": "Total cost to train class abilities 1-60 is between 206 and 207 gold for all classes; most abilities learned at the same level cost the same (Blizzard dev notes, Nov 3). Per-rank costs not sourced.",
+  "respec": "Talents (incl. Legacy talents) are changed at a class trainer in a major city; Dual Specialization at level 40 (Blizzard deep dive).",
+  "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+  "checked": "2026-11-10"
+ },
+ "talent_changes": [
+  {
+   "tree": "Baseline",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Frostfire Bolt: new level-40 spell, 3 s cast, counts as Fire and Frost, uses higher Fire/Frost spell damage and lower target resistance, DoT + movement slow.",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Baseline",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Comprehension: new Mage-only minor tradeskill; Comprehend Scroll (General tab) reads scrolls dropped in the world.",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Baseline",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Cone of Cold duration decreased (anti-farming).",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Baseline",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Mage Armor: mana regeneration bonus from Spirit increased (50% while casting per bindonforever/Wowhead).",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Baseline",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Magic Attunement moved to baseline.",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Baseline",
+   "stage": "launch notes (2026-11-03, 'Updated November 2')",
+   "change": "Frost Blast (added Oct 16 at level 24) removed.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Baseline",
+   "stage": "launch notes (2026-11-03, 'Updated November 2')",
+   "change": "Various talents no longer have a reduced proc chance from low-rank spells; the penalty still applies to Blizzard (reduced chance to trigger Arcane Concentration, Frostbite and Fingers of Frost when the rank was learned >12 levels below the caster).",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Arcane",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Arcane Blast: new 11-pt gold medal, 2.5 s cast, buff to other spells + own mana cost, 4 stacks, 8 s or until another spell is cast.",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Arcane",
+   "stage": "beta notes (2026-10-16)",
+   "change": "Arcane Blast redesigned: 1.5 s cast, +15% Intellect as spell damage per stack, 15 s from first application. Arcane Wrath added as 16-pt gold medal (3.5 s cast, +5% max mana as spell power, 6 s CD). Missile Barrage moved to row 1 as a 2-pt talent.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Arcane",
+   "stage": "launch notes (2026-11-03, 'Updated November 2')",
+   "change": "Arcane Blast: mana cost increase per stack 100% (was 175%), 12% of Intellect as spell damage per stack (was 15%), duration 18 s. Missile Barrage moved to row 2; Arcane Resilience to row 1 (3 pts, 75% Int as armor); Arcane Focus removed (merged into Precision); Clearcasting no longer consumed by Arcane Missiles while Missile Barrage is active.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Arcane",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Arcane Meditation now requires Arcane Concentration; Arcane Power requires Presence of Mind; Arcane Instability no longer requires Presence of Mind; Arcane Mind increases Intellect and Arcane crit damage; Arcane Impact boosts crit of all Arcane spells; Arcane Geometry new (range).",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Arcane",
+   "stage": "hotfix (2026-11-06)",
+   "change": "Arcane Blast duration fixed to 18 s (hotfix).",
+   "source_url": "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Fire",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Heating Up (new row 4, requires Pyroblast): crits with Fireball/Frostfire Bolt/Fire Blast/Scorch cut next Pyroblast cast 25%/stack, max 3 (1.5 s Pyroblast). Ignite per-Mage. Improved Scorch only benefits the caster. Blast Wave no longer requires Pyroblast. Incineration also affects Ice Lance and Arcane Blast.",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Fire",
+   "stage": "beta notes (2026-10-16)",
+   "change": "Heating Up always gains a charge from Fire Blast (2 on crit) and is not consumed when Presence of Mind is used; Wake of Fire reverted to Improved Fire Blast (+8/15 yd range, no kill bonus); Fire Power redesigned (1/2/3% per Fire effect, max 12%).",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Fire",
+   "stage": "launch notes (2026-11-03, 'Updated November 2')",
+   "change": "Improved Fireball renamed Accelerant (also -0.5 s on Arcane Wrath); Incineration 5 pts for 10% crit; Critical Mass back to 3 pts (6%); Improved Fire Blast moved to row 3.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Frost",
+   "stage": "deep dive (2026-10-07)",
+   "change": "Ice Lance new 11-pt gold medal (+300% vs Frozen); Fingers of Frost new row 5 (requires Ice Lance); Ice Block 16-pt; Cold Snap 21-pt with 10 min CD; Improved Blizzard slow max 40%; Permafrost %-based; Winter's Chill self-only; Shatter no longer requires Improved Frost Nova.",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "tree": "Frost",
+   "stage": "beta notes (2026-10-16)",
+   "change": "Ice Lance vs Frozen reduced to +200%; Winter's Chill redesigned to empower Cone of Cold (stacks to 5, consumed by Cone of Cold); Cone of Cold slows first 4 targets 10% more and 3 s longer.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "tree": "Frost",
+   "stage": "launch notes (2026-11-03, 'Updated November 2')",
+   "change": "Piercing Ice removed; Ice Barrier +15% Frost damage for 1 min on cast and +5% while it holds; Frost Warding boosts Ice Barrier/Frost Ward absorbs; Elemental Precision renamed Precision (3 pts, 2/4/6% hit with all spells); Ice Lance 8 s cooldown shared with Fire Blast, back to +300% vs Frozen; Winter's Chill +20% Cone of Cold damage per stack.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  }
+ ],
+ "builds": [
+  {
+   "spec": "Arcane",
+   "purpose": "Leveling",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-0022277666aCC2266eddd4fggggghhh4ikkkkkllllljjmmrumC~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "Leveling",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-0022277666aCC2266dddkkkkkllllljjmmrummmsxwwwsyyysvz~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d.",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Leveling",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CC0022277BBBEEEBBJDDDDMMMDIPPKKHHHLGOR44CNNNQQQQQFF~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d. Page: for leveling and dungeons, viable end-game dungeon build; switch at 60 for raiding.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Arcane",
+   "purpose": "Raid/Dungeon",
+   "variant": "Arcane Fire",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-22222446666677999adddegggggfhhhillkkkkCCCmmmmmkrjju~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "Raid/Dungeon (AoE)",
+   "variant": "Frostfire Bolt",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CCCAADDDDDFHHHJMMMLEPPlllllkkkkkmmmmmrjjuvssswwwyyy~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d.",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "Raid/Dungeon (single target)",
+   "variant": "Fire Arcane (Deep Fire / Combustion)",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-22222446666677adkkkkklllllmmmmmrjjvvvussswwwyyyzCCC~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d.",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Overworld/Dungeon",
+   "variant": "Deep Frost 9/0/42",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-CCCBBBBBDDDDDEEEFFGHIJMMMLKKONNPPRNQQQQQ222224477HH~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Raid",
+   "variant": "Cone of Cold - Arcane Meditation 18/0/33",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-003334466666558ddBBBBBCCCDDDDDJKKMMMPPONNNQQQQQLRId~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d. Use during progression.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Raid",
+   "variant": "Cone of Cold - Incineration 10/5/36",
+   "talent_calc_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator#tc-0033344666BBBBBCCCDDDDDJKKMMMPPONNNQQQQQLRIkkkkkHHH~70755-d1899b7d",
+   "notes": "Published as a protocol-relative link (//www.icy-veins.com/...); https: added. Calculator data version 70755-d1899b7d. Highest DPS, least threat; switch to it if mana is no issue.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Arcane",
+   "purpose": "Leveling",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/vkndmh250205223100311531-550000002-003_t0/0A2c0bbbGDbkbfffqffP2c0SrJT1BA0v2c0H1J",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "Leveling",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/vkndmh0502052001003-55520301200103031-002_t0/1B2c1AhJccnccc0BGD1DQfSfft2c0FkP",
+   "notes": "URL built from the page's [talent=mage/...] embed code. Only takes 4% hit (enough vs same-level mobs).",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Leveling 1-33",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/vkndmh2--0525300011003002_t0/0A2BEcckjdddPddS",
+   "notes": "URL built from the page's [talent=mage/...] embed code. Tab 'Levels 1-33' (24 points by design).",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Leveling 33-60",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/vkndmh2032050030003--053500031100331251_t0/2BDcckjcPhhSrQttttvth0ACDFJP",
+   "notes": "URL built from the page's [talent=mage/...] embed code. Tab 'Levels 33-60' (respec after Fingers of Frost).",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Arcane",
+   "purpose": "Raid/Dungeon",
+   "variant": "Arcane Fire",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v2050205203100311531-525000012001-003_t0/2C1bbAChJn0BDFGJkqPrSTv",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Arcane",
+   "purpose": "Raid (Fire-immune bosses)",
+   "variant": "Arcane-only",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v2050205223101311531-5500003-003_t0/0BDFGHJkqPnrSTv1AB2C1G",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Arcane",
+   "purpose": "Raid (long fights, concept)",
+   "variant": "Mana sustain",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v205020520310020153-505002012301-003_t0/2C0BDFGkppJSrT1AChJffKn",
+   "notes": "URL built from the page's [talent=mage/...] embed code. Gives up Arcane Power; author calls it a concept until gear is tested.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Arcane",
+   "purpose": "PvP",
+   "variant": "Pyro PoM Pyro",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v2050205220102211531-505230012001_t0/0BffffgfgkDNHrppTssssq1DcccchJcAnE0vs",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "Raid/Dungeon",
+   "variant": "Deep Fire",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v20502052001001-55500001230133031-003_t0/1bbb2C1bbChaaaanKJQpSppta0BGDfkffffp",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "Raid/Dungeon",
+   "variant": "Frostfire Bolt",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v2-5550000123011303-2035000311113002_t0/2C1B2DkHPn1ChJaanKpQS2jAmS1aaa",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "purpose": "PvP",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/v2050205220002201-35523001230103-002_t0/1aaaBChJnqqe0BfDfGfffNpp1K0rH1q2cc1Dee",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "Raid/Dungeon",
+   "variant": "Deep Frost",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/vkndmh2032050030003--053500031100331251_t0/2BCDkjHPsQrttttvt0ACDFJP2s",
+   "notes": "URL built from the page's [talent=mage/...] embed code. Listed under both 'Raid' and 'Dungeon'.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "purpose": "PvP",
+   "talent_calc_url": "https://www.wowhead.com/forever/talent-calc/mage/vkndmh2032202001--053532301101331251_t0/2BCDkjPsQrttttvt0ACD2sE0E2Fggng0kG",
+   "notes": "URL built from the page's [talent=mage/...] embed code.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/talent-builds-pve-dps",
+   "checked": "2026-11-10"
+  }
+ ],
+ "rotations": {
+  "arcane": "Arcane Fire (raid): open Pyroblast, build 4 Arcane Blast stacks and refresh within 18 s. Priority: Pyroblast at 3 Heating Up > Fire Blast on cooldown (until 3 Heating Up) > Arcane Wrath on cooldown > Arcane Missiles with Missile Barrage > Arcane Blast to keep 4 stacks. AoE: pre-pull Flamestrike, Blink in, Arcane Explosion on cooldown, Presence of Mind + Flamestrike when the first one ends (8 s).",
+  "arcane_leveling": "Max range: Frostbolt (slow) > Arcane Wrath > Arcane Blast 1-3x until Missile Barrage > Arcane Missiles > Frost Nova > Arcane Wrath > Fire Blast > wand to finish. Let Arcane Blast drop (cost +100% per stack). Use Clearcasting on multi-stack Arcane Blast or Arcane Wrath. AoE: gather, Frost Nova, Cone of Cold, Arcane Explosion spam (not on 3 or fewer mobs).",
+  "fire": "Deep Fire (Combustion): open Pyroblast, Scorch to 5 Improved Scorch stacks (refresh within 30 s). Priority: Pyroblast at 3 Heating Up > Fire Blast on cooldown (1 stack guaranteed, 2 on crit; each stack -1.5 s Pyroblast cast) > Arcane Blast (keep 1-2 stacks) > Arcane Missiles on Missile Barrage > Fireball filler > Scorch to maintain the debuff. AoE: Flamestrike, Blink in, Blast Wave on cooldown > Cone of Cold > Flamestrike (8 s) > Arcane Explosion.",
+  "fire_leveling": "Max range: Frostfire Bolt / Pyroblast (Fireball before you have them) > Arcane Blast 1-2x until Missile Barrage > Arcane Missiles > Pyroblast at 3 Heating Up > Fire Blast on cooldown > Scorch filler > wand under ~15% or when out of mana. AoE: Frost Nova, Flamestrike, Blast Wave (or Cone of Cold), Arcane Explosion; don't overlap slows; Mana Shield only near death.",
+  "frostfire": "Frostfire Bolt build: open Pyroblast, Scorch to 5 stacks. Pyroblast at 3 Heating Up > Fire Blast on cooldown > Frostfire Bolt until 3 Heating Up > Scorch to maintain. On Fingers of Frost, batch an instant (preferably Fire Blast) with the 2nd stack. AoE: Flamestrike, Blink in, Blast Wave > Cone of Cold (can proc Fingers of Frost) > Flamestrike > Arcane Explosion.",
+  "frost": "Pre-pull: Arcane Intellect, Ice Armor or Mage Armor, Ice Barrier at pull, precast Frostbolt. Priority: at 5 Winter's Chill stacks batch Cone of Cold with the next Frostbolt > at 1 Fingers of Frost stack batch Ice Lance with Frostbolt > (Frostbite builds) frozen target: batch Ice Lance > recast Ice Barrier when Frigid Power has <=3 s > Frostbolt. AoE 3+: Cone of Cold on cooldown, Cold Snap to reset it, Blizzard filler.",
+  "frost_leveling": "Max-range Frostbolt; keep Arcane Blast at 1 stack (buff); react to procs: Frostbite freeze on hit -> Frostbolt + batched Ice Lance (Cone of Cold if Ice Lance is on cooldown); Fingers of Frost on cast -> Frostbolt, then Frostbolt + batched Ice Lance on the 2nd stack. Arcane Missiles on Missile Barrage. Frost Nova and back up when enemies close in; Fire Blast or wand to finish.",
+  "mana": "Five-second rule: spending mana stops Spirit regen for 5 s (wand finishing lets it resume sooner; wanding doesn't interrupt it). Mage Armor keeps 50% of Spirit regen while casting and Arcane Meditation 3/3 another 50% (100% in combat from ~level 34, Icy Veins). Regen formula 13 + Spirit/4 every 2 s (Wowhead). MP5 always applies. Evocation restores most mana over 8 s (use near ~5% mana; Spirit improves it). Conjure food, water and a mana gem at login; Major Mana Potion has a 2 min cooldown.",
+  "sources": {
+   "arcane": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "arcane_leveling": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "fire": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "fire_leveling": "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+   "frostfire": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "frost": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "frost_leveling": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "mana": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities ; https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority ; https://www.wowhead.com/forever/guide/classes/mage/arcane/stat-priority-pve-dps"
+  },
+  "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+  "checked": "2026-11-10"
+ },
+ "stat_priority": [
+  {
+   "spec": "Arcane",
+   "priority": "Hit (to 17%) > Spell power > Crit > Intellect > Spirit > MP5",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Fire",
+   "priority": "Hit (to 17%) > Spell power > Crit > Intellect > Spirit > MP5",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-stat-priority",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Frost",
+   "priority": "Hit (to 17%) > Spell power > Crit > Intellect > MP5 > Spirit",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-stat-priority",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Leveling",
+   "priority": "Hit (4% vs same level) > Spell damage (Frost damage) > Crit > Spirit > Intellect > Stamina",
+   "notes": "Order in which the Icy Veins Frost leveling page presents the stats ('capping your Hit Chance is a high priority'; 4% from Precision prevents misses vs same level).",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "spec": "Conversions",
+   "priority": "1 Int = 15 mana; 54 Int = 1% spell crit",
+   "notes": "Icy Veins (all three stat pages). Wowhead says 59.5 Int (Arcane/Fire pages) or 60 Int (Frost page) per 1% crit - conflict.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority",
+   "checked": "2026-11-10"
+  }
+ ],
+ "quests": [
+  {
+   "type": "breadcrumb",
+   "level": 10,
+   "races": "Skyborne",
+   "faction": "Alliance",
+   "name": "Speak with Belann",
+   "quest_id": 93791,
+   "zone": "Zephras Isle (Valanaar) 65.8, 80.4",
+   "start_npc": "Anathamaas Aetherwind (Mage trainer)",
+   "notes": "Breadcrumb from the Mage trainer in Valanaar.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Speak+with+Belann",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 10,
+   "races": "Skyborne",
+   "faction": "Alliance",
+   "name": "Boughs in the Wind",
+   "quest_id": 93797,
+   "zone": "Zephras Isle 62.8, 77.4",
+   "start_npc": "Belann Windwood",
+   "reward": "Windbough Wand + Elixir of Minor Spirit",
+   "reward_item_id": 263430,
+   "reward_item_ids": [
+    263430,
+    250344
+   ],
+   "notes": "Quest item at 48.5, 68.2. Wand at level 10 - 'definitely worth doing'. Wowhead search data: item rewards 263430 x1, 250344 x5.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Boughs+in+the+Wind",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 10,
+   "races": "Human",
+   "faction": "Alliance",
+   "name": "Speak with Jennea",
+   "quest_id": 1860,
+   "zone": "Elwynn Forest (Goldshire) 43.2, 66.2",
+   "start_npc": "Zaldimar Wefhellt (Mage trainer)",
+   "id_source": "https://www.wowhead.com/forever/search?q=Speak+with+Jennea",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 10,
+   "races": "Human",
+   "faction": "Alliance",
+   "name": "Mirror Lake",
+   "quest_id": 1861,
+   "zone": "Stormwind City 49, 86",
+   "start_npc": "Jennea Cannon",
+   "reward": "Ley Orb or Ley Staff",
+   "reward_item_ids": [
+    7508,
+    9513
+   ],
+   "id_source": "https://www.wowhead.com/forever/search?q=Mirror+Lake",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 10,
+   "races": "Gnome",
+   "faction": "Alliance",
+   "name": "Speak with Bink",
+   "quest_id": 1879,
+   "zone": "Dun Morogh (Kharanos) 47.5, 52.1",
+   "start_npc": "Magis Sparkmantle (Mage trainer)",
+   "id_source": "https://www.wowhead.com/forever/search?q=Speak+with+Bink",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 10,
+   "races": "Gnome",
+   "faction": "Alliance",
+   "name": "Mage-tastic Gizmonitor",
+   "quest_id": 1880,
+   "zone": "Ironforge 27, 8",
+   "start_npc": "Bink",
+   "reward": "Ley Orb or Ley Staff",
+   "reward_item_ids": [
+    7508,
+    9513
+   ],
+   "notes": "Icy Veins item ids; Wowhead search data lists choices 7507/9514 (conflict).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Mage-tastic+Gizmonitor",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 15,
+   "races": "Human/Gnome",
+   "faction": "Alliance",
+   "name": "Report to Jennea",
+   "quest_id": 1919,
+   "zone": "Elwynn Forest (Goldshire) 43.2, 66.2",
+   "start_npc": "Zaldimar Wefhellt / Magis Sparkmantle",
+   "notes": "Optional breadcrumb; Skyborne go straight to Jennea Cannon.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Report+to+Jennea",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 15,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "Investigate the Blue Recluse",
+   "quest_id": 1920,
+   "zone": "Stormwind City 49, 86",
+   "start_npc": "Jennea Cannon",
+   "id_source": "https://www.wowhead.com/forever/search?q=Investigate+the+Blue+Recluse",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 15,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "Gathering Materials",
+   "quest_id": 1921,
+   "zone": "Stormwind City 49, 86",
+   "start_npc": "Jennea Cannon",
+   "notes": "10 Linen Cloth + 6 Charged Rift Gems (Silver Stream Mine, Loch Modan).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Gathering+Materials",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 15,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "Manaweave Robe",
+   "quest_id": 1941,
+   "zone": "Stormwind City 51.8, 83.5",
+   "start_npc": "Wynne Larson",
+   "reward": "Manaweave Robe",
+   "reward_item_id": 7509,
+   "id_source": "https://www.wowhead.com/forever/search?q=Manaweave+Robe",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "High Sorcerer Andromath",
+   "quest_id": 1939,
+   "zone": "Stormwind City 49, 86",
+   "start_npc": "Jennea Cannon",
+   "id_source": "https://www.wowhead.com/forever/search?q=High+Sorcerer+Andromath",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "Ur's Treatise on Shadow Magic",
+   "quest_id": 1938,
+   "zone": "Stormwind City 48.7, 87.6",
+   "start_npc": "High Sorcerer Andromath",
+   "notes": "Book in the Redridge tower at 79, 49 (Tower of Ilgalar); dangerous solo at level.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Ur%27s+Treatise+on+Shadow+Magic",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "Pristine Spider Silk",
+   "quest_id": 1940,
+   "zone": "Stormwind City 48.7, 87.6",
+   "start_npc": "High Sorcerer Andromath",
+   "notes": "8 Pristine Spider Silk from Duskwood spiders (Raven Hill Cemetery).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Pristine+Spider+Silk",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Human/Gnome/Skyborne",
+   "faction": "Alliance",
+   "name": "Astral Knot Garment",
+   "quest_id": 1942,
+   "zone": "Stormwind City 51.8, 83.5",
+   "start_npc": "Wynne Larson",
+   "reward": "Astral Knot Robe or Astral Knot Blouse",
+   "reward_item_ids": [
+    7511,
+    9516
+   ],
+   "id_source": "https://www.wowhead.com/forever/search?q=Astral+Knot+Garment",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 10,
+   "races": "Orc/Troll",
+   "faction": "Horde",
+   "name": "Speak with Un'thuwa",
+   "quest_id": 1883,
+   "zone": "Orgrimmar (Valley of Spirits) 39, 86",
+   "start_npc": "Uthel'nay (Mage trainer)",
+   "id_source": "https://www.wowhead.com/forever/search?q=Speak+with+Un%27thuwa",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 10,
+   "races": "Orc/Troll",
+   "faction": "Horde",
+   "name": "Ju-Ju Heaps",
+   "quest_id": 1884,
+   "zone": "Durotar 56, 75",
+   "start_npc": "Un'Thuwa",
+   "reward": "Ley Orb or Ley Staff",
+   "reward_item_ids": [
+    7508,
+    9513
+   ],
+   "id_source": "https://www.wowhead.com/forever/search?q=Ju-Ju+Heaps",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 10,
+   "races": "Undead",
+   "faction": "Horde",
+   "name": "Speak with Anastasia",
+   "quest_id": 1881,
+   "zone": "Tirisfal Glades (Brill) 62, 52.5",
+   "start_npc": "Cain Firesong (Mage trainer)",
+   "id_source": "https://www.wowhead.com/forever/search?q=Speak+with+Anastasia",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 10,
+   "races": "Undead",
+   "faction": "Horde",
+   "name": "The Balnir Farmstead",
+   "quest_id": 1882,
+   "zone": "The Undercity 85, 10",
+   "start_npc": "Anastasia Hartwell",
+   "reward": "Ley Orb or Ley Staff",
+   "reward_item_ids": [
+    7508,
+    9513
+   ],
+   "notes": "Icy Veins item ids; Wowhead search data lists choices 7507/9514 (conflict).",
+   "id_source": "https://www.wowhead.com/forever/search?q=The+Balnir+Farmstead",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 15,
+   "races": "Orc/Troll",
+   "faction": "Horde",
+   "name": "Report to Anastasia",
+   "quest_id": 1959,
+   "zone": "Orgrimmar (Valley of Spirits) 39, 86",
+   "start_npc": "Uthel'nay",
+   "notes": "Optional breadcrumb.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Report+to+Anastasia",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 15,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Investigate the Alchemist Shop",
+   "quest_id": 1960,
+   "zone": "The Undercity 85, 10",
+   "start_npc": "Anastasia Hartwell",
+   "id_source": "https://www.wowhead.com/forever/search?q=Investigate+the+Alchemist+Shop",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 15,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Gathering Materials",
+   "quest_id": 1961,
+   "zone": "The Undercity 85, 10",
+   "start_npc": "Anastasia Hartwell",
+   "notes": "10 Linen Cloth + 6 Dalaran Mana Gems (Ambermill, Silverpine Forest).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Gathering+Materials",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 15,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Spellfire Robes",
+   "quest_id": 1962,
+   "zone": "The Undercity 70.8, 30.7",
+   "start_npc": "Josef Gregorian",
+   "reward": "Lesser Spellfire Robes",
+   "reward_item_id": 7510,
+   "id_source": "https://www.wowhead.com/forever/search?q=Spellfire+Robes",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 26,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Speak with Deino",
+   "quest_id": 1943,
+   "zone": "The Undercity 85, 10",
+   "start_npc": "Anastasia Hartwell",
+   "id_source": "https://www.wowhead.com/forever/search?q=Speak+with+Deino",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Waters of Xavian",
+   "quest_id": 1944,
+   "zone": "Orgrimmar (Valley of Spirits) 38.4, 86.1",
+   "start_npc": "Deino",
+   "id_source": "https://www.wowhead.com/forever/search?q=Waters+of+Xavian",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Laughing Sisters",
+   "quest_id": 1945,
+   "zone": "Orgrimmar (Valley of Spirits) 38.4, 86.1",
+   "start_npc": "Deino",
+   "id_source": "https://www.wowhead.com/forever/search?q=Laughing+Sisters",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 26,
+   "races": "Orc/Troll/Undead",
+   "faction": "Horde",
+   "name": "Nether-lace Garment",
+   "quest_id": 1946,
+   "zone": "The Barrens (Crossroads) 52.2, 31.7",
+   "start_npc": "Kil'hala",
+   "reward": "Nether-lace Robe or Nether-lace Tunic",
+   "reward_item_ids": [
+    7512,
+    9515
+   ],
+   "id_source": "https://www.wowhead.com/forever/search?q=Nether-lace+Garment",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 30,
+   "races": "All",
+   "faction": "Both",
+   "name": "Journey to the Marsh",
+   "quest_id": 1947,
+   "zone": "Any capital city",
+   "start_npc": "Any capital city Mage trainer",
+   "notes": "Level-40 difficulty chain; Alliance fly to Theramore Isle, Horde to Brackenwall Village.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Journey+to+the+Marsh",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 30,
+   "races": "All",
+   "faction": "Both",
+   "name": "Hidden Secrets",
+   "quest_id": 1949,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "id_source": "https://www.wowhead.com/forever/search?q=Hidden+Secrets",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 30,
+   "races": "All",
+   "faction": "Both",
+   "name": "Get the Scoop",
+   "quest_id": 1950,
+   "zone": "Thousand Needles (Shimmering Flats) 78.3, 75.7",
+   "start_npc": "Magus Tirth",
+   "id_source": "https://www.wowhead.com/forever/search?q=Get+the+Scoop",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 30,
+   "races": "All",
+   "faction": "Both",
+   "name": "Rituals of Power",
+   "quest_id": 1951,
+   "zone": "Thousand Needles (Shimmering Flats) 78.3, 75.7",
+   "start_npc": "Magus Tirth",
+   "notes": "Book in Scarlet Monastery Library (group).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Rituals+of+Power",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 30,
+   "races": "All",
+   "faction": "Both",
+   "name": "Items of Power",
+   "quest_id": 1948,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "notes": "Needs Jade + Bolt Charged Bramble (Arathi Highlands).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Items+of+Power",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 30,
+   "races": "All",
+   "faction": "Both",
+   "name": "Mage's Wand",
+   "quest_id": 1952,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "reward": "Icefury Wand, Nether Force Wand or Ragefire Wand",
+   "reward_item_ids": [
+    7514,
+    11263,
+    7513
+   ],
+   "id_source": "https://www.wowhead.com/forever/search?q=Mage%27s+Wand",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 35,
+   "races": "All",
+   "faction": "Both",
+   "name": "Return to the Marsh",
+   "quest_id": 1953,
+   "zone": "Any capital city",
+   "start_npc": "Any capital city Mage trainer",
+   "notes": "Every quest in the chain is level 40.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Return+to+the+Marsh",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 35,
+   "races": "All",
+   "faction": "Both",
+   "name": "The Infernal Orb",
+   "quest_id": 1954,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "id_source": "https://www.wowhead.com/forever/search?q=The+Infernal+Orb",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 35,
+   "races": "All",
+   "faction": "Both",
+   "name": "The Exorcism",
+   "quest_id": 1955,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "notes": "Level 40 elite demon, 3-minute timer.",
+   "id_source": "https://www.wowhead.com/forever/search?q=The+Exorcism",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 35,
+   "races": "All",
+   "faction": "Both",
+   "name": "Power in Uldaman",
+   "quest_id": 1956,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "notes": "Obsidian Sentinel (elite) in Uldaman.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Power+in+Uldaman",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 35,
+   "races": "All",
+   "faction": "Both",
+   "name": "Mana Surges",
+   "quest_id": 1957,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "notes": "Kill 12 Mana Surges in 10 minutes.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Mana+Surges",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 35,
+   "races": "All",
+   "faction": "Both",
+   "name": "Celestial Power",
+   "quest_id": 1958,
+   "zone": "Dustwallow Marsh 46, 57",
+   "start_npc": "Tabetha",
+   "reward": "Celestial Orb or Celestial Stave",
+   "reward_item_ids": [
+    7515,
+    9517
+   ],
+   "notes": "Icy Veins: take the orb (unique on-use effect).",
+   "id_source": "https://www.wowhead.com/forever/search?q=Celestial+Power",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "breadcrumb",
+   "level": 50,
+   "races": "All",
+   "faction": "Both",
+   "name": "Magecraft",
+   "quest_id": 8250,
+   "zone": "Any capital city",
+   "start_npc": "Any capital city Mage trainer",
+   "id_source": "https://www.wowhead.com/forever/search?q=Magecraft",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 50,
+   "races": "All",
+   "faction": "Both",
+   "name": "Magic Dust",
+   "quest_id": 8251,
+   "zone": "Azshara 29.2, 40.2",
+   "start_npc": "Archmage Xylem",
+   "id_source": "https://www.wowhead.com/forever/search?q=Magic+Dust",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 50,
+   "races": "All",
+   "faction": "Both",
+   "name": "The Siren's Coral",
+   "quest_id": 8252,
+   "zone": "Azshara 29.2, 40.2",
+   "start_npc": "Archmage Xylem",
+   "id_source": "https://www.wowhead.com/forever/search?q=The+Siren%27s+Coral",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 50,
+   "races": "All",
+   "faction": "Both",
+   "name": "Destroy Morphaz",
+   "quest_id": 8253,
+   "zone": "Azshara 29.2, 40.2",
+   "start_npc": "Archmage Xylem",
+   "reward": "Glacial Spike, Arcane Crystal Pendant or Fire Ruby",
+   "reward_item_ids": [
+    20035,
+    20036,
+    20037
+   ],
+   "notes": "Dungeon quest (Sunken Temple). Item ids from Wowhead search data; which id is which reward name is not stated.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Destroy+Morphaz",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 60,
+   "races": "All",
+   "faction": "Both",
+   "name": "Warlord Krellian",
+   "quest_id": 9362,
+   "zone": "Azshara 29.2, 40.2",
+   "start_npc": "Archmage Xylem",
+   "id_source": "https://www.wowhead.com/forever/search?q=Warlord+Krellian",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "class",
+   "level": 60,
+   "races": "All",
+   "faction": "Both",
+   "name": "Fragmented Magic",
+   "quest_id": 9364,
+   "zone": "Azshara 29.2, 40.2",
+   "start_npc": "Archmage Xylem",
+   "reward": "Polymorph: Pig (spell 28285)",
+   "notes": "Kill 50 Polymorph Clones; soloable at 60.",
+   "id_source": "https://www.wowhead.com/forever/search?q=Fragmented+Magic",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  }
+ ],
+ "class_trainers": {
+  "trainers": [
+   "Anathamaas Aetherwind (Valanaar, Zephras Isle)",
+   "Zaldimar Wefhellt (Goldshire, Elwynn Forest)",
+   "Magis Sparkmantle (Kharanos, Dun Morogh)",
+   "Uthel'nay (Orgrimmar, Valley of Spirits)",
+   "Cain Firesong (Brill, Tirisfal Glades)",
+   "Any capital city Mage trainer (Orgrimmar, Undercity, Thunder Bluff, Stormwind City, Ironforge) - level 30/35/50 chains"
+  ],
+  "valanaar_note": "The Mage trainer in Valanaar (Zephras Isle) is Anathamaas Aetherwind (65.8, 80.4); gives 'Speak with Belann' at level 10.",
+  "respec_note": "Respec at a class trainer in a major city (Blizzard deep dive).",
+  "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+  "checked": "2026-11-10"
+ },
+ "racials": [
+  {
+   "race": "Skyborne",
+   "faction": "Both",
+   "spell": "Read Ley Line",
+   "spell_id": 1259705,
+   "type": "active",
+   "effect": "+50% Health and Mana regeneration for 15 s, 2 min CD; replaced by Innervate while active. Used on an active Ley Line grants 'Attuned' (1 h, regen buff 100%, persists through death, removed entering a raid).",
+   "notes": "Blizzard/Wowhead spell name 'Read Leyline'.",
+   "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+   "checked": "2026-11-10"
+  },
+  {
+   "race": "Skyborne",
+   "faction": "Both",
+   "spell": "Skysight",
+   "spell_id": 1259686,
+   "type": "active",
+   "effect": "+15% movement speed for 15 s, 2 min CD; at an elemental convergence grants 'Charged' (1 h, 30%).",
+   "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+   "checked": "2026-11-10"
+  },
+  {
+   "race": "Skyborne",
+   "faction": "Both",
+   "spell": "Walk on Air",
+   "spell_id": 1308663,
+   "type": "active",
+   "effect": "Glide downward for 10 s, 90 s CD.",
+   "notes": "Wowhead Forever links Walk on Air as 1259416.",
+   "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+   "checked": "2026-11-10"
+  },
+  {
+   "race": "Skyborne",
+   "faction": "Both",
+   "spell": "Elemental Insight",
+   "spell_id": 1259707,
+   "type": "passive",
+   "effect": "Damage done to Elementals +5%.",
+   "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+   "checked": "2026-11-10"
+  },
+  {
+   "race": "Skyborne",
+   "faction": "Both",
+   "spell": "Wind Blessed",
+   "spell_id": 1259710,
+   "type": "passive",
+   "effect": "Spell, ranged and melee haste +2% (was 3% in beta; Blizzard Nov 4 notes).",
+   "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+   "checked": "2026-11-10"
+  }
+ ],
+ "race_notes": {
+  "text": "Skyborne are a neutral race picked per faction at character creation: Alliance = High Order Skyborne, Horde = Windshaper Skyborne. Mage is Alliance-only (High Order); Shaman is Horde-only. Skyborne classes: Druid, Hunter, Mage (Alliance), Rogue, Shaman (Horde), Warrior. Starting zone Zephras Isle; unlocked by the Skyborne Heroic Pack or higher special editions. Icy Veins rates Skyborne the best Mage race for long encounters (Read Ley Line + Wind Blessed with Mage's Spirit-based regen; Elemental Insight vs Elementals). Mage races: Human, Gnome, High Order Skyborne, Orc, Troll, Undead.",
+  "also_sources": [
+   "https://foreverguide.net/classes/mage/",
+   "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps"
+  ],
+  "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+  "checked": "2026-11-10"
+ },
+ "mana_gems": {
+  "spell_name": "Conjure Mana Agate / Conjure Mana Jade / Conjure Mana Citrine / Conjure Mana Ruby",
+  "spell_ids": [
+   759,
+   3552,
+   10053,
+   10054
+  ],
+  "learn_levels": [
+   28,
+   38,
+   48,
+   58
+  ],
+  "item_names": [
+   "Mana Agate",
+   "Mana Jade",
+   "Mana Citrine",
+   "Mana Ruby"
+  ],
+  "restores": [
+   "375-425",
+   "550-650",
+   "775-925",
+   "1,000-1,200"
+  ],
+  "item_ids_by_name": {
+   "Mana Ruby": 8008
+  },
+  "forever_spell": {
+   "name": "Mana Gems",
+   "spell_id": 1318827,
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  "notes": "Icy Veins Arcane/Fire PvE guides (launch-updated) name the four classic conjure spells with levels 28/38/48/58; Icy Veins leveling tables call them 'Conjure Mana Gem' (same levels) and link a Forever spell 'Mana Gems' (1318827); Wowhead's trainer table lists 'Conjure Mana Agate' learn 28, ranks 38/48/58. You can carry one gem of each kind for long fights; use the best first. Blizzard beta known issue: the mana gem cooldown needs another spell cast before the Cooldown Manager tracks it. Item ids for Agate/Jade/Citrine not sourced.",
+  "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+  "checked": "2026-11-10"
+ },
+ "changes_log": [
+  {
+   "date": "2026-09-24",
+   "change": "Beta: Arcane Missiles checks line of sight once at channel start; Wake of Fire buff 30 s; Hot Streak buff 20 s; Ignite no longer double-dips % modifiers; wands no longer gain damage from spell damage.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "date": "2026-10-01",
+   "change": "Beta: Comprehension scrolls rebalanced and can't be cast while moving; Hot Streak renamed Heating Up; Combustion charges back to 3; Fire Vulnerability and Winter's Chill applications no longer roll resists.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "date": "2026-10-07",
+   "change": "Blizzard Mage class deep dive published (Frostfire Bolt, Comprehension, Arcane Blast, Missile Barrage, Heating Up, Ice Lance, Fingers of Frost...).",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "date": "2026-10-08",
+   "change": "Beta: Impact no longer procs from Flamestrike periodic damage; Frostbolt/Fireball/Arcane Missiles low ranks re-scaled so every new rank is an upgrade.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "date": "2026-10-16",
+   "change": "Beta (Oct 15 build): Frost Blast added (lvl 24); Arcane Blast redesign (1.5 s, 15% Int, 15 s); Arcane Wrath 16-pt; Missile Barrage row 1; Fire Blast always grants Heating Up; Improved Fire Blast restored; Critical Mass 5 pts; Fire Power redesign; Ice Lance +200%; Winter's Chill empowers Cone of Cold; Cone of Cold 4-target bonus.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "date": "2026-11-03",
+   "change": "Launch notes ('Updated November 2'): Frost Blast removed; low-rank proc penalty removed except Blizzard; training 1-60 = 206-207g; Arcane Blast 12% Int/18 s/+100% mana per stack; Missile Barrage row 2; Accelerant; Incineration 5 pts; Critical Mass 3 pts; Piercing Ice removed; Ice Barrier Frost damage buff; Precision 2/4/6% all spells; Ice Lance 8 s CD shared with Fire Blast, +300%.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "date": "2026-11-04",
+   "change": "WoW Forever launch. Skyborne racials tuned: Wind Blessed 2% (was 3%), Read Leyline 50%/15 s + Attuned. Icy Veins Mage guides updated for launch.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "date": "2026-11-06",
+   "change": "Hotfix: Mages no longer learn (then lose) the Research spell - only Study after the relevant quest; Arcane Blast duration fixed to 18 s.",
+   "source_url": "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026",
+   "checked": "2026-11-09"
+  }
+ ],
+ "conflicts": [
+  {
+   "topic": "Arcane Blast values",
+   "detail": "Deep dive: 2.5 s cast, +10% damage to other spells per stack, +175% own cost, 8 s or until another spell is cast. Oct 16 beta: 1.5 s cast, 15% Int as spell damage, 15 s. Launch notes: +100% cost, 12% Int per stack, 18 s; Nov 6 hotfix fixed duration to 18 s. Icy Veins Frost leveling still says a '15-second buff'; Wowhead abilities page still says 2.5 s/10%/175%; Wowhead overview says 1.5 s. Using launch values (18 s, 12% Int, +100% cost). Cast time at launch not restated by Blizzard (2.5 vs 1.5 s).",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "topic": "Arcane Blast aura type",
+   "detail": "Icy Veins Arcane rotation calls the stack a 'debuff'; Icy Veins builds/Wowhead call it a buff ('gain one debuff stack' on Wowhead). Detect by name 'Arcane Blast' on both helpful and harmful auras until verified in game.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Teleport: Dalaran level",
+   "detail": "db.icy-veins spell 1297659: Requires Level 50, Faction Alliance. Icy Veins Frost leveling milestone table lists it at 40. Using 50 (client data).",
+   "source_url": "https://db.icy-veins.com/wow-forever/spells/1297659",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Portal: Darnassus / Portal: Thunder Bluff level",
+   "detail": "Icy Veins Frost leveling milestones and Wowhead leveling-tips/abilities: 50. Icy Veins Arcane/Fire PvE guides: all three portals at 40. Using 50.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Mana gem spell names",
+   "detail": "Icy Veins PvE guides + Wowhead: Conjure Mana Agate (28) / Jade (38) / Citrine (48) / Ruby (58), ids 759/3552/10053/10054. Icy Veins leveling tables: 'Conjure Mana Gem' at 28/38/48/58 and a Forever spell 'Mana Gems' (1318827). Wowhead's trainer table treats them as ranks of Conjure Mana Agate. Sportskeeda snippet: 'Conjured Mana Agates'. Verify in game.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Low-rank proc penalty",
+   "detail": "Deep dive: Arcane Concentration, Impact and similar free-effect talents trigger less from much lower ranks. Launch notes: various talents no longer have the penalty; it still applies to Blizzard (Arcane Concentration, Frostbite, Fingers of Frost when the rank is >12 levels below the caster). Dev notes also say low ranks get less spell damage benefit. NOTES.md summary predates the launch change.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "topic": "Intellect per 1% spell crit",
+   "detail": "Icy Veins: 54 Int = 1% crit (all three stat pages). Wowhead: 59.5 Int (Arcane/Fire stat pages), 60 Int (Frost page, which also says 'Druids'). Using Icy Veins.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Frost stat priority / hit cap",
+   "detail": "Icy Veins Frost: Hit (to 17%) > Spell power > Crit > Int > MP5 > Spirit. Wowhead Frost: Hit until 11-12% (5-6% from talents) > Crit > Spell damage > Int > Spirit > Stamina; Wowhead Arcane/Fire add Spell Piercing and Haste. Using Icy Veins.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/stat-priority-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Frost Blast",
+   "detail": "Wowhead Arcane/Fire trainer tables list Frost Blast (1326053, learn 24, ranks 36/48) and Icy Veins stat pages list its coefficient, but the Nov 2/3 launch notes removed it. Not imported.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "topic": "Arcane Missiles rank levels",
+   "detail": "Wowhead trainer table lists new ranks '16; 24; 32; 40; 58; 56' (out of order; probably 48; 56). Kept as published in spells_by_level.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Ice Lance spell id",
+   "detail": "Talent node 1312002 (Icy Veins calculator, bindonforever, Wowhead rotation); Icy Veins guides link 400640; Wowhead Frost leveling links 1240047.",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Precision spell id",
+   "detail": "29438 (calculator, Wowhead, Icy Veins Frost pages) vs 13705 (some Icy Veins Arcane/Fire pages).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Arcane Wrath spell id",
+   "detail": "1326079 (calculator, Icy Veins, Wowhead trainer table) vs 1326082 (Wowhead overview pages).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Ice Barrier spell id",
+   "detail": "Talent 11426 (calculator) vs 13033 (Icy Veins, Wowhead rotation) vs 13032 (Wowhead Frost overview).",
+   "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Missile Barrage placement",
+   "detail": "Deep dive: 16-pt gold medal. Oct 16 beta: row 1, 2 pts. Launch: row 2, 2 ranks (calculator agrees). Icy Veins Arcane leveling milestone table still lists 'Missile Barrage' at 25.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "topic": "Improved Fire Blast / Wake of Fire",
+   "detail": "Deep dive: Wake of Fire (row 1, kill grants Fire Blast crit). Oct 16: reverted to Improved Fire Blast without the kill bonus, +8/15 yd range. Launch: row 3. Wowhead abilities pages still describe a 50% crit bonus after a kill.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "topic": "Combustion charges",
+   "detail": "Wowhead Fire abilities: until 4 crits. Oct 1 beta notes: charges returned to 3; Wowhead Fire overview: 3.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "topic": "Cold Snap cooldown change",
+   "detail": "Deep dive says the cooldown rose to 10 min from 5; bindonforever notes Classic Era data already had 10 min. Either way it is 10 min in Forever.",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Level-10 class quest rewards (Gnome/Undead)",
+   "detail": "Icy Veins: Mage-tastic Gizmonitor and The Balnir Farmstead reward Ley Orb (7508) or Ley Staff (9513). Wowhead search data lists choices 7507/9514 for those two quests (7508/9513 for Mirror Lake and Ju-Ju Heaps).",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Skyborne racial names/ids",
+   "detail": "Icy Veins: 'Read Ley Line' (1259705), Walk on Air 1308663. Blizzard/Wowhead: 'Read Leyline'; Wowhead links Walk on Air as 1259416.",
+   "source_url": "https://www.icy-veins.com/wow-forever/skyborne",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Conjure Food / Frost Armor / Mana Shield base ids",
+   "detail": "Wowhead trainer table links 587 / 7300 / 10191; Wowhead Frost abilities page links 597 / 168 / 1463. Used 587, 168, 1463 as base ids.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Wowhead page scope",
+   "detail": "Wowhead /forever/guide/classes/mage/<spec>/overview (without -pve-dps) serves the retail Midnight guide, and frost/leveling-tips is the TBC Classic guide (Water Elemental, level 70, tbc.wowhead talent link). Nothing imported from them.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Mana gem spell naming",
+   "detail": "Icy Veins Frost leveling lists 'Mana Gems' (spell 1318827) at 28; Arcane/Fire leveling list 'Conjure Mana Gem' at 28/38/48/58; Icy Veins PvE guides name Conjure Mana Agate (759) 28, Jade (3552) 38, Citrine (10053) 48, Ruby (10054) 58. Which name the Forever trainer/spellbook uses is unresolved.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Conjure Water spell ID",
+   "detail": "Wowhead Frost rotation cites Conjure Water spell 468766; Icy Veins pages cite 10140.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Wowhead frost leveling-tips is TBC content",
+   "detail": "Items (e.g. Vengeance of the Illidari 28040, Figurine - Jade Owl 21748 via Jewelcrafting) and spells for levels 60-70 (Shattrath portals, Water Elemental) are TBC; not imported.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Wowhead Mage */overview pages contain retail builds",
+   "detail": "[build-items] blocks (e.g. consumables 241322/241308/241288/241304/243734, Spellslinger hero talents, Arcane Surge 365350, Touch of the Magi 321507) are modern-retail content; not imported. The */overview-pve-dps pages are the Forever ones.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/overview",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Tier 1 set bonuses",
+   "detail": "Wowhead shows datamined Mage T1 bonuses but says they are placeholders and likely to change; Icy Veins shows no set info.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/bis-gear",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Riding/mount rows copied from the earlier research cite a dead URL",
+   "detail": "https://www.wowhead.com/forever/guide/riding-mounts returned 'Page Not Found' on 2026-11-10; the content now lives at https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts (fetched 2026-11-10; Alliance trainer/vendor names in the copied rows still match).",
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Portal: Darnassus / Thunder Bluff level",
+   "detail": "Icy Veins Frost leveling milestones list Portal: Darnassus and Portal: Thunder Bluff at 50 (other portals at 40); Arcane/Fire leveling say 'Portal: City' at 40 only.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Lesser Magic Wand Enchanting skill",
+   "detail": "Icy Veins frost leveling says Enchanting 10; db.icy-veins item 11287 'Crafted With' says Enchanting 75 (research/item_sources.json).",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "topic": "Greater Magic Wand Enchanting skill",
+   "detail": "Icy Veins frost leveling says Enchanting 70; db.icy-veins item 11288 'Crafted With' says Enchanting 110 (research/item_sources.json).",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "Flamestrike learn/rank levels: not in the Wowhead trainer tables or Icy Veins pages.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Detect Magic and Arcane Brilliance: no Forever page mentions them (trainer or book); not included.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Talent spells with trained ranks other than Arcane Blast/Arcane Wrath/Pyroblast (Ice Barrier, Blast Wave, Ice Lance?): rank levels unsourced.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Ice Armor rank-1 spell id (only top rank 10220 linked).",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Proc/aura spell ids for Missile Barrage, Clearcasting, Frostbite freeze, Presence of Mind/Arcane Power/Combustion buffs, Frostfire Bolt debuff and the Arcane Blast stack (400573 unconfirmed): detect by name.",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Reagents for city teleports/portals in Forever: only Teleport: Dalaran is confirmed (Rune of Teleportation); others marked classic-only.",
+   "source_url": "https://db.icy-veins.com/wow-forever/spells/1297659",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Mana Agate/Jade/Citrine item ids (only Mana Ruby 8008 sourced); relation of 'Mana Gems' (1318827) to the four conjure spells.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Destroy Morphaz reward ids 20035/20036/20037: mapping to Glacial Spike / Arcane Crystal Pendant / Fire Ruby not stated.",
+   "source_url": "https://www.wowhead.com/forever/search?q=Destroy+Morphaz",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Per-rank training costs (only 206-207g total 1-60).",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "gap": "Arcane Blast cast time at launch (deep dive 2.5 s, Oct 16 notes 1.5 s, launch notes silent).",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "gap": "Frostfire Bolt ranks 2/3 (levels 50/60, ids 1237312/1237313) only from bindonforever (community, beta build 70291 files).",
+   "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "db.icy-veins.com returns a Cloudflare challenge to plain curl (UA 'Mozilla/5.0'); quest ids came from Wowhead Forever search data instead and were not cross-checked on db.icy-veins. Spell 1297659 page was fetched once with a full browser UA string before that was blocked.",
+   "source_url": "https://db.icy-veins.com/wow-forever/spells/1297659",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Frost leveling Wowhead build 'Levels 1-33' is 24 points by design (level-33 build).",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Blizzard launch notes and hotfix were read from an earlier research archive (fetched 2026-11-09), not re-fetched.",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  },
+  {
+   "gap": "No level-60 pre-raid or Phase 1 BiS items for any Mage spec: Icy Veins and Wowhead BiS pages are empty placeholders (raids open 2026-12-09).",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-gear-best-in-slot",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Icy Veins gives no Mage leveling gear beyond level 30 (beta cap); no level-40/50/60 leveling gear brackets beyond class-quest rewards.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Level-50 'Destroy Morphaz' rewards (Glacial Spike, Arcane Crystal Pendant, Fire Ruby) have no item links/IDs on the page; not added to gear.",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Light Feather item ID not sourced (Forever pages name the reagent without a link).",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Rune of Teleportation / Rune of Portals / Arcane Powder: no Forever source states whether Teleport, Portal or Arcane Brilliance need reagents; rows marked classic-only, item IDs omitted.",
+   "source_url": "https://wowforeverplaybook.com/wow-forever-mage-changes",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Conjured mana gem item IDs (Mana Agate/Jade/Citrine/Ruby) not sourced; names come from Icy Veins 'conjures a Mana Agate' text.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Conjured water and food item names/IDs for Forever not sourced (only Conjure Water/Conjure Food spell links); no conjured water/food rows added.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Sportskeeda 'Conjured Mana Agates' mention could not be verified: archived page is empty (snippet only).",
+   "source_url": "https://www.sportskeeda.com/mmo/wow-forever-mage-leveling-guide-best-spec-talents-rotation-tips",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Thendal Village and Shen'dar Village (Zephras Isle) not found in any archived source; only Valanaar, Fairweather Stables and Shen'dar Highlands are sourced.",
+   "source_url": "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Mage enchant recommendations: all Icy Veins enchant slots say 'Coming Soon'; Wowhead enchants-consumables pages not archived. Only Enchant Weapon - Revelation is sourced.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-gear-best-in-slot",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "db.icy-veins.com spell pages and wowhead.com/forever/spell= pages returned 403 to curl with UA 'Mozilla/5.0' on 2026-11-10 (Cloudflare 'Just a moment...' / CloudFront), so spell reagents and conjured item names/IDs could not be checked. (tools/fetch_item_sources.py, with its own UA, did get db.icy-veins item/quest pages.)",
+   "source_url": "https://db.icy-veins.com/wow-forever/spells/3561",
+   "checked": "2026-11-10"
+  },
+  {
+   "gap": "Talbar Mantle, Reinforced Woolen Shoulders, Shining Circlet, Fallen Dragon's Scepter: required level or exact source not stated on the Icy Veins pages. research/item_sources.json (db.icy-veins, fetched 2026-11-10) fills some: Talbar Mantle = quest 'In Nightmares'; Reinforced Woolen Shoulders = Tailoring 95, level 19; Shining Circlet = Tailoring 100, level 20; Fallen Dragon's Scepter = quest 'Stopping the Cycle'.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  }
+ ],
+ "gear_by_bracket": [
+  {
+   "bracket": "level 20",
+   "name": "Golemheart Stave",
+   "item_id": 270228,
+   "slot": "Weapon",
+   "source": "Hall of Thanes (drop; frost guide: Plunder)",
+   "level": 13,
+   "faction": "Alliance",
+   "listed_in": [
+    "Arcane",
+    "Fire",
+    "Frost"
+   ],
+   "notes": "'as early as Level 13' (Arcane/Fire leveling); 'potential drop from Plunder' (Frost leveling)",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Staff of Orgrimmar",
+   "item_id": 15444,
+   "slot": "Weapon",
+   "source": "Quest: Hidden Enemies (Ragefire Chasm)",
+   "faction": "Horde",
+   "listed_in": [
+    "Arcane",
+    "Fire",
+    "Frost"
+   ],
+   "notes": "'at a similar level' to Golemheart Stave (13)",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Emberstone Staff",
+   "item_id": 5201,
+   "slot": "Weapon",
+   "source": "The Deadmines (Captain Greenskin)",
+   "level": 17,
+   "faction": "Alliance",
+   "listed_in": [
+    "Arcane",
+    "Fire",
+    "Frost"
+   ],
+   "notes": "'as low as 17' (Arcane/Fire); drop from Captain Greenskin (Frost)",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Crescent Staff",
+   "item_id": 6505,
+   "slot": "Weapon",
+   "source": "Quest: Leaders of the Fang (Wailing Caverns)",
+   "faction": "Horde",
+   "listed_in": [
+    "Arcane",
+    "Fire",
+    "Frost"
+   ],
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "name": "Glimmering Staff",
+   "item_id": 249392,
+   "slot": "Weapon",
+   "source": "Crafted: Enchanting",
+   "level": 25,
+   "listed_in": [
+    "Arcane",
+    "Fire"
+   ],
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "name": "Death Prophet Spine",
+   "item_id": 274158,
+   "slot": "Weapon",
+   "source": "Razorfen Kraul",
+   "listed_in": [
+    "Arcane",
+    "Fire"
+   ],
+   "notes": "'as you approach 30'",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "spec": "Frost",
+   "name": "Coldspire Staff",
+   "item_id": 271215,
+   "slot": "Weapon",
+   "source": "Ruins of Lordaeron (Rath'mael)",
+   "level": 19,
+   "listed_in": [
+    "Frost"
+   ],
+   "notes": "'a huge power spike and item worth chasing'",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "spec": "Frost",
+   "name": "Rod of the Sleepwalker",
+   "item_id": 1155,
+   "slot": "Weapon",
+   "source": "Blackfathom Deeps (Twilight Lord Kelris)",
+   "level": 24,
+   "listed_in": [
+    "Frost"
+   ],
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "spec": "Frost",
+   "name": "Fallen Dragon's Scepter",
+   "item_id": 281312,
+   "slot": "Weapon",
+   "source": "Quest chain (elite): Stopping the Cycle, Wetlands",
+   "faction": "Alliance",
+   "listed_in": [
+    "Frost"
+   ],
+   "notes": "Level not stated on page; Wetlands is in the guide's mid/late-20s zone slider",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Pearly Circlet",
+   "item_id": 253957,
+   "slot": "Head",
+   "source": "Crafted: Tailoring",
+   "level": 20,
+   "listed_in": [
+    "Arcane",
+    "Fire"
+   ],
+   "notes": "'will last you well into your 30s'",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "spec": "Frost",
+   "name": "Silky Circlet",
+   "item_id": 253951,
+   "slot": "Head",
+   "source": "Crafted: Tailoring (Bind-on-Pickup)",
+   "level": 20,
+   "listed_in": [
+    "Frost"
+   ],
+   "notes": "'will last you all the way into your mid 30s'",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "leveling (level not stated)",
+   "spec": "Frost",
+   "name": "Shining Circlet",
+   "item_id": 253959,
+   "source": "Tailoring pattern (Waylaid Supply Crates, dungeons or Auction House)",
+   "listed_in": [
+    "Frost"
+   ],
+   "notes": "Named as an example Tailoring craft in the professions section",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "spec": "Frost",
+   "name": "Novice Arcanist's Sash",
+   "item_id": 253885,
+   "source": "Crafted: Tailoring (Bind-on-Pickup Rare)",
+   "level": 10,
+   "listed_in": [
+    "Frost"
+   ],
+   "notes": "'Starting as low as level 10'",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "leveling (level not stated)",
+   "name": "Talbar Mantle",
+   "item_id": 10657,
+   "slot": "Shoulders",
+   "source": "Quest reward (quest not named)",
+   "listed_in": [
+    "Arcane",
+    "Fire"
+   ],
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "spec": "Frost",
+   "name": "Double-Stitched Woolen Shoulders",
+   "item_id": 4314,
+   "slot": "Shoulders",
+   "source": "Crafted: Tailoring",
+   "level": 17,
+   "listed_in": [
+    "Frost"
+   ],
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "spec": "Frost",
+   "name": "Reinforced Woolen Shoulders",
+   "item_id": 4315,
+   "slot": "Shoulders",
+   "source": "Not stated",
+   "level": 19,
+   "listed_in": [
+    "Frost"
+   ],
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Minor Channeling Ring",
+   "item_id": 1449,
+   "slot": "Ring",
+   "source": "Quest: WANTED: Chok'sul (quest 256)",
+   "faction": "Alliance",
+   "listed_in": [
+    "Arcane",
+    "Fire"
+   ],
+   "notes": "Useful rings from around Level 16",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Philanthropist's Ring",
+   "item_id": 281635,
+   "slot": "Ring",
+   "source": "Hand in 20 books to your faction's library (Stormwind or Undercity)",
+   "listed_in": [
+    "Arcane",
+    "Fire"
+   ],
+   "notes": "'will last you well past Level 30'",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Ley Orb",
+   "item_id": 7508,
+   "source": "Class quest (level 10, choice): Mirror Lake / Mage-tastic Gizmonitor / Ju-Ju Heaps / The Balnir Farmstead",
+   "notes": "Human, Gnome, Orc/Troll, Undead level-10 quests; not the Skyborne quest (Skyborne gets Windbough Wand)",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Ley Staff",
+   "item_id": 9513,
+   "source": "Class quest (level 10, choice): Mirror Lake / Mage-tastic Gizmonitor / Ju-Ju Heaps / The Balnir Farmstead",
+   "notes": "Human, Gnome, Orc/Troll, Undead level-10 quests; not Skyborne",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Manaweave Robe",
+   "item_id": 7509,
+   "slot": "Chest",
+   "source": "Class quest (level 15): Manaweave Robe (Wynne Larson, Stormwind)",
+   "level": 15,
+   "faction": "Alliance",
+   "notes": "Human, Gnome and Skyborne chain",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 20",
+   "name": "Lesser Spellfire Robes",
+   "item_id": 7510,
+   "slot": "Chest",
+   "source": "Class quest (level 15): Spellfire Robes (Josef Gregorian, Undercity)",
+   "level": 15,
+   "faction": "Horde",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "name": "Astral Knot Robe",
+   "item_id": 7511,
+   "slot": "Chest",
+   "source": "Class quest (level 26, choice): Astral Knot Garment (Wynne Larson, Stormwind)",
+   "level": 26,
+   "faction": "Alliance",
+   "notes": "Choice with Astral Knot Blouse; Human, Gnome and Skyborne",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "name": "Astral Knot Blouse",
+   "item_id": 9516,
+   "slot": "Chest",
+   "source": "Class quest (level 26, choice): Astral Knot Garment (Wynne Larson, Stormwind)",
+   "level": 26,
+   "faction": "Alliance",
+   "notes": "Choice with Astral Knot Robe",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "name": "Nether-lace Robe",
+   "item_id": 7512,
+   "slot": "Chest",
+   "source": "Class quest (level 26, choice): Nether-lace Garment (Kil'hala, Crossroads)",
+   "level": 26,
+   "faction": "Horde",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 30",
+   "name": "Nether-lace Tunic",
+   "item_id": 9515,
+   "slot": "Chest",
+   "source": "Class quest (level 26, choice): Nether-lace Garment (Kil'hala, Crossroads)",
+   "level": 26,
+   "faction": "Horde",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 40",
+   "name": "Celestial Orb",
+   "item_id": 7515,
+   "source": "Class quest (unlocks 35, quests level 40, choice): Celestial Power (Tabetha, Dustwallow Marsh)",
+   "level": 35,
+   "notes": "Icy Veins: 'Take the orb. The on-use effect is unique'; keep it in bags as an equipment swap for a free refill",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "bracket": "level 40",
+   "name": "Celestial Stave",
+   "item_id": 9517,
+   "source": "Class quest (unlocks 35, quests level 40, choice): Celestial Power (Tabetha, Dustwallow Marsh)",
+   "level": 35,
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  }
+ ],
+ "wands": [
+  {
+   "name": "Windbough Wand",
+   "item_id": 263430,
+   "source": "Skyborne Mage class quest (level 10): Boughs in the Wind (Belann Windwood, Zephras Isle 62.8,77.4)",
+   "required_level": 10,
+   "faction": "Alliance",
+   "notes": "High Order Skyborne only; 'definitely worth doing as soon as you can'. Also rewards Elixir of Minor Spirit (250344)",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10",
+   "dps": 7.2,
+   "dps_source_url": "https://www.icy-veins.com/wow-forever/shadow-priest-leveling",
+   "dps_checked": "2026-11-09"
+  },
+  {
+   "name": "Lesser Magic Wand",
+   "item_id": 11287,
+   "source": "Enchanting 10 or Auction House",
+   "required_level": 5,
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10",
+   "dps": 11.3,
+   "dps_source_url": "https://www.icy-veins.com/wow-forever/professions-overview",
+   "dps_checked": "2026-11-09"
+  },
+  {
+   "name": "Greater Magic Wand",
+   "item_id": 11288,
+   "source": "Enchanting 70 or Auction House",
+   "required_level": 13,
+   "notes": "Arcane/Fire leveling: 'incredibly strong low-level wand that holds value well into your 20s'",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10",
+   "dps": 17.5,
+   "dps_source_url": "https://www.icy-veins.com/wow-forever/professions-overview",
+   "dps_checked": "2026-11-09"
+  },
+  {
+   "name": "Gravestone Scepter",
+   "item_id": 7001,
+   "source": "Quest: Blackfathom Villainy (quest 1200, Blackfathom Deeps), either faction",
+   "notes": "Quest begins at Level 18; BFD usually run 20-26; 'best option until at least Level 30'",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10",
+   "dps": 29.0,
+   "dps_source_url": "https://www.icy-veins.com/wow-forever/shadow-priest-leveling",
+   "dps_checked": "2026-11-09"
+  },
+  {
+   "name": "Deepblaze",
+   "item_id": 279896,
+   "source": "Quest: Old Ironforge Incursion (Hall of Thanes)",
+   "faction": "Alliance",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10",
+   "dps": 18.5,
+   "dps_source_url": "https://www.icy-veins.com/wow-forever/shadow-priest-leveling",
+   "dps_checked": "2026-11-09"
+  },
+  {
+   "name": "Cookie's Stirring Rod",
+   "item_id": 5198,
+   "source": "The Deadmines (Cookie)",
+   "faction": "Alliance",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10",
+   "dps": 22.3,
+   "dps_source_url": "https://www.icy-veins.com/wow-forever/shadow-priest-leveling",
+   "dps_checked": "2026-11-09"
+  },
+  {
+   "name": "Icefury Wand",
+   "item_id": 7514,
+   "source": "Class quest chain (unlocks 30, level-40 difficulty, choice): Mage's Wand (Tabetha, Dustwallow Marsh 46,57)",
+   "spec": "Frost",
+   "notes": "'one for each spec'; chain needs Scarlet Monastery (Library) and level 36+ mobs; listed as the spec wand on the Frost leveling page",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Nether Force Wand",
+   "item_id": 11263,
+   "source": "Class quest chain (unlocks 30, level-40 difficulty, choice): Mage's Wand (Tabetha, Dustwallow Marsh 46,57)",
+   "spec": "Arcane",
+   "notes": "'one for each spec'; chain needs Scarlet Monastery (Library) and level 36+ mobs; listed as the spec wand on the Arcane leveling page",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Ragefire Wand",
+   "item_id": 7513,
+   "source": "Class quest chain (unlocks 30, level-40 difficulty, choice): Mage's Wand (Tabetha, Dustwallow Marsh 46,57)",
+   "spec": "Fire",
+   "notes": "'one for each spec'; chain needs Scarlet Monastery (Library) and level 36+ mobs; listed as the spec wand on the Fire leveling page",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  }
+ ],
+ "other_weapons": {
+  "note": "Icy Veins leveling pages list staves/scepters by level (in gear_by_bracket, slot 'Weapon'). Enchanting also crafts various Bind-on-Pickup wands, staves and off-hands (frost leveling). Icy Veins gives no gear advice beyond level 30 yet (beta cap 30). Wowhead frost leveling-tips item list (Crescent Staff/Staff of Westfall, Robes of Arugal, Illusionary Rod, Jade Owl, Dreamweave Vest, Zum'rah's Vexing Cane, Glowing Brightwood Staff, Trindlehaven Staff, Ruby Serpent, Vengeance of the Illidari) is TBC-era content and was NOT imported.",
+  "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+  "checked": "2026-11-10"
+ },
+ "bis": {
+  "status": "Phase-1 placeholders, no items listed. Icy Veins Arcane/Fire/Frost gear-best-in-slot pages (updated for launch Nov 4, last updated Nov 9) show empty Overall/Pre-Raid/PvP slot widgets and 'Coming Soon' enchants because the beta was capped at 30. Wowhead bis-gear pages have empty BiS/Great/Good/Option rows ('will be filled in once more items are discovered at max level') and say Blizzard has stated ~80% of gear is still hidden. Raids open 2026-12-09 (roadmap).",
+  "tier1_datamined_placeholder": {
+   "set_name": "Manaflare Regalia",
+   "2": "Improves your chance to hit by 1.0%.",
+   "3": "Reduces the cooldown of your Counterspell by 5 sec.",
+   "4": "Increases damage done by your spells and effects by up to 21 when fighting Elementals.",
+   "5": "Your Frostfire Bolt spell has a 10% increased chance to trigger Missile Barrage, gains 10% increased critical strike chance while your Combustion spell is active, and has a 10% increased chance to trigger Fingers of Frost."
+  },
+  "flag": "Wowhead: tier bonuses were datamined during Beta, Blizzard said they are placeholders and very likely to change; 'for illustrative purposes only'. Set name only on the Frost page.",
+  "guidance": [
+   {
+    "spec": "Arcane",
+    "text": "Highest spell power items plus highest-value hit items up to 17%; Intellect/Spirit matter but unlikely to drive Phase 1 choices; Spell Piercing increases damage (even into negative resistances).",
+    "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/bis-gear",
+    "checked": "2026-11-10"
+   },
+   {
+    "spec": "Fire",
+    "text": "Highest spell power items plus hit up to 17%, then the most critical strike.",
+    "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/bis-gear",
+    "checked": "2026-11-10"
+   },
+   {
+    "spec": "Frost",
+    "text": "Highest spell power items plus hit up to 17% (with talents).",
+    "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/bis-gear",
+    "checked": "2026-11-10"
+   }
+  ],
+  "other_pages": [
+   "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-gear-best-in-slot",
+   "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-gear-best-in-slot",
+   "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-gear-best-in-slot",
+   "https://www.wowhead.com/forever/guide/classes/mage/arcane/bis-gear",
+   "https://www.wowhead.com/forever/guide/classes/mage/fire/bis-gear"
+  ],
+  "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/bis-gear",
+  "checked": "2026-11-10"
+ },
+ "consumables_enchants": [
+  {
+   "type": "enchant",
+   "name": "Enchant Weapon - Revelation",
+   "item_id": 273629,
+   "slot": "Weapon",
+   "notes": "Arcane & Fire PvE guides: 'fundamentally changes how the class is played'; every tick on every mob can proc it (makes Flamestrike/AoE worthwhile). Also cited on the Fire PvE guide and Arcane rotation page.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "consumable",
+   "bracket": "level 60",
+   "name": "Major Mana Potion",
+   "item_id": 13444,
+   "notes": "Two-minute cooldown; use short-cooldown potion first, then Mana Gem and Evocation, to fit more potions in long fights",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "consumable",
+   "name": "Minor Wizard Oil",
+   "item_id": 20744,
+   "profession": "Enchanting",
+   "notes": "Named as an Enchanting consumable in the professions section",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "note",
+   "name": "Food",
+   "notes": "Keep regular cooked food: Forever has well-fed buffs and some food grants an experience buff; campfires placed by players provide buffs.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Mana Well",
+   "item_id": 279956,
+   "profession": "Alchemy",
+   "notes": "Buff: Mana regeneration. Icy Veins frost leveling: Mana/5 buff, mutually exclusive with Blessing of Wisdom.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Sharpening Wheel",
+   "item_id": 279944,
+   "profession": "Blacksmithing",
+   "notes": "Buff: Increased Strength. Icy Veins frost leveling: mutually exclusive with Strength of Earth Totem.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Enchanted Lute",
+   "item_id": 279976,
+   "profession": "Enchanting",
+   "notes": "Buff: Increased Armor, All Stats and Resistances. Icy Veins frost leveling: mutually exclusive with Mark of the Wild.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Reagent Bot",
+   "item_id": 279950,
+   "profession": "Engineering",
+   "notes": "Buff: Purchase reagents. Icy Veins frost leveling: Summons a vendor that sells Reagents.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Incense Candle",
+   "item_id": 279962,
+   "profession": "Herbalism",
+   "notes": "Buff: Increased Intellect. Icy Veins frost leveling: mutually exclusive with Arcane Intellect.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Camp Tent",
+   "item_id": 279978,
+   "profession": "Leatherworking",
+   "notes": "Buff: Rested XP up to 5% of a level. Icy Veins frost leveling: 5% Rested Experience, once per hour.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Lodestone",
+   "item_id": 279960,
+   "profession": "Mining",
+   "notes": "Buff: Increased melee Attack Power. Icy Veins frost leveling: mutually exclusive with Blessing of Might.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Camp Chair",
+   "item_id": 279979,
+   "profession": "Skinning",
+   "notes": "Buff: 2% Critical Strike. Icy Veins frost leveling: mutually exclusive with Moonkin Aura.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Faction Banner",
+   "item_id": 279972,
+   "profession": "Tailoring",
+   "notes": "Buff: Increased Spirit. Icy Veins frost leveling: mutually exclusive with Divine Spirit.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Basic Campfire Kit",
+   "item_id": 279981,
+   "notes": "Allows Cooking and hosts 3 camp features. Wowhead lists it under skill=185; tier 2 unlocks Cookie's Feast (279957) Stamina food.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "First Aid Kit",
+   "item_id": 279968,
+   "profession": "First Aid",
+   "notes": "Buff: Stamina. Icy Veins frost leveling: mutually exclusive with Power Word: Fortitude.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "camp",
+   "name": "Fish Bowl",
+   "item_id": 279967,
+   "profession": "Fishing",
+   "notes": "Buff: 8% increased stats. Icy Veins frost leveling: All Stats buff, mutually exclusive with Blessing of Kings.",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+   "checked": "2026-11-10"
+  },
+  {
+   "type": "note",
+   "name": "Campfire buffs vs class buffs",
+   "notes": "Icy Veins: 1-hour campfire buffs are for the most part mutually exclusive with class buffs from other players; Leatherworking's Camp Tent is 'the most immediately beneficial' for leveling; Incense Candle (Herbalism) is mutually exclusive with Arcane Intellect.",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  }
+ ],
+ "reagents": [
+  {
+   "name": "Light Feather",
+   "used_by": "Slow Fall (spell 130)",
+   "status": "confirmed",
+   "notes": "All three Icy Veins Forever leveling pages: Slow Fall 'if you have a Light Feather reagent handy' (fire: 'never leave town without them'). Wowhead frost overview: High Order Skyborne Glide 'is also redundant with Slowfall, though it doesn't require reagents'. Item ID not sourced.",
+   "vendor_note": "Engineering camp Reagent Bot 'summons a vendor that sells Reagents' (Icy Veins frost leveling); normal reagent-vendor locations not sourced",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Rune of Teleportation",
+   "used_by": "Teleport: <city> (Classic)",
+   "status": "classic-only",
+   "notes": "No Forever source names a reagent for Teleport spells. wowforeverplaybook: Blizzard 'has not published changes to ... Conjure spells or portals'.",
+   "source_url": "https://wowforeverplaybook.com/wow-forever-mage-changes",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Rune of Portals",
+   "used_by": "Portal: <city> (Classic)",
+   "status": "classic-only",
+   "notes": "No Forever source names a reagent for Portal spells.",
+   "source_url": "https://wowforeverplaybook.com/wow-forever-mage-changes",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Arcane Powder",
+   "used_by": "Arcane Brilliance (Classic)",
+   "status": "classic-only",
+   "notes": "No Forever source names a reagent for Arcane Brilliance; no Forever Arcane Brilliance spell ID in the Mage raw pages either.",
+   "source_url": "https://wowforeverplaybook.com/wow-forever-mage-changes",
+   "checked": "2026-11-10"
+  }
+ ],
+ "conjured": [
+  {
+   "kind": "gem",
+   "name": "Mana Agate",
+   "level": 28,
+   "spell": "Conjure Mana Agate",
+   "spell_id": 759,
+   "restores_mana": "375 to 425",
+   "notes": "Item ID not sourced. Same text on the Fire PvE guide.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "kind": "gem",
+   "name": "Mana Jade",
+   "level": 38,
+   "spell": "Conjure Mana Jade",
+   "spell_id": 3552,
+   "restores_mana": "550 to 650",
+   "notes": "Item ID not sourced. Same text on the Fire PvE guide.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "kind": "gem",
+   "name": "Mana Citrine",
+   "level": 48,
+   "spell": "Conjure Mana Citrine",
+   "spell_id": 10053,
+   "restores_mana": "775 to 925",
+   "notes": "Item ID not sourced. Same text on the Fire PvE guide.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  },
+  {
+   "kind": "gem",
+   "name": "Mana Ruby",
+   "level": 58,
+   "spell": "Conjure Mana Ruby",
+   "spell_id": 10054,
+   "restores_mana": "1,000 to 1,200",
+   "notes": "Item ID not sourced. Same text on the Fire PvE guide.",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+   "checked": "2026-11-10"
+  }
+ ],
+ "professions": {
+  "leveling": "Tailoring + Enchanting",
+  "leveling_notes": "All three Icy Veins leveling pages recommend Tailoring + Enchanting: Tailoring crafts Bind-on-Pickup Rare leveling gear (from level 10, e.g. Novice Arcanist's Sash; patterns from Waylaid Supply Crates, dungeons, AH); Enchanting crafts Lesser/Greater Magic Wand, Minor Wizard Oil, BoP wands/staves/off-hands; disenchant your Tailoring crafts.",
+  "raiding": "Not settled. Wowhead (Arcane/Fire overview-pve-dps): Engineering's Tinkers such as Nitro Boosts 'by themselves have made the profession BiS'; Tailoring embroidery enchants unknown; Alchemy, Enchanting and Leatherworking depend on final stat bonuses. Wowhead Frost: 'always a proponent of Engineering'.",
+  "alternatives": [
+   "Herbalism or Mining + Skinning (Icy Veins Arcane/Fire leveling: fastest leveling, steady gold, stockpile mats)",
+   "Alchemy or Engineering + the matching gatherer (Icy Veins Frost leveling: hard/expensive to level without a gathering alt)",
+   "Skinning + Herbalism or Mining, income-focused (Icy Veins Frost leveling)"
+  ],
+  "comprehension": "Comprehension is a new Mage-only minor tradeskill that lets Mages read and decipher scrolls dropped by creatures in the world; 'various benefits are provided by these that players will discover in their adventures' (Blizzard). Comprehend Scroll is the ability used to attempt Comprehension, found in the General tab of the spellbook (Blizzard). Datamined: skill line 3012, a Secondary Skill like Cooking, Mage-only (class mask 128) from level 6; Comprehend Scroll (spell 1296017, 'Decipher an untranslated scroll') learned at level 6; scrolls are consumed when read (bindonforever). Icy Veins: used to gain unique buffs, temporary effects and additional on-use items exclusive to Mage. Wowhead: scrolls drop for players and only Mages can use Comprehend Scroll on them, like lockboxes for Rogues; a 'Research' spell (1310041) appeared in beta but was removed (unconfirmed). Blizzard has not said what the scrolls grant.",
+  "comprehension_details": [
+   {
+    "fact": "Comprehension: new Mage-specific minor tradeskill to read and decipher scrolls dropped by creatures in the world; benefits to be discovered. Comprehend Scroll: the ability used to attempt Comprehension, in the General tab of the spellbook.",
+    "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "checked": "2026-11-10"
+   },
+   {
+    "fact": "Datamined: Comprehension = skill line 3012, Secondary Skill, class mask 128 (Mage) from level 6; Comprehend Scroll spell 1296017 'Decipher an untranslated scroll', learned at level 6; scrolls are consumed when read. Classic Era has no such line.",
+    "source_url": "https://bindonforever.com/notes/deep-dive-mage-shaman",
+    "checked": "2026-11-10"
+   },
+   {
+    "fact": "Comprehend Scroll (spell 1296017) is brand new and is used to gain unique buffs, temporary effects, and additional on-use items exclusive to Mage.",
+    "source_url": "https://www.icy-veins.com/wow-forever/mage-class-overview",
+    "checked": "2026-11-10"
+   },
+   {
+    "fact": "Comprehend Scroll (spell 1296017); Research (spell 1310041) showed up in beta but was removed (unconfirmed). Scrolls drop for players; only Mages can use Comprehend Scroll on them.",
+    "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/overview-pve-dps",
+    "checked": "2026-11-10"
+   },
+   {
+    "fact": "Blizzard has deliberately not said what the scrolls do.",
+    "source_url": "https://wowforeverplaybook.com/wow-forever-mage-changes",
+    "checked": "2026-11-10"
+   },
+   {
+    "fact": "Comprehension (new): Mage-only minor tradeskill; use Comprehend Scroll (General tab) on scrolls dropped in the world for various rewards.",
+    "source_url": "https://foreverguide.net/classes/mage/",
+    "checked": "2026-11-10"
+   }
+  ],
+  "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+  "checked": "2026-11-10"
+ },
+ "riding": [
+  {
+   "skill": "Apprentice Riding",
+   "spell_id": 33388,
+   "level": 40,
+   "speed": "60%",
+   "training": "100g",
+   "mount_cost": "20g (first mount free via quest)",
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "skill": "Journeyman Riding",
+   "spell_id": 33391,
+   "level": 60,
+   "speed": "100%",
+   "training": "1000g",
+   "mount_cost": "200g epic",
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "skill": "Discounts/rules",
+   "notes": "Honored with home faction = 10% off; Exalted lets you learn another race's riding for 100g; no Mage class mount; no WoW Token",
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "skill": "Class mounts",
+   "notes": "Only Paladins and Warlocks have class mount quests (levels 40 and 60); no Mage class mount. Same costs table as above confirmed on this page 2026-11-10 (Apprentice 40/60%/100g, mount 20g first free; Journeyman 60/100%/1000g, mount 200g).",
+   "source_url": "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+   "checked": "2026-11-10"
+  }
+ ],
+ "mounts": [
+  {
+   "race": "Human",
+   "trainer": "Randal Hunter",
+   "trainer_npc_id": 4732,
+   "location": "Eastvale Logging Camp 84.2,65.0",
+   "vendor": "Katie Hunter",
+   "vendor_npc_id": 384,
+   "first_mount_quest": "Your First Horse",
+   "quest_id": 97045,
+   "mount_item_ids": [
+    5655,
+    5656,
+    2414
+   ],
+   "epic_mount_item_ids": [
+    18776,
+    18777,
+    18778
+   ],
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "race": "Dwarf",
+   "trainer": "Ultham Ironhorn",
+   "trainer_npc_id": 4772,
+   "location": "Gol'Bolar Quarry 63.8,50.2",
+   "vendor": "Veron Amberstill",
+   "vendor_npc_id": 1261,
+   "first_mount_quest": "(first mount quest)",
+   "quest_id": 97017,
+   "mount_item_ids": [
+    5864,
+    5872,
+    5873
+   ],
+   "epic_mount_item_ids": [
+    18787,
+    18786,
+    18785
+   ],
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "race": "Night Elf",
+   "trainer": "Jartsam",
+   "trainer_npc_id": 4753,
+   "location": "Darnassus 38.6,16.0",
+   "vendor": "Lelanai",
+   "vendor_npc_id": 4730,
+   "first_mount_quest": "(first mount quest)",
+   "quest_id": 95511,
+   "mount_item_ids": [
+    8629,
+    8631,
+    8632,
+    274706
+   ],
+   "epic_mount_item_ids": [
+    18902,
+    18766,
+    18767
+   ],
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "race": "Gnome",
+   "trainer": "Binjy Featherwhistle",
+   "trainer_npc_id": 7954,
+   "location": "Kharanos 49.2,48.0",
+   "vendor": "Milli Featherwhistle",
+   "vendor_npc_id": 7955,
+   "first_mount_quest": "(first mount quest)",
+   "quest_id": 97046,
+   "mount_item_ids": [
+    8563,
+    8595,
+    13321,
+    13322
+   ],
+   "epic_mount_item_ids": [
+    18774,
+    18773,
+    18772
+   ],
+   "source_url": "https://www.wowhead.com/forever/guide/riding-mounts",
+   "checked": "2026-11-09"
+  },
+  {
+   "race": "Any",
+   "notes": "Cerulean Prideclaw pre-purchase mount still requires riding skill",
+   "source_url": "https://news.blizzard.com/en-us/article/24302093",
+   "checked": "2026-11-09"
+  },
+  {
+   "race": "Skyborne",
+   "faction": "Both (same NPC for High Order and Windshaper)",
+   "trainer": "Genn Fairweather",
+   "trainer_npc_id": 265756,
+   "location": "Fairweather/west of Valanaar, Zephras Isle 53.8,81.2",
+   "vendor": "Genn Fairweather (the riding trainer also sells the mounts)",
+   "vendor_npc_id": 265756,
+   "racial_riding_skill": "Galestrider Riding",
+   "racial_riding_spell_id": 1285853,
+   "first_mount_quest": "Your First Riding Galestrider",
+   "quest_id": 96996,
+   "mount_item_ids": [
+    269681,
+    269683,
+    274930
+   ],
+   "mount_names": [
+    "Empyrean Galestrider",
+    "Stormy Galestrider",
+    "Umber Galestrider"
+   ],
+   "epic_mount_item_ids": [
+    269671,
+    269678,
+    274933
+   ],
+   "epic_mount_names": [
+    "Swift Empyrean Galestrider",
+    "Swift Stormy Galestrider",
+    "Swift Umber Galestrider"
+   ],
+   "notes": "Choose any 60% Galestrider as the reward of the first-mount quest, given by the mount vendor after learning Apprentice Riding.",
+   "source_url": "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+   "checked": "2026-11-10"
+  }
+ ],
+ "zones_by_level": [
+  {
+   "levels": "10-13",
+   "alliance": "Loch Modan / Darkshore",
+   "horde": "The Barrens",
+   "dungeons": "Hall of Thanes / Ragefire Chasm",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  },
+  {
+   "levels": "14-17",
+   "alliance": "Westfall / Darkshore",
+   "horde": "Silverpine Forest",
+   "dungeons": "Hall of Thanes / Ragefire + Ruins of Lordaeron",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  },
+  {
+   "levels": "18-20",
+   "alliance": "Westfall / Redridge",
+   "horde": "The Barrens / Stonetalon",
+   "dungeons": "Hall of Thanes / Wailing Caverns",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  },
+  {
+   "levels": "21-23",
+   "alliance": "Redridge / Duskwood",
+   "horde": "Hillsbrad / Stonetalon",
+   "dungeons": "Stockade / Shadowfang + Wailing Caverns",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  },
+  {
+   "levels": "24-26",
+   "alliance": "Ashenvale / Duskwood",
+   "horde": "Ashenvale / Duskwood",
+   "dungeons": "BFD + Stockade / BFD + Shadowfang",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  },
+  {
+   "levels": "27-28",
+   "alliance": "Wetlands / Ashenvale",
+   "horde": "Hillsbrad / Wetlands",
+   "dungeons": "Excavation Site + BFD",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  },
+  {
+   "levels": "29-30",
+   "alliance": "Wetlands / Ashenvale",
+   "horde": "Wetlands / Thousand Needles",
+   "dungeons": "Excavation Site + Gnomeregan / Excavation Site + Razorfen Kraul",
+   "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+   "checked": "2026-11-09"
+  }
+ ],
+ "new_zones": [
+  {
+   "zone": "Zephras Isle",
+   "levels": "1-12",
+   "notes": "Skyborne start",
+   "source_url": "https://www.icy-veins.com/wow-forever/wow-forever-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "zone": "Riverglades",
+   "levels": "35-45",
+   "notes": "",
+   "source_url": "https://www.icy-veins.com/wow-forever/wow-forever-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "zone": "Shen'Dralas",
+   "levels": "?",
+   "notes": "Between Mulgore/Desolace and Feralas; quests for Maraudon and Razorfen Downs",
+   "source_url": "https://www.icy-veins.com/wow-forever/wow-forever-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "zone": "Mount Hyjal",
+   "levels": "60",
+   "notes": "Barrow Deeps / Hyjal Summit raids",
+   "source_url": "https://www.icy-veins.com/wow-forever/wow-forever-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "zone": "Zephras Isle",
+   "subzone": "Valanaar",
+   "notes": "Mage trainer Anathamaas Aetherwind at 65.8,80.4 gives breadcrumb 'Speak with Belann'; Belann Windwood at 62.8,77.4 gives level-10 'Boughs in the Wind' (quest item at 48.5,68.2; reward Windbough Wand).",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "zone": "Zephras Isle",
+   "subzone": "Fairweather Stables (west of Valanaar)",
+   "notes": "Skyborne riding trainer and Galestrider vendor Genn Fairweather (npc 265756) at 53.8,81.2; Wowhead map zone=16593.",
+   "source_url": "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+   "checked": "2026-11-10"
+  },
+  {
+   "zone": "Zephras Isle",
+   "subzone": "Shen'dar Highlands",
+   "notes": "Overlook Standing Stones are in Shen'dar Highlands (High Order Skyborne quest 'Catching Wind' redesigned).",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+   "checked": "2026-11-09"
+  }
+ ],
+ "dungeons": [
+  {
+   "name": "Ragefire Chasm",
+   "levels": "13-18",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Hall of Thanes",
+   "levels": "13-20",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Ruins of Lordaeron",
+   "levels": "15-22",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Wailing Caverns",
+   "levels": "15-24",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "The Deadmines",
+   "levels": "17-26",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Shadowfang Keep",
+   "levels": "20-30",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Blackfathom Deeps",
+   "levels": "24-32",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "The Stockade",
+   "levels": "24-32",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Excavation Site: Wetlands",
+   "levels": "26-33",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "City of Dalaran",
+   "levels": "28-35",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Gnomeregan",
+   "levels": "29-38",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Razorfen Kraul",
+   "levels": "29-38",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "SM Graveyard",
+   "levels": "30-38",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "SM Library",
+   "levels": "33-41",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "The Drowned City",
+   "levels": "35-40",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "SM Armory",
+   "levels": "36-44",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Razorfen Downs",
+   "levels": "37-46",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "SM Cathedral",
+   "levels": "38-46",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Krol'dok Stronghold",
+   "levels": "40-45",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Uldaman",
+   "levels": "41-51",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Zul'Farrak",
+   "levels": "44-54",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Maraudon",
+   "levels": "46-55",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Alcaz Island Prison",
+   "levels": "48-53",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Sunken Temple",
+   "levels": "50-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Blackrock Depths",
+   "levels": "52-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Dire Maul East",
+   "levels": "54-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Blackmaw Hold",
+   "levels": "55-60",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Lower Blackrock Spire",
+   "levels": "55-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Dire Maul North/West",
+   "levels": "56-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Scholomance",
+   "levels": "58-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Shaper's Terrace",
+   "levels": "58-60",
+   "new_in_forever": true,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Stratholme",
+   "levels": "58-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Upper Blackrock Spire",
+   "levels": "59-60",
+   "new_in_forever": false,
+   "source_url": "https://www.icy-veins.com/wow-forever/dungeons-overview",
+   "checked": "2026-11-09"
+  }
+ ],
+ "raids": [
+  {
+   "name": "Barrow Deeps",
+   "size": 10,
+   "bosses": 8,
+   "location": "Mount Hyjal",
+   "opens": "2026-12-09",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Hyjal Summit",
+   "size": 20,
+   "bosses": 13,
+   "location": "Mount Hyjal",
+   "opens": "2026-12-09",
+   "notes": "Has a legendary",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Onyxia's Lair",
+   "size": 40,
+   "location": "Dustwallow Marsh",
+   "opens": "2026-12-09",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  }
+ ],
+ "raid_rules": {
+  "rules": [
+   "No world buffs in raids",
+   "No heroic/flex modes",
+   "Item stats hidden until first looted"
+  ],
+  "source_url": "https://www.icy-veins.com/wow-forever/raid-overview",
+  "checked": "2026-11-09"
+ },
+ "roadmap": [
+  {
+   "when": "2026-11-04",
+   "what": "Launch: level 60 cap, dungeons, PvP",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "when": "2026-12-09",
+   "what": "Raids: Barrow Deeps, Hyjal Summit, Onyxia's Lair",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "when": "Winter 2026",
+   "what": "Hardcore ruleset",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "when": "Spring 2027",
+   "what": "2 raids (10/20), 2 dungeons, new zone/quests, legendary questline, PvP season refresh",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "when": "Summer 2027",
+   "what": "Revamped iconic raid, new raid, 2 dungeons, profession and Legacy updates",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  }
+ ],
+ "addons": [
+  {
+   "name": "Questie",
+   "status": "Forever TOC (Questie_Forever.toc, Interface 16001)",
+   "source_url": "https://github.com/Questie/Questie",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Deadly Boss Mods",
+   "status": "16001 in DBM-Core TOC",
+   "source_url": "https://github.com/DeadlyBossMods/DeadlyBossMods",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Details!",
+   "status": "Details_Camelot.toc 16001",
+   "source_url": "https://github.com/Tercioo/Details-Damage-Meter",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "BigWigs",
+   "status": "16001 in TOC",
+   "source_url": "https://github.com/BigWigsMods/BigWigs",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "WeakAuras",
+   "status": "NOT confirmed: Vanilla TOC 11509 only",
+   "source_url": "https://github.com/WeakAuras/WeakAuras2",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "ElvUI, Bartender4, Dominos, Plater, BetterBags, UnitFramesImproved",
+   "status": "Listed as working by foreverstatus.com (third party, unverified)",
+   "source_url": "https://foreverstatus.com/addons",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Built-in Cooldown Manager",
+   "status": "Blizzard UI has Blizzard_CooldownViewer; it tracks all spells by default",
+   "source_url": "https://www.icy-veins.com/wow-forever/wow-forever-overview",
+   "checked": "2026-11-09"
+  }
+ ],
+ "addon_dev": {
+  "notes": [
+   "Forever is Mainline-family; Classic Era addons don't load",
+   "Midnight-style restrictions incl. secret values apply (verify)",
+   "TOC lookup: _Forever/_Camelot, then _Mainline, then plain .toc",
+   "Use '## Interface: 16001'; dual: '120105, 16001'",
+   "Runtime: WOW_PROJECT_ID == 18",
+   "Check in game: /run print(GetBuildInfo()) print('project', WOW_PROJECT_ID)",
+   "Install folder _forever_ (verify)"
+  ],
+  "source_url": "https://github.com/Tautellini/TautelliniAddons/blob/main/docs/forever-addon-development.md",
+  "checked": "2026-11-09"
+ },
+ "change_sources": [
+  {
+   "name": "Blizzard Tracker RSS (blue posts incl. Forever hotfixes/tuning)",
+   "type": "rss",
+   "source_url": "https://us.forums.blizzard.com/en/wow/groups/blizzard-tracker/posts.rss",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Forever Development Notes thread RSS",
+   "type": "rss",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696.rss",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Wowhead Forever news RSS",
+   "type": "rss",
+   "source_url": "https://www.wowhead.com/news/rss/forever",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Wowhead Forever hub",
+   "type": "page",
+   "source_url": "https://www.wowhead.com/forever",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Blizzard hotfixes article (updated in place)",
+   "type": "page",
+   "source_url": "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Blizzard WoW news feed",
+   "type": "rss (returned HTML on test - verify)",
+   "source_url": "https://news.blizzard.com/en-us/feed/world-of-warcraft",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Gethe/wow-ui-source forever branch commits (build number changes)",
+   "type": "atom",
+   "source_url": "https://github.com/Gethe/wow-ui-source/commits/forever.atom",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Icy Veins roadmap + priest guides (Last Updated / changelog)",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/roadmap",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Discourse JSON for any thread (append .json)",
+   "type": "api",
+   "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696.json",
+   "checked": "2026-11-09"
+  },
+  {
+   "name": "Blizzard Mage & Shaman class deep dive",
+   "type": "page",
+   "source_url": "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Mage class overview",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-overview",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Mage class quests",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-class-quests",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Arcane Mage leveling",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Fire Mage leveling",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Frost Mage leveling",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Mage talent calculator",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/mage-talent-calculator",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Arcane Mage gear/BiS (placeholder)",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-gear-best-in-slot",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Fire Mage gear/BiS (placeholder)",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-gear-best-in-slot",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Icy Veins Frost Mage gear/BiS (placeholder)",
+   "type": "page",
+   "source_url": "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-gear-best-in-slot",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Wowhead Arcane Mage BiS (placeholder)",
+   "type": "page",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/bis-gear",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Wowhead Fire Mage BiS (placeholder)",
+   "type": "page",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/fire/bis-gear",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Wowhead Frost Mage BiS (placeholder)",
+   "type": "page",
+   "source_url": "https://www.wowhead.com/forever/guide/classes/mage/frost/bis-gear",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "Wowhead riding/mounts guide (current URL)",
+   "type": "page",
+   "source_url": "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+   "checked": "2026-11-10"
+  },
+  {
+   "name": "wowforeverplaybook Mage changes",
+   "type": "page",
+   "source_url": "https://wowforeverplaybook.com/wow-forever-mage-changes",
+   "checked": "2026-11-10"
+  }
+ ]
+}

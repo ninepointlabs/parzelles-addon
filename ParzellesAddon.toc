@@ -1,0 +1,62 @@
+## Interface: 16001
+## Title: Parzelle's Addon
+## Notes: The do-everything Mage companion for WoW Forever: spec-aware rotation help, conjure button, portals, crowd control, talents, gear upgrade tips, leveling, class quests, reminders and a full Learn the Mage mode.
+## Author: Nine Point Labs
+## Version: @project-version@
+## X-Website: https://github.com/ninepointlabs/parzelles-addon
+## Category: Class
+## IconTexture: Interface\Icons\Spell_Holy_MagicalSentry
+## AddonCompartmentFunc: ParzellesAddon_OnCompartmentClick
+## SavedVariables: ParzellesAddonDB
+## SavedVariablesPerCharacter: ParzellesAddonCharDB
+
+Core\Init.lua
+Data\Meta.lua
+Data\Spells.lua
+Data\Quests.lua
+Data\Builds.lua
+Data\Gear.lua
+Data\World.lua
+Data\Notes.lua
+Data\Talents.lua
+Data\ItemSources.lua
+Data\Learn.lua
+Data\Changes.lua
+Core\Spec.lua
+Core\DB.lua
+Core\DualSpec.lua
+Modules\Auras.lua
+Modules\Stats.lua
+Modules\Training.lua
+Modules\Progress.lua
+Modules\Travel.lua
+Modules\Conjure.lua
+Modules\Reminders.lua
+Modules\Rotation.lua
+Modules\CC.lua
+Modules\Summary.lua
+Modules\Changes.lua
+Modules\Learn.lua
+Modules\Tooltip.lua
+Modules\Map.lua
+UI\Widgets.lua
+UI\Main.lua
+UI\Panels\Home.lua
+UI\Panels\Rotation.lua
+UI\Panels\Learn.lua
+UI\Panels\Leveling.lua
+UI\Panels\Talents.lua
+UI\Panels\Gear.lua
+UI\Panels\Quests.lua
+UI\Panels\Training.lua
+UI\Panels\Mounts.lua
+UI\Panels\Portals.lua
+UI\Panels\Reminders.lua
+UI\Panels\Changes.lua
+UI\Panels\Sources.lua
+UI\Panels\Options.lua
+UI\Hud.lua
+UI\Bags.lua
+UI\ConjureButton.lua
+UI\Minimap.lua
+Core\Boot.lua

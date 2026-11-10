@@ -1,0 +1,1007 @@
+{
+ "items": {
+  "270228": {
+   "min_level": 13,
+   "drops": [
+    {
+     "npc": "Plunder",
+     "npc_id": 261311,
+     "chance": "33.9%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/270228",
+   "checked": "2026-11-10"
+  },
+  "15444": {
+   "quests": [
+    {
+     "name": "Hidden Enemies",
+     "quest_id": 5730,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/15444",
+   "checked": "2026-11-10"
+  },
+  "5201": {
+   "min_level": 17,
+   "drops": [
+    {
+     "npc": "Captain Greenskin",
+     "npc_id": 647,
+     "chance": "31.5%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/5201",
+   "checked": "2026-11-10"
+  },
+  "6505": {
+   "quests": [
+    {
+     "name": "Leaders of the Fang",
+     "quest_id": 914,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/6505",
+   "checked": "2026-11-10"
+  },
+  "249392": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Enchanting",
+    "skill": 140,
+    "reagents": [
+     {
+      "count": 5,
+      "name": "Strange Dust"
+     },
+     {
+      "count": 2,
+      "name": "Small Glimmering Shard"
+     },
+     {
+      "count": 1,
+      "name": "Greater Astral Essence"
+     },
+     {
+      "count": 4,
+      "name": "Large Glimmering Shard"
+     },
+     {
+      "count": 4,
+      "name": "Star Wood"
+     },
+     {
+      "count": 3,
+      "name": "Pyrite"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/249392",
+   "checked": "2026-11-10"
+  },
+  "274158": {
+   "min_level": 26,
+   "drops": [
+    {
+     "npc": "Aggem Thorncurse",
+     "npc_id": 4424,
+     "chance": "31.1%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/274158",
+   "checked": "2026-11-10"
+  },
+  "271215": {
+   "min_level": 19,
+   "drops": [
+    {
+     "npc": "Rath'mael",
+     "npc_id": 250657,
+     "chance": "35.6%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/271215",
+   "checked": "2026-11-10"
+  },
+  "1155": {
+   "min_level": 24,
+   "drops": [
+    {
+     "npc": "Twilight Lord Kelris",
+     "npc_id": 4832,
+     "chance": "33%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/1155",
+   "checked": "2026-11-10"
+  },
+  "281312": {
+   "quests": [
+    {
+     "name": "Stopping the Cycle",
+     "quest_id": 98297,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281312",
+   "checked": "2026-11-10"
+  },
+  "253957": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Silver Bar"
+     },
+     {
+      "count": 2,
+      "name": "Silken Thread"
+     },
+     {
+      "count": 10,
+      "name": "Bolt of Silk Cloth"
+     },
+     {
+      "count": 4,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 2,
+      "name": "Greater Astral Essence"
+     },
+     {
+      "count": 4,
+      "name": "Cerulean Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/253957",
+   "checked": "2026-11-10"
+  },
+  "253951": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Silver Bar"
+     },
+     {
+      "count": 4,
+      "name": "Spider's Silk"
+     },
+     {
+      "count": 2,
+      "name": "Silken Thread"
+     },
+     {
+      "count": 10,
+      "name": "Bolt of Silk Cloth"
+     },
+     {
+      "count": 2,
+      "name": "Greater Astral Essence"
+     },
+     {
+      "count": 4,
+      "name": "Cerulean Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/253951",
+   "checked": "2026-11-10"
+  },
+  "253959": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Silver Bar"
+     },
+     {
+      "count": 2,
+      "name": "Silken Thread"
+     },
+     {
+      "count": 10,
+      "name": "Bolt of Silk Cloth"
+     },
+     {
+      "count": 2,
+      "name": "Greater Astral Essence"
+     },
+     {
+      "count": 4,
+      "name": "Pyrite"
+     },
+     {
+      "count": 4,
+      "name": "Cerulean Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/253959",
+   "checked": "2026-11-10"
+  },
+  "253885": {
+   "min_level": 10,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 50,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 2,
+      "name": "Minor Mana Potion"
+     },
+     {
+      "count": 8,
+      "name": "Bolt of Linen Cloth"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/253885",
+   "checked": "2026-11-10"
+  },
+  "10657": {
+   "quests": [
+    {
+     "name": "In Nightmares",
+     "quest_id": 3369,
+     "choice": true
+    },
+    {
+     "name": "In Nightmares",
+     "quest_id": 3370,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/10657",
+   "checked": "2026-11-10"
+  },
+  "4314": {
+   "min_level": 17,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 110,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Bolt of Woolen Cloth"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/4314",
+   "checked": "2026-11-10"
+  },
+  "4315": {
+   "min_level": 19,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 95,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 6,
+      "name": "Bolt of Woolen Cloth"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/4315",
+   "checked": "2026-11-10"
+  },
+  "1449": {
+   "quests": [
+    {
+     "name": "WANTED: Chok'sul",
+     "quest_id": 256,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/1449",
+   "checked": "2026-11-10"
+  },
+  "281635": {
+   "quests": [
+    {
+     "name": "Greater Friend of the Library",
+     "quest_id": 79536,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281635",
+   "checked": "2026-11-10"
+  },
+  "7508": {
+   "quests": [
+    {
+     "name": "Ju-Ju Heaps",
+     "quest_id": 1884,
+     "choice": true
+    },
+    {
+     "name": "Mirror Lake",
+     "quest_id": 1861,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7508",
+   "checked": "2026-11-10"
+  },
+  "9513": {
+   "quests": [
+    {
+     "name": "Ju-Ju Heaps",
+     "quest_id": 1884,
+     "choice": true
+    },
+    {
+     "name": "Mirror Lake",
+     "quest_id": 1861,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/9513",
+   "checked": "2026-11-10"
+  },
+  "7509": {
+   "quests": [
+    {
+     "name": "Manaweave Robe",
+     "quest_id": 1941,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7509",
+   "checked": "2026-11-10"
+  },
+  "7510": {
+   "quests": [
+    {
+     "name": "Spellfire Robes",
+     "quest_id": 1962,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7510",
+   "checked": "2026-11-10"
+  },
+  "7511": {
+   "quests": [
+    {
+     "name": "Astral Knot Garment",
+     "quest_id": 1942,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7511",
+   "checked": "2026-11-10"
+  },
+  "9516": {
+   "quests": [
+    {
+     "name": "Astral Knot Garment",
+     "quest_id": 1942,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/9516",
+   "checked": "2026-11-10"
+  },
+  "7512": {
+   "quests": [
+    {
+     "name": "Nether-lace Garment",
+     "quest_id": 1946,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7512",
+   "checked": "2026-11-10"
+  },
+  "9515": {
+   "quests": [
+    {
+     "name": "Nether-lace Garment",
+     "quest_id": 1946,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/9515",
+   "checked": "2026-11-10"
+  },
+  "7515": {
+   "quests": [
+    {
+     "name": "Celestial Power",
+     "quest_id": 1958,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7515",
+   "checked": "2026-11-10"
+  },
+  "9517": {
+   "quests": [
+    {
+     "name": "Celestial Power",
+     "quest_id": 1958,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/9517",
+   "checked": "2026-11-10"
+  },
+  "263430": {
+   "quests": [
+    {
+     "name": "Boughs in the Wind",
+     "quest_id": 93797,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/263430",
+   "checked": "2026-11-10"
+  },
+  "11287": {
+   "min_level": 5,
+   "crafted": {
+    "profession": "Enchanting",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Simple Wood"
+     },
+     {
+      "count": 1,
+      "name": "Lesser Magic Essence"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/11287",
+   "checked": "2026-11-10"
+  },
+  "11288": {
+   "min_level": 13,
+   "crafted": {
+    "profession": "Enchanting",
+    "skill": 110,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Simple Wood"
+     },
+     {
+      "count": 2,
+      "name": "Lesser Magic Essence"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/11288",
+   "checked": "2026-11-10"
+  },
+  "7001": {
+   "quests": [
+    {
+     "name": "Blackfathom Villainy",
+     "quest_id": 1200,
+     "choice": true
+    },
+    {
+     "name": "Blackfathom Villainy",
+     "quest_id": 6561,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7001",
+   "checked": "2026-11-10"
+  },
+  "279896": {
+   "quests": [
+    {
+     "name": "Old Ironforge Incursion",
+     "quest_id": 96393,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279896",
+   "checked": "2026-11-10"
+  },
+  "5198": {
+   "min_level": 17,
+   "drops": [
+    {
+     "npc": "Cookie",
+     "npc_id": 645,
+     "chance": "29.7%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/5198",
+   "checked": "2026-11-10"
+  },
+  "7514": {
+   "quests": [
+    {
+     "name": "Mage's Wand",
+     "quest_id": 1952,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7514",
+   "checked": "2026-11-10"
+  },
+  "11263": {
+   "quests": [
+    {
+     "name": "Mage's Wand",
+     "quest_id": 1952,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/11263",
+   "checked": "2026-11-10"
+  },
+  "7513": {
+   "quests": [
+    {
+     "name": "Mage's Wand",
+     "quest_id": 1952,
+     "choice": true
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/7513",
+   "checked": "2026-11-10"
+  }
+ },
+ "quests": {
+  "5730": {
+   "level": 16,
+   "min_level": 9,
+   "faction": "Both",
+   "zone": "Orgrimmar",
+   "start_npc": "Neeru Fireblade",
+   "end_npc": "Thrall",
+   "pins": [
+    {
+     "zone": "Orgrimmar",
+     "label": "Start: Neeru Fireblade",
+     "x": 49.6,
+     "y": 50.5
+    },
+    {
+     "zone": "Orgrimmar",
+     "label": "End: Thrall",
+     "x": 32.0,
+     "y": 37.8
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/5730",
+   "checked": "2026-11-10"
+  },
+  "914": {
+   "level": 22,
+   "min_level": 10,
+   "faction": "Both",
+   "zone": "Wailing Caverns",
+   "start_npc": "Nara Wildmane",
+   "end_npc": "Nara Wildmane",
+   "pins": [
+    {
+     "zone": "Thunder Bluff",
+     "label": "Start and End: Nara Wildmane",
+     "x": 75.8,
+     "y": 31.2
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/914",
+   "checked": "2026-11-10"
+  },
+  "98297": {
+   "level": 34,
+   "min_level": 24,
+   "faction": "Alliance",
+   "zone": "Wetlands",
+   "start_npc": "Howin Kindfeather",
+   "end_npc": "Howin Kindfeather",
+   "pins": [
+    {
+     "zone": "Wetlands",
+     "label": "Start and End: Howin Kindfeather",
+     "x": 49.4,
+     "y": 42.0
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/98297",
+   "checked": "2026-11-10"
+  },
+  "3369": {
+   "level": 25,
+   "min_level": 10,
+   "faction": "Horde",
+   "zone": "The Barrens",
+   "start_npc": "Falla Sagewind",
+   "end_npc": "Arch Druid Hamuul Runetotem",
+   "pins": [
+    {
+     "zone": "The Barrens",
+     "label": "End: Arch Druid Hamuul Runetotem",
+     "x": 76.6,
+     "y": 27.6
+    },
+    {
+     "zone": "The Barrens",
+     "label": "End: Arch Druid Hamuul Runetotem",
+     "x": 78.3,
+     "y": 28.6
+    },
+    {
+     "zone": "The Barrens",
+     "label": "End: Arch Druid Hamuul Runetotem",
+     "x": 78.6,
+     "y": 27.7
+    },
+    {
+     "zone": "The Barrens",
+     "label": "Start: Falla Sagewind",
+     "x": 48.2,
+     "y": 32.8
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/3369",
+   "checked": "2026-11-10"
+  },
+  "3370": {
+   "level": 25,
+   "min_level": 10,
+   "faction": "Alliance",
+   "zone": "The Barrens",
+   "start_npc": "Falla Sagewind",
+   "end_npc": "Mathrengyl Bearwalker",
+   "pins": [
+    {
+     "zone": "The Barrens",
+     "label": "End: Mathrengyl Bearwalker",
+     "x": 35.2,
+     "y": 8.1
+    },
+    {
+     "zone": "The Barrens",
+     "label": "End: Mathrengyl Bearwalker",
+     "x": 35.3,
+     "y": 8.9
+    },
+    {
+     "zone": "The Barrens",
+     "label": "Start: Falla Sagewind",
+     "x": 48.2,
+     "y": 32.8
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/3370",
+   "checked": "2026-11-10"
+  },
+  "256": {
+   "level": 22,
+   "min_level": 17,
+   "faction": "Both",
+   "zone": "Loch Modan",
+   "start_npc": "WANTED",
+   "end_npc": "Magistrate Bluntnose",
+   "pins": [
+    {
+     "zone": "Loch Modan",
+     "label": "End: Magistrate Bluntnose",
+     "x": 34.6,
+     "y": 44.6
+    },
+    {
+     "zone": "Loch Modan",
+     "label": "End: Magistrate Bluntnose",
+     "x": 34.6,
+     "y": 43.2
+    },
+    {
+     "zone": "Loch Modan",
+     "label": "Start: WANTED",
+     "x": 37.2,
+     "y": 46.5
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/256",
+   "checked": "2026-11-10"
+  },
+  "79536": {
+   "level": 35,
+   "min_level": 20,
+   "faction": "Both",
+   "end_npc": "Owen Thadd",
+   "pins": [
+    {
+     "zone": "Undercity",
+     "label": "End: Owen Thadd",
+     "x": 73.6,
+     "y": 33.1
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/79536",
+   "checked": "2026-11-10"
+  },
+  "1884": {
+   "level": 10,
+   "min_level": 10,
+   "faction": "Both",
+   "start_npc": "Un'Thuwa",
+   "end_npc": "Un'Thuwa",
+   "pins": [
+    {
+     "zone": "Durotar",
+     "label": "Start and End: Un'Thuwa",
+     "x": 56.3,
+     "y": 75.1
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1884",
+   "checked": "2026-11-10"
+  },
+  "1861": {
+   "level": 10,
+   "min_level": 10,
+   "faction": "Both",
+   "start_npc": "Jennea Cannon",
+   "end_npc": "Jennea Cannon",
+   "pins": [
+    {
+     "zone": "Stormwind City",
+     "label": "Start and End: Jennea Cannon",
+     "x": 49.5,
+     "y": 86.0
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1861",
+   "checked": "2026-11-10"
+  },
+  "1941": {
+   "level": 15,
+   "min_level": 15,
+   "faction": "Both",
+   "start_npc": "Wynne Larson",
+   "end_npc": "Wynne Larson",
+   "pins": [
+    {
+     "zone": "Stormwind City",
+     "label": "Start and End: Wynne Larson",
+     "x": 52.0,
+     "y": 83.7
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1941",
+   "checked": "2026-11-10"
+  },
+  "1962": {
+   "level": 15,
+   "min_level": 15,
+   "faction": "Both",
+   "start_npc": "Josef Gregorian, Victor Ward, Rhiannon Davis",
+   "end_npc": "Josef Gregorian, Victor Ward, Rhiannon Davis",
+   "pins": [
+    {
+     "zone": "Undercity",
+     "label": "Start and End: Josef Gregorian",
+     "x": 70.7,
+     "y": 30.3
+    },
+    {
+     "zone": "Undercity",
+     "label": "Start and End: Josef Gregorian",
+     "x": 70.8,
+     "y": 31.0
+    },
+    {
+     "zone": "Undercity",
+     "label": "Start and End: Victor Ward",
+     "x": 70.3,
+     "y": 30.5
+    },
+    {
+     "zone": "Undercity",
+     "label": "Start and End: Victor Ward",
+     "x": 70.3,
+     "y": 29.8
+    },
+    {
+     "zone": "Undercity",
+     "label": "Start and End: Rhiannon Davis",
+     "x": 70.2,
+     "y": 30.2
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1962",
+   "checked": "2026-11-10"
+  },
+  "1942": {
+   "level": 26,
+   "min_level": 26,
+   "faction": "Both",
+   "start_npc": "Wynne Larson",
+   "end_npc": "Wynne Larson",
+   "pins": [
+    {
+     "zone": "Stormwind City",
+     "label": "Start and End: Wynne Larson",
+     "x": 52.0,
+     "y": 83.7
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1942",
+   "checked": "2026-11-10"
+  },
+  "1946": {
+   "level": 26,
+   "min_level": 26,
+   "faction": "Both",
+   "start_npc": "Kil'hala",
+   "end_npc": "Kil'hala",
+   "pins": [
+    {
+     "zone": "The Barrens",
+     "label": "Start and End: Kil'hala",
+     "x": 52.2,
+     "y": 31.8
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1946",
+   "checked": "2026-11-10"
+  },
+  "1958": {
+   "level": 40,
+   "min_level": 35,
+   "faction": "Both",
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1958",
+   "checked": "2026-11-10"
+  },
+  "93797": {
+   "level": 10,
+   "min_level": 10,
+   "faction": "Alliance",
+   "start_npc": "Belann Windwood",
+   "end_npc": "Belann Windwood",
+   "pins": [
+    {
+     "zone": "Zephras Isle",
+     "label": "Start and End: Belann Windwood",
+     "x": 62.9,
+     "y": 77.4
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/93797",
+   "checked": "2026-11-10"
+  },
+  "1200": {
+   "level": 27,
+   "min_level": 18,
+   "faction": "Alliance",
+   "zone": "Blackfathom Deeps",
+   "end_npc": "Dawnwatcher Selgorm",
+   "pins": [
+    {
+     "zone": "Darnassus",
+     "label": "End: Dawnwatcher Selgorm",
+     "x": 55.9,
+     "y": 24.3
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1200",
+   "checked": "2026-11-10"
+  },
+  "6561": {
+   "level": 27,
+   "min_level": 18,
+   "faction": "Horde",
+   "zone": "Blackfathom Deeps",
+   "end_npc": "Bashana Runetotem",
+   "pins": [
+    {
+     "zone": "Thunder Bluff",
+     "label": "End: Bashana Runetotem",
+     "x": 70.8,
+     "y": 32.8
+    },
+    {
+     "zone": "Thunder Bluff",
+     "label": "End: Bashana Runetotem",
+     "x": 70.9,
+     "y": 33.8
+    },
+    {
+     "zone": "Thunder Bluff",
+     "label": "End: Bashana Runetotem",
+     "x": 71.1,
+     "y": 34.5
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/6561",
+   "checked": "2026-11-10"
+  },
+  "96393": {
+   "level": 16,
+   "min_level": 9,
+   "faction": "Both",
+   "zone": "The Hall of Thanes",
+   "start_npc": "Earthseer Farsen",
+   "end_npc": "King Magni Bronzebeard",
+   "pins": [
+    {
+     "zone": "Dun Morogh",
+     "label": "End: King Magni Bronzebeard",
+     "x": 39.3,
+     "y": 56.6
+    },
+    {
+     "zone": "Dun Morogh",
+     "label": "End: King Magni Bronzebeard",
+     "x": 39.4,
+     "y": 55.9
+    },
+    {
+     "zone": "Dun Morogh",
+     "label": "End: King Magni Bronzebeard",
+     "x": 39.4,
+     "y": 57.1
+    },
+    {
+     "zone": "Dun Morogh",
+     "label": "Start: Earthseer Farsen",
+     "x": 64.8,
+     "y": 58.4
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/96393",
+   "checked": "2026-11-10"
+  },
+  "1952": {
+   "level": 40,
+   "min_level": 30,
+   "faction": "Both",
+   "start_npc": "Tabetha",
+   "end_npc": "Tabetha",
+   "pins": [
+    {
+     "zone": "Dustwallow Marsh",
+     "label": "Start and End: Tabetha",
+     "x": 46.0,
+     "y": 57.1
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/1952",
+   "checked": "2026-11-10"
+  }
+ },
+ "source": "https://db.icy-veins.com/wow-forever/ (early access)",
+ "checked": "2026-11-10",
+ "errors": []
+}

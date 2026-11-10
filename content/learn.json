@@ -1,0 +1,3712 @@
+{
+ "version": 1,
+ "checked": "2026-11-10",
+ "spells": {
+  "Fireball": {
+   "what": "A slow Fire bolt that hits hard and leaves a small burn on the target. One of your three starting spells. Blizzard re-scaled the low ranks so every new rank is an upgrade.",
+   "when": "Your opener and main nuke at low level. Cast it from max range before the enemy reaches you.",
+   "rank_tip": "Ranks at 1, 6, 12, 18, 24, 30, 36, 42, 48, 54 and 60. Fire players train every rank; Frost and Arcane players can skip later ranks to save gold.",
+   "per_spec": {
+    "Arcane": "Rarely used once you have Arcane Blast and Frostbolt. Fireball can proc Missile Barrage.",
+    "Fire": "Opener before Pyroblast and Frostfire Bolt, and the filler in the Deep Fire raid build. Crits build Heating Up.",
+    "Frost": "Only for enemies immune to Frost."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Frost Armor": {
+   "what": "Self buff that raises armor and slows the movement and attack speed of enemies that hit you in melee. Shares a slot with Ice Armor and Mage Armor: only one armor at a time.",
+   "when": "Keep it up while leveling. Icy Veins: the slow cuts melee damage a lot, and taking hits can proc Frostbite.",
+   "rank_tip": "Ranks at 1, 10 and 20. Ice Armor (30) replaces it.",
+   "per_spec": {
+    "Arcane": "Use it until Mage Armor at 34, then switch for the mana regen.",
+    "Fire": "Use it until Mage Armor at 34, then switch for the mana regen.",
+    "Frost": "Your leveling armor until Ice Armor at 30."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  "Arcane Intellect": {
+   "what": "Long buff that raises the target's Intellect, which means a bigger mana pool and a little spell crit.",
+   "when": "Keep it on yourself and give it to every caster you group with. Recast it when it drops.",
+   "rank_tip": "Ranks at 1, 14, 28, 42 and 56. Always use the highest rank: it's a long buff, so the cost hardly matters.",
+   "per_spec": {
+    "Arcane": "Pre-combat buff on yourself and your group.",
+    "Fire": "Pre-combat buff on yourself and your group.",
+    "Frost": "Pre-combat buff on yourself and your group."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ]
+  },
+  "Conjure Water": {
+   "what": "Creates free water for you and others. Mages don't need to buy drinks.",
+   "when": "Conjure a stack at login and whenever you run low. Hand it out in groups.",
+   "rank_tip": "Ranks at 4, 10, 20, 30, 40, 50 and 60. Higher ranks make higher-level water.",
+   "per_spec": {
+    "Arcane": "Arcane spends mana fastest of the three specs; carry plenty.",
+    "Fire": "Fire is mana hungry before 34; carry plenty.",
+    "Frost": "Keep a full stack; Frost still drinks often early on."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities"
+   ]
+  },
+  "Frostbolt": {
+   "what": "A Frost bolt that deals damage and slows the target. Low ranks were re-scaled in beta so every new rank is an upgrade.",
+   "when": "Open from max range so the enemy takes as long as possible to reach you, then keep casting. Wowhead notes rank 1 is a cheap, fast slow.",
+   "rank_tip": "Ranks at 4, 8, 14, 20, 26, 32, 38, 44, 50, 56 and 60. Frost trains every rank.",
+   "per_spec": {
+    "Arcane": "Leveling opener to slow the enemy before Arcane Wrath and Arcane Blast. It can also proc Missile Barrage.",
+    "Fire": "A rank-1 Frostbolt is a cheap way to tag mobs for an AoE pull.",
+    "Frost": "Your main spell. Its chill feeds Frostbite and Fingers of Frost."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Conjure Food": {
+   "what": "Creates free food for you and others.",
+   "when": "Conjure a stack at login along with water.",
+   "rank_tip": "Ranks at 6, 12, 22, 32, 42, 52 and 60.",
+   "per_spec": {
+    "Arcane": "Health is a resource too: eat instead of wasting mana on avoiding every hit.",
+    "Fire": "Same as all Mages: make it at login.",
+    "Frost": "Same as all Mages: make it at login."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  "Fire Blast": {
+   "what": "Instant Fire damage on a short cooldown. In Forever it always grants a Heating Up stack (2 on a crit), and its 8 second cooldown is shared with Ice Lance.",
+   "when": "Use it while moving, to finish low enemies, and on cooldown as Fire to build Heating Up.",
+   "rank_tip": "Ranks at 6, 14, 22, 30, 38, 46 and 54.",
+   "per_spec": {
+    "Arcane": "Part of the leveling loop after Frost Nova and Arcane Wrath.",
+    "Fire": "On cooldown until Heating Up has 3 stacks.",
+    "Frost": "Finisher when the enemy is low and not frozen. Using it puts Ice Lance on cooldown too."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Arcane Missiles": {
+   "what": "A channel that fires a stream of Arcane missiles at one target. With a Missile Barrage proc it channels much faster and costs no mana.",
+   "when": "Mostly on Missile Barrage procs. If the enemy is nearly dead, Icy Veins says save the proc for the next one.",
+   "rank_tip": "Rank 1 at 8; Wowhead lists new ranks at 16, 24, 32, 40, 58 and 56 (probably a typo for 48 and 56).",
+   "per_spec": {
+    "Arcane": "Your main damage funnel: Arcane Blast fishes for Missile Barrage, then Missiles dumps it.",
+    "Fire": "Used on Missile Barrage procs from Fireball, Frostbolt and Arcane Blast.",
+    "Frost": "Used on Missile Barrage procs while leveling."
+   },
+   "unconfirmed": true,
+   "flag": "Wowhead's rank table lists '58; 56' out of order",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  "Polymorph": {
+   "what": "Turns an enemy into a sheep that wanders and can't fight. Any damage breaks it, and you can only have one target polymorphed at a time.",
+   "when": "When you pull one enemy too many, sheep the extra and kill the other. In groups, sheep the target the tank marks for you.",
+   "rank_tip": "Ranks at 8, 20, 40 and 60.",
+   "per_spec": {
+    "Arcane": "Same for all specs: your main crowd control.",
+    "Fire": "Watch Flamestrike and Blast Wave: AoE breaks your sheep.",
+    "Frost": "Frost Nova first, then sheep one while you kill the other (Wowhead)."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  "Frost Nova": {
+   "what": "Damages enemies around you and freezes them in place for up to 8 seconds. Frozen targets count for Shatter and Ice Lance.",
+   "when": "When enemies get close: Nova, step back, keep casting. Also freezes a pack together for AoE.",
+   "rank_tip": "Ranks at 10, 26, 40 and 54.",
+   "per_spec": {
+    "Arcane": "Part of the leveling loop: Nova, back up, Arcane Wrath.",
+    "Fire": "Freeze the pack before Flamestrike when AoE grinding solo.",
+    "Frost": "Nova then Frostbolt + Ice Lance on the frozen target."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Arcane Explosion": {
+   "what": "Instant Arcane damage to every enemy within 10 yards of you. No damage fall-off with more targets.",
+   "when": "AoE packs that are frozen or tanked. Not worth it on 3 or fewer enemies.",
+   "rank_tip": "Ranks at 14, 22, 30, 38, 46 and 54.",
+   "per_spec": {
+    "Arcane": "Arcane's AoE: stand near the tank (or a Nova'd pack) and spam it.",
+    "Fire": "Last step of the Fire AoE pull to finish the pack.",
+    "Frost": "Use it if you have aggro and can't safely channel Blizzard."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Blink": {
+   "what": "Teleports you a short distance forward. Breaks roots and can save you from fall damage if timed right.",
+   "when": "Escape melee, break a root, and use it on cooldown while running: Icy Veins says that is roughly 20% faster travel.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Escape tool; Icy Veins says don't waste mana Blinking away from one half-dead enemy.",
+    "Fire": "Blink into range after a pre-pull Flamestrike.",
+    "Frost": "Blink out after Frost Nova to set up Frostbolt + Ice Lance."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Evocation": {
+   "what": "Channels for 8 seconds and restores most of your mana. Spirit makes it restore more.",
+   "when": "When you are almost empty: Icy Veins says wait until about 5% mana to get its full value. Between pulls is best.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Arcane's main mana cooldown along with Arcane Power and Presence of Mind.",
+    "Fire": "Fire's main cooldowns are Combustion and Evocation.",
+    "Frost": "Wowhead Frost: if you must Evocate mid-fight in a raid, plan your mana better; between pulls it's fine."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  "Remove Lesser Curse": {
+   "what": "Removes one curse from you or an ally.",
+   "when": "In dungeons and raids, watch for curses: only Mages and Druids can remove them.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Group utility.",
+    "Fire": "Group utility.",
+    "Frost": "Group utility."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Blizzard": {
+   "what": "A channeled ground AoE that hits everything in the area over 8 seconds. Improved Blizzard adds a slow.",
+   "when": "Groups of enemies, from a safe distance. It's the one spell that still has the low-rank penalty: a rank learned more than 12 levels ago has a lower chance to trigger Arcane Concentration, Frostbite and Fingers of Frost.",
+   "rank_tip": "Ranks at 20, 28, 36, 44, 52 and 60. Keep it current if you rely on its procs.",
+   "per_spec": {
+    "Arcane": "Use it when standing close for Arcane Explosion isn't safe.",
+    "Fire": "Rarely used; Flamestrike and Blast Wave are Fire's AoE.",
+    "Frost": "Frost's AoE filler for 3+ targets, with Cone of Cold on cooldown."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Arcane Blast": {
+   "what": "The 11-point Arcane talent. Each cast adds a stack (up to 4) that gives 12% of your Intellect as spell damage per stack for 18 seconds, but also raises Arcane Blast's own mana cost by 100% per stack.",
+   "when": "Arcane: cast it 1-3 times while fishing for Missile Barrage, then let the stacks drop. Frost and Fire builds that take it keep 1-2 stacks for the buff.",
+   "rank_tip": "Learned with the talent at 20; trained ranks at 30, 40, 50 and 60.",
+   "per_spec": {
+    "Arcane": "Core spell: builds stacks and procs Missile Barrage. In the Arcane Fire raid build you keep 4 stacks.",
+    "Fire": "Keep 1-2 stacks for the spell damage (Icy Veins Deep Fire).",
+    "Frost": "Leveling build: keep 1 stack up for the buff, never more."
+   },
+   "unconfirmed": true,
+   "flag": "Cast time differs between sources (2.5 s deep dive vs 1.5 s beta notes); launch notes don't restate it",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026"
+   ]
+  },
+  "Arcane Wrath": {
+   "what": "The 16-point Arcane talent: a big Arcane nuke that scales with your maximum mana. Blizzard's beta notes give a 3.5 second cast and 6 second cooldown; Accelerant shortens the cast.",
+   "when": "Early in each fight and again on cooldown. Spend Clearcasting procs on it.",
+   "rank_tip": "Learned with the talent at 25; trained ranks at 36, 48 and 60.",
+   "per_spec": {
+    "Arcane": "Burst for leveling and raids: on cooldown.",
+    "Fire": "Only if you spec deep enough into Arcane.",
+    "Frost": "Not in Frost builds."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json"
+   ]
+  },
+  "Counterspell": {
+   "what": "Interrupts the target's cast and locks that school of magic for 10 seconds. Off the global cooldown, so you can use it mid-rotation.",
+   "when": "Interrupt enemy healers and dangerous casters. It's one of the few ranged interrupts in Forever.",
+   "rank_tip": "One rank, at 24.",
+   "per_spec": {
+    "Arcane": "Group utility.",
+    "Fire": "Group utility.",
+    "Frost": "Group utility."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Pyroblast": {
+   "what": "Fire talent: a long cast that hits very hard and leaves a burn. With 3 Heating Up stacks the cast drops to 1.5 seconds.",
+   "when": "Precast it as an opener, then cast it whenever Heating Up reaches 3 stacks.",
+   "rank_tip": "Learned with the talent at 24; trained ranks at 30, 36, 42, 48 and 54.",
+   "per_spec": {
+    "Arcane": "The Arcane Fire raid build opens with it and uses it at 3 Heating Up.",
+    "Fire": "Your hardest-hitting spell: at 3 Heating Up stacks, cast it.",
+    "Frost": "Not in Frost builds."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Cone of Cold": {
+   "what": "Frost damage in a cone in front of you that slows everything it hits. Blizzard shortened its duration in Forever. Winter's Chill stacks now empower it.",
+   "when": "Packs that are close to you, to slow and damage them. Don't overlap it with Blast Wave: slows wear off together.",
+   "rank_tip": "Ranks at 26, 34, 42, 50 and 58.",
+   "per_spec": {
+    "Arcane": "Slows the pack before Arcane Explosion.",
+    "Fire": "Use it if you don't have Blast Wave.",
+    "Frost": "On cooldown on 3+ targets; batch it with Frostbolt at 5 Winter's Chill stacks, or on a frozen target when Ice Lance is on cooldown."
+   },
+   "unconfirmed": true,
+   "flag": "Blizzard only says the duration was reduced; 6 s comes from datamining and Wowhead",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Conjure Mana Agate": {
+   "what": "Conjures a Mana Agate: an instant mana refill you use from your bags. Gem use is off the global cooldown.",
+   "when": "Make one at login and after you use it. Use it in a fight before Evocation, as soon as it won't overfill your mana.",
+   "rank_tip": "Learned at 28. You can carry one gem of each kind for long fights; use the best one first.",
+   "per_spec": {
+    "Arcane": "Arcane burns mana fastest: keep a gem ready for long fights.",
+    "Fire": "Use the gem before Evocation in long fights.",
+    "Frost": "Use the gem before Evocation in long fights."
+   },
+   "unconfirmed": true,
+   "flag": "Icy Veins leveling pages call this 'Conjure Mana Gem' / 'Mana Gems' (1318827); the trainer name in Forever is unconfirmed",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  "Conjure Mana Jade": {
+   "what": "Conjures a Mana Jade: an instant mana refill you use from your bags. Gem use is off the global cooldown.",
+   "when": "Make one at login and after you use it. Use it in a fight before Evocation, as soon as it won't overfill your mana.",
+   "rank_tip": "Learned at 38. You can carry one gem of each kind for long fights; use the best one first.",
+   "per_spec": {
+    "Arcane": "Arcane burns mana fastest: keep a gem ready for long fights.",
+    "Fire": "Use the gem before Evocation in long fights.",
+    "Frost": "Use the gem before Evocation in long fights."
+   },
+   "unconfirmed": true,
+   "flag": "Icy Veins leveling pages call this 'Conjure Mana Gem' / 'Mana Gems' (1318827); the trainer name in Forever is unconfirmed",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  "Conjure Mana Citrine": {
+   "what": "Conjures a Mana Citrine: an instant mana refill you use from your bags. Gem use is off the global cooldown.",
+   "when": "Make one at login and after you use it. Use it in a fight before Evocation, as soon as it won't overfill your mana.",
+   "rank_tip": "Learned at 48. You can carry one gem of each kind for long fights; use the best one first.",
+   "per_spec": {
+    "Arcane": "Arcane burns mana fastest: keep a gem ready for long fights.",
+    "Fire": "Use the gem before Evocation in long fights.",
+    "Frost": "Use the gem before Evocation in long fights."
+   },
+   "unconfirmed": true,
+   "flag": "Icy Veins leveling pages call this 'Conjure Mana Gem' / 'Mana Gems' (1318827); the trainer name in Forever is unconfirmed",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  "Conjure Mana Ruby": {
+   "what": "Conjures a Mana Ruby: an instant mana refill you use from your bags. Gem use is off the global cooldown.",
+   "when": "Make one at login and after you use it. Use it in a fight before Evocation, as soon as it won't overfill your mana.",
+   "rank_tip": "Learned at 58. You can carry one gem of each kind for long fights; use the best one first.",
+   "per_spec": {
+    "Arcane": "Arcane burns mana fastest: keep a gem ready for long fights.",
+    "Fire": "Use the gem before Evocation in long fights.",
+    "Frost": "Use the gem before Evocation in long fights."
+   },
+   "unconfirmed": true,
+   "flag": "Icy Veins leveling pages call this 'Conjure Mana Gem' / 'Mana Gems' (1318827); the trainer name in Forever is unconfirmed",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  "Ice Armor": {
+   "what": "Stronger version of Frost Armor: more armor and it chills enemies that hit you in melee. Only one armor at a time.",
+   "when": "Frost's leveling armor from 30. Switch to Mage Armor when mana matters more than melee hits.",
+   "rank_tip": "Ranks at 30, 40, 50 and 60.",
+   "per_spec": {
+    "Arcane": "Mage Armor is better for Arcane from 34.",
+    "Fire": "Mage Armor is better for Fire from 34.",
+    "Frost": "Keep it up while leveling; in groups Icy Veins prefers Mage Armor."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  "Mage Armor": {
+   "what": "Raises your resistances and lets 50% of your Spirit mana regen continue while you cast (Blizzard buffed it for Forever). With 3/3 Arcane Meditation that is 100% regen in combat.",
+   "when": "From 34 for Arcane and Fire, and in groups for every spec. Use Ice/Frost Armor instead when you expect to be hit in melee.",
+   "rank_tip": "Ranks at 34, 46 and 58.",
+   "per_spec": {
+    "Arcane": "Your armor from 34; with Arcane Meditation your Spirit regen never stops.",
+    "Fire": "Your armor from 34: Icy Veins says Fire drinks after nearly every mob until then.",
+    "Frost": "Use it in groups and raids; Ice Armor while soloing."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman"
+   ]
+  },
+  "Slow Fall": {
+   "what": "Slows your fall for a short time. Costs a Light Feather.",
+   "when": "Jump off cliffs and ledges safely to save travel time. Carry Light Feathers.",
+   "rank_tip": "One rank, at 12.",
+   "per_spec": {
+    "Arcane": "Travel utility.",
+    "Fire": "Travel utility.",
+    "Frost": "Travel utility."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Dampen Magic": {
+   "what": "Lowers magic damage taken by the target, but also lowers healing they receive.",
+   "when": "Solo: keep it on yourself against casters. In groups, only on purpose: it cuts your healer's heals too.",
+   "rank_tip": "Ranks at 12, 24, 36, 48 and 60. Wowhead lists it as optional.",
+   "per_spec": {
+    "Arcane": "Solo utility.",
+    "Fire": "Solo utility.",
+    "Frost": "Solo utility."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Amplify Magic": {
+   "what": "Raises magic damage taken by the target and healing they receive.",
+   "when": "Situational in groups: more healing for the target in fights that are mostly physical damage.",
+   "rank_tip": "Ranks at 18, 30, 42 and 54. Wowhead lists it as optional.",
+   "per_spec": {
+    "Arcane": "Group utility.",
+    "Fire": "Group utility.",
+    "Frost": "Group utility."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  "Mana Shield": {
+   "what": "A shield that absorbs damage by draining your mana instead of your health.",
+   "when": "Emergencies only: you need your mana to finish fights.",
+   "rank_tip": "Ranks at 20, 28, 36, 44, 52 and 60. Wowhead lists it as optional.",
+   "per_spec": {
+    "Arcane": "Last resort when something reaches you.",
+    "Fire": "Icy Veins: save it for near-death moments during AoE pulls.",
+    "Frost": "Ice Barrier is the better shield once you have it."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Fire Ward": {
+   "what": "Absorbs a set amount of Fire damage.",
+   "when": "Against Fire-casting enemies or boss abilities.",
+   "rank_tip": "Ranks at 20, 30, 40, 50 and 60. Optional per Wowhead.",
+   "per_spec": {
+    "Arcane": "Situational.",
+    "Fire": "Situational.",
+    "Frost": "Situational."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ]
+  },
+  "Frost Ward": {
+   "what": "Absorbs a set amount of Frost damage.",
+   "when": "Against Frost-casting enemies or boss abilities.",
+   "rank_tip": "Ranks at 22, 32, 42, 52 and 60. Optional per Wowhead.",
+   "per_spec": {
+    "Arcane": "Situational.",
+    "Fire": "Situational.",
+    "Frost": "Situational."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  "Scorch": {
+   "what": "A short-cast Fire spell. With Improved Scorch it stacks a debuff (up to 5) that makes the target take more Fire damage from you only.",
+   "when": "Fire leveling filler as the enemy closes in, and an efficient finisher. In Fire raid builds, keep 5 stacks and refresh within 30 seconds.",
+   "rank_tip": "Ranks at 22, 28, 34, 40, 46, 52 and 58. Wowhead lists it as optional for Arcane leveling.",
+   "per_spec": {
+    "Arcane": "Cheap finisher instead of overkilling with a big spell.",
+    "Fire": "Leveling filler; raid debuff upkeep. Crits build Heating Up.",
+    "Frost": "Rarely used."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Flamestrike": {
+   "what": "Fire damage in a target area, then a burning patch for 8 seconds. Different ranks no longer stack on the same spot.",
+   "when": "Pre-pull a pack where the tank will stand, or under a Nova'd pack when solo.",
+   "rank_tip": "Learn levels aren't in any Forever trainer table yet.",
+   "per_spec": {
+    "Arcane": "AoE opener; Presence of Mind + Flamestrike when the first one ends.",
+    "Fire": "Core AoE: pre-pull, Blink in, Blast Wave, Flamestrike again.",
+    "Frost": "Pre-pull for 3+ targets if it's safe."
+   },
+   "unconfirmed": true,
+   "flag": "Learn and rank levels not sourced",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Frostfire Bolt": {
+   "what": "New in Forever at 40: a 3 second cast that counts as both Fire and Frost. It uses the higher of your Fire or Frost spell damage and the target's lower resistance, and leaves a burn plus a slow.",
+   "when": "Fire leveling opener from 40, and the main spell of the Frostfire Bolt hybrid build.",
+   "rank_tip": "Rank 1 at 40. Ranks at 50 and 60 come only from datamined beta files.",
+   "per_spec": {
+    "Arcane": "Its casts can proc Missile Barrage.",
+    "Fire": "Leveling opener from 40; filler in the Frostfire Bolt build. Crits build Heating Up.",
+    "Frost": "Works with Frost Nova for Shatter combos in hybrid builds."
+   },
+   "unconfirmed": true,
+   "flag": "Ranks 2-3 (50/60) only from bindonforever beta datamining",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman"
+   ]
+  },
+  "Comprehend Scroll": {
+   "what": "New in Forever: the spell for Comprehension, a Mage-only minor tradeskill (General tab of your spellbook). Use it on scrolls that drop from creatures in the world. Scrolls give buffs, temporary effects or on-use items; Wowhead warns some can backfire.",
+   "when": "Whenever you loot a scroll. Datamining says scrolls are consumed when read, and beta notes say you can't read them while moving.",
+   "rank_tip": "One spell. Datamining puts it at level 6; Blizzard gives no level.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Level 6 and the scroll effects come from datamining and guides; Blizzard hasn't said what scrolls grant",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/mage-class-overview",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Teleport: Stormwind": {
+   "what": "Teleports you to Stormwind. Alliance only.",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Teleportation)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Teleport: Ironforge": {
+   "what": "Teleports you to Ironforge. Alliance only.",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Teleportation)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Teleport: Darnassus": {
+   "what": "Teleports you to Darnassus. Alliance only.",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 30.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Teleportation)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Teleport: Orgrimmar": {
+   "what": "Teleports you to Orgrimmar. Horde only.",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Teleportation)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Teleport: Undercity": {
+   "what": "Teleports you to Undercity. Horde only.",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 20.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Teleportation)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Teleport: Thunder Bluff": {
+   "what": "Teleports you to Thunder Bluff. Horde only.",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 30.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Teleportation)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Teleport: Dalaran": {
+   "what": "Teleports you to Dalaran. Added in Forever (client data: Alliance, level 50, Rune of Teleportation reagent).",
+   "when": "Use it to cut travel: teleport to the city, then fly or walk from there. Don't set your Hearthstone to a city you can teleport to.",
+   "rank_tip": "One rank, at 50.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Level conflict: db.icy-veins says 50, the Icy Veins Frost leveling table says 40",
+   "sources": [
+    "https://db.icy-veins.com/wow-forever/spells/1297659",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Portal: Stormwind": {
+   "what": "Opens a portal to Stormwind that you and your party or raid can use. Alliance only.",
+   "when": "For your group, or sell portals to other players (Wowhead says for more than the spell costs to learn). You learn portals from the cities' portal trainers.",
+   "rank_tip": "One rank, at 40.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Portals)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Portal: Ironforge": {
+   "what": "Opens a portal to Ironforge that you and your party or raid can use. Alliance only.",
+   "when": "For your group, or sell portals to other players (Wowhead says for more than the spell costs to learn). You learn portals from the cities' portal trainers.",
+   "rank_tip": "One rank, at 40.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Portals)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Portal: Darnassus": {
+   "what": "Opens a portal to Darnassus that you and your party or raid can use. Alliance only.",
+   "when": "For your group, or sell portals to other players (Wowhead says for more than the spell costs to learn). You learn portals from the cities' portal trainers.",
+   "rank_tip": "One rank, at 50.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Level conflict: 50 per Icy Veins Frost leveling and Wowhead, 40 per the Icy Veins Arcane/Fire guides",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Portal: Orgrimmar": {
+   "what": "Opens a portal to Orgrimmar that you and your party or raid can use. Horde only.",
+   "when": "For your group, or sell portals to other players (Wowhead says for more than the spell costs to learn). You learn portals from the cities' portal trainers.",
+   "rank_tip": "One rank, at 40.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Portals)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Portal: Undercity": {
+   "what": "Opens a portal to Undercity that you and your party or raid can use. Horde only.",
+   "when": "For your group, or sell portals to other players (Wowhead says for more than the spell costs to learn). You learn portals from the cities' portal trainers.",
+   "rank_tip": "One rank, at 40.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Reagent in Forever not confirmed (Classic used a Rune of Portals)",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Portal: Thunder Bluff": {
+   "what": "Opens a portal to Thunder Bluff that you and your party or raid can use. Horde only.",
+   "when": "For your group, or sell portals to other players (Wowhead says for more than the spell costs to learn). You learn portals from the cities' portal trainers.",
+   "rank_tip": "One rank, at 50.",
+   "per_spec": {
+    "Arcane": "Same for all specs.",
+    "Fire": "Same for all specs.",
+    "Frost": "Same for all specs."
+   },
+   "unconfirmed": true,
+   "flag": "Level conflict: 50 per Icy Veins Frost leveling and Wowhead, 40 per the Icy Veins Arcane/Fire guides",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  }
+ },
+ "talents": {
+  "Arcane Blast": {
+   "tree": "Arcane",
+   "what": "11-point gold-medal talent. Up to 4 stacks for 18 seconds: each gives 12% of your Intellect as spell damage to all spells and +100% to Arcane Blast's own mana cost.",
+   "why": "Arcane's core: build stacks, fish for Missile Barrage. Other specs take it for the spell damage buff and keep 1-2 stacks.",
+   "unconfirmed": true,
+   "flag": "Cast time not restated at launch (2.5 s vs 1.5 s)",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json"
+   ]
+  },
+  "Missile Barrage": {
+   "tree": "Arcane",
+   "what": "Row 2, 2 ranks. Arcane Blast (20/40%) and Arcane Wrath, Fireball, Frostbolt or Frostfire Bolt (10/20%) can make your next Arcane Missiles free, with a 50% faster channel.",
+   "why": "Turns Arcane Missiles into a mana-free machine gun. Icy Veins rates it one of the most mana-efficient leveling talents for every spec.",
+   "unconfirmed": true,
+   "flag": "Blizzard hasn't published the proc chances; they come from the talent calculator data",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  "Arcane Concentration": {
+   "tree": "Arcane",
+   "what": "2-10% chance on spell hits for Clearcasting: your next damage spell costs no mana. Since launch, Arcane Missiles doesn't consume Clearcasting while Missile Barrage is active.",
+   "why": "Free spells. Spend Clearcasting on an expensive multi-stack Arcane Blast or Arcane Wrath, not a cheap spell.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  "Arcane Wrath": {
+   "tree": "Arcane",
+   "what": "16-point gold-medal talent: a big Arcane nuke that scales with your maximum mana (3.5 s cast, 6 s cooldown per the beta notes).",
+   "why": "Burst on cooldown for Arcane leveling and raids.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Arcane Meditation": {
+   "tree": "Arcane",
+   "what": "Lets 17/33/50% of your mana regen continue while casting. Now requires Arcane Concentration.",
+   "why": "With Mage Armor that is 100% Spirit regen in combat from about level 34; Icy Veins says no other class has that.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  "Arcane Mind": {
+   "tree": "Arcane",
+   "what": "Raises Intellect and the critical damage bonus of your Arcane spells.",
+   "why": "More mana, more crit, bigger Arcane crits.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  "Presence of Mind": {
+   "tree": "Arcane",
+   "what": "Arcane cooldown that lets you fire off a cast-time spell instantly. Guides pair it with Flamestrike in AoE and with Arcane Wrath for burst. Using it doesn't consume Heating Up.",
+   "why": "Burst and instant Flamestrikes. Arcane Power requires it.",
+   "unconfirmed": true,
+   "flag": "Effect wording not on a Forever page; pairings from Icy Veins and Wowhead",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Arcane Power": {
+   "tree": "Arcane",
+   "what": "Burst cooldown that raises your damage and your mana costs for a short time (Wowhead: 30% for 15 seconds). Requires Presence of Mind.",
+   "why": "Arcane's main damage cooldown with Presence of Mind and Evocation. Don't sit on it.",
+   "unconfirmed": true,
+   "flag": "30%/15 s only from Wowhead",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Improved Channeling": {
+   "tree": "Arcane",
+   "what": "Pushback protection for Arcane Missiles and Arcane Blast.",
+   "why": "Keep casting while something hits you. Icy Veins: 5 points here instead of Wand Specialization if you level Arcane then respec Frost at 30.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Arcane Subtlety": {
+   "tree": "Arcane",
+   "what": "Row 2 talent: reduces target resistances and Arcane threat. Blizzard made the resistance part a little stronger and the threat part a little weaker.",
+   "why": "Damage against resistant targets; Icy Veins Frost picks it up after Ice Barrier.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Heating Up": {
+   "tree": "Fire",
+   "what": "Requires Pyroblast. Crits with Fireball, Frostfire Bolt, Fire Blast and Scorch add a stack (max 3); each stack cuts your next Pyroblast's cast by 25%, so 3 stacks = 1.5 s. Fire Blast always adds a stack, 2 on a crit.",
+   "why": "The heart of Forever Fire: Fire Blast on cooldown, Pyroblast at 3 stacks.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Pyroblast": {
+   "tree": "Fire",
+   "what": "Row 3 Fire talent spell: a huge Fire nuke with a burn. Trained ranks follow.",
+   "why": "Opener and the payoff for Heating Up.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Combustion": {
+   "tree": "Fire",
+   "what": "Fire cooldown that keeps raising your Fire crit chance until you score a set number of crits (3 per the beta notes and Icy Veins).",
+   "why": "Fire's main damage cooldown with Evocation.",
+   "unconfirmed": true,
+   "flag": "Wowhead's abilities page still says 4 crits and 10% per hit",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/rotation-cooldowns-pve-dps"
+   ]
+  },
+  "Blast Wave": {
+   "tree": "Fire",
+   "what": "Instant Fire damage around you that slows enemies. No longer requires Pyroblast.",
+   "why": "AoE: after Flamestrike, on cooldown. Don't overlap it with Cone of Cold.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-abilities"
+   ]
+  },
+  "Ignite": {
+   "tree": "Fire",
+   "what": "Your Fire crits add 40% of their damage as a burn over 4 seconds. In Forever each Mage has their own Ignite.",
+   "why": "Big damage at high crit. No more shared Ignite threat problems, but Icy Veins warns lucky crits can still pull threat in AoE.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://wowforeverplaybook.com/wow-forever-mage-changes"
+   ]
+  },
+  "Improved Scorch": {
+   "tree": "Fire",
+   "what": "Scorch stacks Fire Vulnerability on the target (up to 5); it now benefits only the Mage who applied it.",
+   "why": "Raid Fire keeps 5 stacks and refreshes them within 30 seconds.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman"
+   ]
+  },
+  "Impact": {
+   "tree": "Fire",
+   "what": "Fire proc talent. Flamestrike's periodic damage no longer triggers it (beta notes).",
+   "why": "Minor; not core to leveling.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Fire Power": {
+   "tree": "Fire",
+   "what": "Redesigned in beta: 1/2/3% damage per Fire effect on the target, up to 12%.",
+   "why": "Rewards keeping several burns on a target.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Accelerant": {
+   "tree": "Fire",
+   "what": "Formerly Improved Fireball. Shortens the cast of Fireball, Frostfire Bolt and Arcane Wrath.",
+   "why": "Faster nukes; Arcane builds dip into Fire for it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  "Incineration": {
+   "tree": "Fire",
+   "what": "5 points for 10% crit; also affects Ice Lance and Arcane Blast.",
+   "why": "Crit for every spec: Arcane and Frost raid builds take it too.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents"
+   ]
+  },
+  "Improved Fire Blast": {
+   "tree": "Fire",
+   "what": "Row 3 talent: adds 8/15 yards of range to Fire Blast (the beta 'Wake of Fire' kill bonus was removed).",
+   "why": "Icy Veins: speeds up grinding by generating Heating Up more easily.",
+   "unconfirmed": true,
+   "flag": "Wowhead's abilities page still describes the old crit-after-kill bonus",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  "Master of Elements": {
+   "tree": "Fire",
+   "what": "Refunds mana on spell crits.",
+   "why": "Mana efficiency for crit-heavy Fire.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  "Ice Lance": {
+   "tree": "Frost",
+   "what": "11-point gold-medal talent. An instant Frost spell that deals 300% more damage to frozen targets. Its 8 second cooldown is shared with Fire Blast.",
+   "why": "Frost's payoff: Frost Nova, Frostbite freezes and Fingers of Frost all set it up. It snapshots the freeze, so batch it with Frostbolt.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Fingers of Frost": {
+   "tree": "Frost",
+   "what": "Requires Ice Lance. Chill effects have a 15% chance to give 1 or 2 charges that make your spells treat the target as frozen.",
+   "why": "Lets Ice Lance and Shatter work on anything. Icy Veins: Frostbolt on the first charge, Frostbolt + batched Ice Lance on the second.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Frostbite": {
+   "tree": "Frost",
+   "what": "Chill effects can freeze the target on hit.",
+   "why": "Free freezes for Ice Lance while leveling; Frost Armor hits can proc it too.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Winter's Chill": {
+   "tree": "Frost",
+   "what": "Stacks on the target up to 5 and is consumed by Cone of Cold for +20% Cone of Cold damage per stack. Benefits only you.",
+   "why": "Raid Frost batches Cone of Cold with the next Frostbolt at 5 stacks.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Shatter": {
+   "tree": "Frost",
+   "what": "Makes your Frost spells much stronger against frozen targets. No longer requires Improved Frost Nova.",
+   "why": "Combos with Ice Shards and Ice Lance; Icy Veins says Frost comes online around 30 with it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Ice Block": {
+   "tree": "Frost",
+   "what": "16-point gold-medal talent: total damage immunity while you can't move or cast; Wowhead says it also removes nearly every debuff.",
+   "why": "Saves you from mistakes, aggro and mechanics. Sitting in a block of ice beats dying.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  "Cold Snap": {
+   "tree": "Frost",
+   "what": "21-point gold-medal talent with a 10 minute cooldown: resets your other Frost cooldowns.",
+   "why": "A second Cone of Cold, Frost Nova or Ice Block when you need it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities"
+   ]
+  },
+  "Ice Barrier": {
+   "tree": "Frost",
+   "what": "31-point Frost talent: a damage shield that also gives +15% Frost damage for 1 minute on cast (Frigid Power) and +5% while the shield holds.",
+   "why": "Keep it up: Icy Veins recasts it when Frigid Power has 3 seconds or less left.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Precision": {
+   "tree": "Frost",
+   "what": "Renamed from Elemental Precision: 2/4/6% hit with all spells (it absorbed Arcane Focus).",
+   "why": "Icy Veins: 2 points bring your hit on at-level targets to 100% while leveling.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Improved Blizzard": {
+   "tree": "Frost",
+   "what": "Blizzard slows enemies (max 40%).",
+   "why": "Icy Veins: one point is mainly to make Blizzard a chill effect for freeze and Fingers of Frost procs.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Permafrost": {
+   "tree": "Frost",
+   "what": "Improves your chill effects (now percentage based).",
+   "why": "Icy Veins: makes Cone of Cold's chill last the whole time against 4 targets.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Ice Shards": {
+   "tree": "Frost",
+   "what": "Boosts the damage of your Frost spells, especially combined with Shatter.",
+   "why": "Icy Veins: Ice Shards and Shatter combo off each other and boost Ice Lance a lot.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  "Frost Channeling": {
+   "tree": "Frost",
+   "what": "Lowers the mana cost of your Frost spells.",
+   "why": "Mana efficiency; Icy Veins also uses it to cut threat in raid builds.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents"
+   ]
+  },
+  "Arctic Reach": {
+   "tree": "Frost",
+   "what": "More range for your Frost spells and a bigger Cone of Cold.",
+   "why": "Less running between pulls and easier Cone of Cold hits.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  }
+ },
+ "mechanics": [
+  {
+   "id": "five-second-rule",
+   "title": "Mana and the five-second rule",
+   "body": "Spending mana stops your Spirit-based regen; it starts again after 5 seconds with no mana spent, even in combat. Finish low enemies with your wand so the timer starts sooner, and stop casting when the enemy is about to die.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-stat-priority",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "spirit-regen",
+   "title": "How Spirit turns into mana",
+   "body": "Spirit raises your mana regen while you're not casting and makes Evocation restore more. Wowhead gives 13 + Spirit/4 mana every 2 seconds. MP5 keeps ticking even while you cast.",
+   "unconfirmed": true,
+   "flag": "Formula only from Wowhead",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/stat-priority-pve-dps",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-stat-priority",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "mage-armor-regen",
+   "title": "Mage Armor vs Frost/Ice Armor",
+   "body": "Only one armor at a time. Frost Armor (1) and Ice Armor (30) give armor and chill melee attackers, which can proc Frostbite. Mage Armor (34) lets 50% of your Spirit regen continue while casting. Icy Veins: Frost/Ice Armor when you expect melee hits (Frost leveling), Mage Armor when mana is the problem and in groups.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "arcane-meditation",
+   "title": "Arcane Meditation: 100% regen in combat",
+   "body": "Arcane Meditation 3/3 lets another 50% of your regen continue while casting. With Mage Armor that is 100% Spirit regen in combat from about level 34. All three specs can reach it; it's why Icy Veins says Spirit is underrated while leveling.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "evocation-timing",
+   "title": "When to Evocate",
+   "body": "Evocation restores most of your mana over an 8 second channel. Icy Veins: be low (about 5% mana) to get its full value. Use it between pulls when you can; in long raid fights, use your mana gem first and plan gear so you rarely need it mid-fight.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "mana-gem-first",
+   "title": "Mana gem before Evocation",
+   "body": "From 28 you can conjure a mana gem. It's off the global cooldown, so use it mid-fight as soon as it won't overfill you, then Evocation if you still run dry. Make a new gem after each use, and carry one of each kind for long fights.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "wand-when-low",
+   "title": "Wand when the enemy is low or you're empty",
+   "body": "A wand costs no mana and can't be interrupted. Icy Veins: wand enemies below about 15% health or when you're out of mana, and avoid overkill: don't spend a big spell on an enemy with 30 health left.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "conjure-at-login",
+   "title": "Conjure at login, drink between fights",
+   "body": "When you log in, spend your mana conjuring food, water and a mana gem. You'll still drink often early on, especially as Fire before 34. Skip AoE on 3 or fewer enemies: it empties your mana bar.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "free-casts",
+   "title": "Free casts: Missile Barrage and Clearcasting",
+   "body": "Missile Barrage makes Arcane Missiles free and fast; Clearcasting (Arcane Concentration) makes your next damage spell free. Spend Clearcasting on an expensive spell like a multi-stack Arcane Blast or Arcane Wrath.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "read-ley-line",
+   "title": "Skyborne: Read Ley Line",
+   "body": "Skyborne's Read Ley Line racial raises health and mana regen by 50% for 15 seconds (2 min cooldown); on an active ley line it gives Attuned, a 1 hour regen buff. Icy Veins rates Skyborne the best Mage race for long fights.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/skyborne",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "topic": "mana"
+  },
+  {
+   "id": "arcane-blast-stacks",
+   "title": "Arcane Blast stacks",
+   "body": "Each Arcane Blast adds a stack (max 4, 18 seconds): +12% of your Intellect as spell damage per stack for all spells, but +100% mana cost on Arcane Blast per stack. Leveling: 1-3 casts, then let it drop. Raids (Arcane Fire): keep 4 stacks. The stack may show as a buff or a debuff.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "spec": "Arcane"
+  },
+  {
+   "id": "missile-barrage",
+   "title": "Missile Barrage",
+   "body": "Arcane Blast, Arcane Wrath, Fireball, Frostbolt and Frostfire Bolt can proc Missile Barrage: your next Arcane Missiles channels faster and costs no mana. Arcane leveling is built on fishing for it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "shatter-frozen",
+   "title": "Frozen targets, Shatter and Ice Lance",
+   "body": "Frost Nova, Frostbite freezes and Fingers of Frost make a target count as frozen. Ice Lance does 300% more damage to frozen targets and snapshots the freeze, so it still counts if the freeze breaks right after. Any damage can break a freeze, including your own.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json"
+   ],
+   "spec": "Frost"
+  },
+  {
+   "id": "spell-batching",
+   "title": "Spell batching",
+   "body": "Forever groups spell casts into small time batches. Press an instant (Ice Lance, Fire Blast) just before a cast-time spell lands and both benefit from the same Fingers of Frost charge or freeze.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "chill-effects",
+   "title": "Chill effects",
+   "body": "Frostbolt, Cone of Cold, Frost Armor/Ice Armor and Blizzard (with Improved Blizzard) chill enemies. Chills are what proc Frostbite and Fingers of Frost.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  {
+   "id": "heating-up",
+   "title": "Heating Up and Pyroblast",
+   "body": "Crits with Fireball, Frostfire Bolt, Fire Blast and Scorch add Heating Up stacks (max 3). Fire Blast always adds one (two on a crit). Each stack cuts your next Pyroblast cast by 25%; at 3 stacks it's a 1.5 second Pyroblast. Ice Lance shares Fire Blast's 8 second cooldown.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "spec": "Fire"
+  },
+  {
+   "id": "ignite",
+   "title": "Ignite is yours alone",
+   "body": "Ignite adds 40% of a Fire crit as a burn over 4 seconds. In Forever every Mage has their own Ignite, and damage is no longer lost when crits land close together. Improved Scorch's debuff also helps only you.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://wowforeverplaybook.com/wow-forever-mage-changes",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json"
+   ],
+   "spec": "Fire"
+  },
+  {
+   "id": "frostfire-bolt",
+   "title": "Frostfire Bolt",
+   "body": "New at 40: counts as Fire and Frost, uses your higher Fire or Frost spell damage and the target's lower resistance, and slows plus burns. Its crits build Heating Up. Dual Specialization also opens at 40, a natural time to try a hybrid build.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://wowforeverplaybook.com/wow-forever-mage-changes"
+   ]
+  },
+  {
+   "id": "comprehension",
+   "title": "Comprehension and Comprehend Scroll",
+   "body": "Comprehension is a new Mage-only minor tradeskill. Creatures drop scrolls; only Mages can read them with Comprehend Scroll (General tab). Guides say they give buffs, temporary effects and on-use items, and Wowhead warns some can backfire. Blizzard hasn't said what they grant.",
+   "unconfirmed": true,
+   "flag": "Scroll effects not published by Blizzard",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/mage-class-overview",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://wowforeverplaybook.com/wow-forever-mage-changes"
+   ]
+  },
+  {
+   "id": "low-rank-penalty",
+   "title": "Low ranks and procs",
+   "body": "At launch Blizzard removed the lower proc chance for low-rank spells from most talents. Blizzard keeps it: casting a rank learned more than 12 levels below you lowers its chance to trigger Arcane Concentration, Frostbite and Fingers of Frost. Low ranks also get less benefit from spell damage, so use rank 1 Frostbolt only to slow or tag.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  {
+   "id": "polymorph-one",
+   "title": "Polymorph: one sheep at a time",
+   "body": "You can only have one target polymorphed at a time, and any damage breaks it. Sheep the extra enemy, kill the other, and keep AoE away from the sheep.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "topic": "cc"
+  },
+  {
+   "id": "raid-markers",
+   "title": "Follow the markers",
+   "body": "In dungeons the tank or leader marks the target they want you to sheep, usually with the crescent moon. Re-sheep it if it breaks, and don't hit it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ],
+   "topic": "cc"
+  },
+  {
+   "id": "frost-nova-kiting",
+   "title": "Frost Nova and kiting",
+   "body": "Frost Nova freezes nearby enemies for up to 8 seconds. When enemies close in: Nova, back up, then cast. Wowhead: Nova then Polymorph one of two adds. Blink breaks roots. Icy Veins: one half-dead mob isn't worth the mana to kite.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "topic": "cc"
+  },
+  {
+   "id": "counterspell-use",
+   "title": "Counterspell",
+   "body": "Interrupts a cast and locks that school for 10 seconds, off the global cooldown. Use it on healers and dangerous casters; it's one of the few ranged interrupts in Forever.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "topic": "cc"
+  },
+  {
+   "id": "cone-of-cold-change",
+   "title": "Cone of Cold is shorter now",
+   "body": "Blizzard reduced Cone of Cold's slow duration in Forever to cut down on farming. The first 4 targets hit get a stronger, longer slow. Don't chain Cone of Cold and Blast Wave back to back: both slows run out together and the pack reaches you.",
+   "unconfirmed": true,
+   "flag": "Exact duration (6 s) only from datamining and Wowhead",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman"
+   ],
+   "topic": "cc"
+  }
+ ],
+ "roles": [
+  {
+   "id": "water-for-group",
+   "title": "Water and food for the group",
+   "body": "Conjure Food and Water make you welcome in every group, especially with casters who drink often. Hand out a stack before the first pull; some players tip for it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ]
+  },
+  {
+   "id": "arcane-intellect-group",
+   "title": "Arcane Intellect for everyone",
+   "body": "Buff every party member who uses mana with Arcane Intellect before the first pull and after deaths.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "sheep-duty",
+   "title": "Sheep duty",
+   "body": "Polymorph the target the tank marks (usually the moon). One sheep at a time; watch it and re-sheep if it breaks. Keep your AoE away from it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  {
+   "id": "portals",
+   "title": "Portals for the group",
+   "body": "From 40 you can portal your party to capital cities. Fast travel is limited in Forever, so portals are always useful, and Wowhead says you can sell them for more than they cost to learn.",
+   "unconfirmed": true,
+   "flag": "Reagent cost in Forever not confirmed",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  {
+   "id": "aoe-pulls",
+   "title": "AoE pulls",
+   "body": "Mage AoE has no target cap fall-off but costs a lot of mana. Only AoE packs of 4+ and only once the tank has them: stand near the tank for Arcane Explosion or far back with Blizzard and Flamestrike if it isn't safe. Pre-pull Flamestrike where the tank will stand.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "threat",
+   "title": "Watch your threat",
+   "body": "Mages pull aggro from tanks easily, especially with AoE and Fire crits (Ignite). Let the tank build threat first. Frost Nova and Blink buy time, Ice Barrier and Ice Block save you, and Frost talent choices (Frost Channeling, Incineration in raid builds) can lower threat.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents"
+   ]
+  },
+  {
+   "id": "remove-curse",
+   "title": "Remove Lesser Curse",
+   "body": "Only Mages and Druids can remove curses. Damage matters, but a group wiping to a curse only you can dispel is worse.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities"
+   ]
+  },
+  {
+   "id": "dampen-amplify",
+   "title": "Dampen and Amplify Magic",
+   "body": "Amplify Magic gives a target more healing (and more magic damage taken), useful in heavy physical fights. Dampen Magic lowers magic damage but also healing received, so don't put it on group members by accident.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "interrupts",
+   "title": "Interrupt casters",
+   "body": "Counterspell enemy healers and dangerous casters. It's off the global cooldown, so you lose almost nothing using it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  }
+ ],
+ "leveling": {
+  "Arcane": [
+   {
+    "title": "Talent path",
+    "body": "Arcane levels on its own in Forever. Take Improved Channeling, Arcane Subtlety, Missile Barrage, Arcane Blast (11 points), Arcane Wrath (16 points), Arcane Meditation and Arcane Mind. Dip into Frost for Precision and later into Fire (Incineration, Accelerant, Pyroblast, Heating Up at 60).",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents"
+    ]
+   },
+   {
+    "title": "Rotation basics",
+    "body": "Max range: Frostbolt to slow, Arcane Wrath, Arcane Blast 1-3 times until Missile Barrage procs, Arcane Missiles, Frost Nova and back up, Arcane Wrath again, Fire Blast, wand to finish. Let Arcane Blast stacks drop: each one costs 100% more.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+    ]
+   },
+   {
+    "title": "AoE",
+    "body": "Gather the pack, Frost Nova, Cone of Cold if you have it, then Arcane Explosion. Not on 3 or fewer enemies.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+    ]
+   },
+   {
+    "title": "Mana from 34",
+    "body": "Mage Armor plus Arcane Meditation gives 100% Spirit regen in combat. Stack Spirit; Arcane chews through mana.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+    ]
+   },
+   {
+    "title": "Conjure at login",
+    "body": "Every time you log in, spend your mana on food, water and (from 28) a mana gem. Running out mid-quest and re-conjuring wastes far more time.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+    ]
+   },
+   {
+    "title": "Teleport, don't hearth to a city",
+    "body": "From 20 you can teleport to capitals. Never set your Hearthstone to a city you can teleport to: bind it near your quests instead.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   },
+   {
+    "title": "Blink while traveling",
+    "body": "Blink on cooldown while running is roughly 20% faster travel (Icy Veins).",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   }
+  ],
+  "Fire": [
+   {
+    "title": "Talent path",
+    "body": "Start in Arcane: Wand Specialization, Missile Barrage, Arcane Concentration, Improved Channeling, Arcane Blast. Then Fire: Improved Fire Blast, Pyroblast, Heating Up, Master of Elements, Ignite and Combustion. Take Precision in Frost. Don't rush Ignite while your crit is low.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips"
+    ]
+   },
+   {
+    "title": "Rotation basics",
+    "body": "Open from max range with Frostfire Bolt or Pyroblast (Fireball before you have them). Arcane Blast 1-2 times for Missile Barrage, Arcane Missiles, Fire Blast on cooldown, Pyroblast at 3 Heating Up stacks, Scorch as filler, wand below 15% or when out of mana.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+    ]
+   },
+   {
+    "title": "AoE",
+    "body": "Nova the pack (solo), Flamestrike under it, Blast Wave (or Cone of Cold), Arcane Explosion to finish. Don't overlap slows, and save Mana Shield for near-death moments.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+    ]
+   },
+   {
+    "title": "Mana before 34",
+    "body": "Icy Veins: without Arcane Meditation and Mage Armor (34) Fire drinks after nearly every mob. Use your wand and avoid overkill.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+    ]
+   },
+   {
+    "title": "Conjure at login",
+    "body": "Every time you log in, spend your mana on food, water and (from 28) a mana gem. Running out mid-quest and re-conjuring wastes far more time.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+    ]
+   },
+   {
+    "title": "Teleport, don't hearth to a city",
+    "body": "From 20 you can teleport to capitals. Never set your Hearthstone to a city you can teleport to: bind it near your quests instead.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   },
+   {
+    "title": "Blink while traveling",
+    "body": "Blink on cooldown while running is roughly 20% faster travel (Icy Veins).",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   }
+  ],
+  "Frost": [
+   {
+    "title": "Talent path",
+    "body": "Icy Veins: 2 points in Precision, then Arcane for Wand Specialization and Missile Barrage. Back to Frost: Frostbite, Improved Frostbolt, Ice Lance (27), Ice Shards and Shatter, one point in Improved Blizzard, Fingers of Frost (37), then Arctic Reach or Permafrost, Cold Snap and Ice Barrier (47). The build also works for dungeons; respec for raids at 60.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips"
+    ]
+   },
+   {
+    "title": "Level Arcane, respec at 30",
+    "body": "Frost only comes online around 30 with Shatter. Icy Veins suggests leveling Arcane first and respeccing to Frost around 30 (skip Wand Specialization, take Improved Channeling).",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   },
+   {
+    "title": "Rotation basics",
+    "body": "Max-range Frostbolt, keep 1 Arcane Blast stack if you have it, and react to procs: Frostbite freeze on hit: Frostbolt + batched Ice Lance (Cone of Cold if Ice Lance is on cooldown). Fingers of Frost: Frostbolt on the first charge, Frostbolt + Ice Lance on the second. Arcane Missiles on Missile Barrage. Frost Nova and back up when they close in.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   },
+   {
+    "title": "AoE",
+    "body": "3+ targets: pre-pull Flamestrike if safe, Cone of Cold on cooldown and on Fingers of Frost procs, Blizzard filler, Arcane Explosion if you have aggro.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   },
+   {
+    "title": "Conjure at login",
+    "body": "Every time you log in, spend your mana on food, water and (from 28) a mana gem. Running out mid-quest and re-conjuring wastes far more time.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+    ]
+   },
+   {
+    "title": "Teleport, don't hearth to a city",
+    "body": "From 20 you can teleport to capitals. Never set your Hearthstone to a city you can teleport to: bind it near your quests instead.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   },
+   {
+    "title": "Blink while traveling",
+    "body": "Blink on cooldown while running is roughly 20% faster travel (Icy Veins).",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+    ]
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "title": "AoE on too few enemies",
+   "body": "Arcane Explosion, Blizzard and Flamestrike on 3 or fewer mobs drains your mana for little gain. Single-target them.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  {
+   "title": "Stacking Arcane Blast while leveling",
+   "body": "Each stack makes Arcane Blast cost 100% more. Cast it 1-3 times, use Missile Barrage, and let it drop.",
+   "spec": "Arcane",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "title": "Overkilling with big spells",
+   "body": "Don't finish a 30-health enemy with a full Frostbolt or Fireball. Wand, Scorch or Fire Blast it.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "title": "Leveling without a wand",
+   "body": "Get a wand early (Lesser Magic Wand at 5, Greater Magic Wand at 13, the level-10 class quest wand). Early on it can out-damage your spells for free.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  {
+   "title": "Hearth bound to a teleport city",
+   "body": "You can already teleport to capitals from 20. Bind your Hearthstone near where you quest.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "title": "Forgetting to conjure",
+   "body": "Logging in and heading straight out means re-conjuring mid-zone. Conjure food, water and a gem first.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "title": "Breaking your own sheep",
+   "body": "AoE, Blizzard ticks and Flamestrike break Polymorph. Only one sheep at a time, too.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "title": "Evocating at half mana",
+   "body": "Evocation restores most of your mana; using it at 50% wastes half. Wait until about 5% (gem first).",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  {
+   "title": "Overlapping slows",
+   "body": "Blast Wave and Cone of Cold back to back means both run out together and the pack reaches you.",
+   "spec": "Fire",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  {
+   "title": "Wasting Fire Blast as Frost",
+   "body": "Fire Blast and Ice Lance share an 8 second cooldown. A Fire Blast right before a freeze costs you an Ice Lance.",
+   "spec": "Frost",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "title": "Blinking from one weak mob",
+   "body": "Health is a resource. Don't spend mana kiting or Blinking away from one half-dead enemy.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  {
+   "title": "Pulling threat in groups",
+   "body": "Opening with AoE or big crits before the tank has the pack. Let the tank start, and keep Frost Nova, Blink and Ice Block ready.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ]
+  },
+  {
+   "title": "Clearcasting on a cheap spell",
+   "body": "Spend Clearcasting on a multi-stack Arcane Blast or Arcane Wrath, not a cheap spell.",
+   "spec": "Arcane",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  {
+   "title": "Downranking Blizzard too far",
+   "body": "A Blizzard rank learned more than 12 levels ago has a lower chance to proc Arcane Concentration, Frostbite and Fingers of Frost. Keep it current if you farm with it.",
+   "spec": "any",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  }
+ ],
+ "lessons": [
+  {
+   "id": "welcome",
+   "level": 1,
+   "spec": "any",
+   "title": "Welcome, Mage",
+   "body": "You start with Fireball, Frost Armor and Arcane Intellect. Keep both buffs on yourself, open fights with Fireball from max range, and rest between fights. Mages are glass cannons: kill things before they reach you.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "skyborne-regen",
+   "level": 1,
+   "spec": "any",
+   "title": "Skyborne: Read Ley Line",
+   "body": "If you're Skyborne, Read Ley Line gives +50% health and mana regen for 15 seconds (2 min cooldown). Use it while drinking. Icy Veins rates Skyborne the best Mage race for long fights.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/skyborne",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "id": "frostbolt-water",
+   "level": 4,
+   "spec": "any",
+   "title": "Frostbolt and Conjure Water",
+   "body": "At 4 you learn Frostbolt (damage plus a slow) and Conjure Water. Conjure water before each session: you never need to buy drinks.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "get-a-wand",
+   "level": 5,
+   "spec": "any",
+   "title": "Get a wand",
+   "body": "A Lesser Magic Wand is usable at 5 (Enchanting or the Auction House). A wand costs no mana and early on can out-damage your spells. Finish enemies with it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  {
+   "id": "food-fire-blast",
+   "level": 6,
+   "spec": "any",
+   "title": "Conjure Food and Fire Blast",
+   "body": "Conjure Food joins your water, and Fire Blast gives you an instant finisher you can cast while moving.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "comprehension",
+   "level": 6,
+   "spec": "any",
+   "title": "Comprehension: read scrolls",
+   "body": "Mages get a new minor tradeskill, Comprehension. When a creature drops a scroll, use Comprehend Scroll (General tab of your spellbook) to read it for a buff, effect or item. Scrolls are used up when read.",
+   "unconfirmed": true,
+   "flag": "Level 6 and scroll consumption from datamining (bindonforever)",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://bindonforever.com/notes/deep-dive-mage-shaman",
+    "https://www.icy-veins.com/wow-forever/mage-class-overview"
+   ]
+  },
+  {
+   "id": "polymorph-missiles",
+   "level": 8,
+   "spec": "any",
+   "title": "Polymorph and Arcane Missiles",
+   "body": "Polymorph turns an extra enemy into a sheep; damage breaks it and only one can be sheeped at a time. Arcane Missiles is a channel; later Missile Barrage makes it free and fast.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  {
+   "id": "five-second-rule",
+   "level": 8,
+   "spec": "any",
+   "title": "The five-second rule",
+   "body": "Your mana regen stops whenever you spend mana and restarts 5 seconds later. Stop casting when an enemy is nearly dead and wand it instead.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-stat-priority"
+   ]
+  },
+  {
+   "id": "talents-open",
+   "level": 10,
+   "spec": "any",
+   "title": "Talents are open",
+   "body": "You get your first talent point at 10. Gold-medal talents come at 11, 16, 21 and 31 points. Change talents at a class trainer in a major city. Missile Barrage (Arcane, row 2) helps every spec's mana.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://foreverguide.net/classes/mage/",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  {
+   "id": "boughs-in-the-wind",
+   "level": 10,
+   "spec": "any",
+   "title": "Class quest: Boughs in the Wind",
+   "body": "Skyborne Mages: the trainer Anathamaas Aetherwind in Valanaar (Zephras Isle) sends you to Belann ('Speak with Belann'), then 'Boughs in the Wind' (quest item at 48.5, 68.2). The reward is the Windbough Wand plus an Elixir of Minor Spirit: a wand at 10, definitely worth doing. Other races get a level-10 quest that rewards a Ley Orb or Ley Staff.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  {
+   "id": "frost-nova",
+   "level": 10,
+   "spec": "any",
+   "title": "Frost Nova",
+   "body": "Frost Nova freezes enemies around you for up to 8 seconds. When an enemy reaches you: Nova, step back, keep casting.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "arcane-start",
+   "level": 10,
+   "spec": "Arcane",
+   "title": "Arcane: first talents",
+   "body": "Arcane levels on its own now. Head for Improved Channeling and Missile Barrage, then Arcane Blast at 20. Until then, Frostbolt is your nuke.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips"
+   ]
+  },
+  {
+   "id": "fire-start",
+   "level": 10,
+   "spec": "Fire",
+   "title": "Fire: start in Arcane",
+   "body": "Fire takes Wand Specialization, Missile Barrage and Arcane Concentration first, then moves into Fire for Improved Fire Blast, Pyroblast and Heating Up.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  {
+   "id": "frost-start",
+   "level": 10,
+   "spec": "Frost",
+   "title": "Frost: Precision first",
+   "body": "Two points in Precision make your spells hit at-level targets every time. Then Wand Specialization and Missile Barrage in Arcane before coming back for Frostbite.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "slow-fall-dampen",
+   "level": 12,
+   "spec": "any",
+   "title": "Slow Fall and Dampen Magic",
+   "body": "Slow Fall (needs a Light Feather) lets you jump off cliffs safely. Dampen Magic lowers magic damage on you while soloing, but don't put it on group members: it lowers their healing too.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  {
+   "id": "greater-wand",
+   "level": 13,
+   "spec": "any",
+   "title": "Greater Magic Wand",
+   "body": "The Greater Magic Wand (Enchanting or Auction House) is a strong wand that holds up well into your 20s.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling"
+   ]
+  },
+  {
+   "id": "arcane-explosion",
+   "level": 14,
+   "spec": "any",
+   "title": "Arcane Explosion and AoE",
+   "body": "Arcane Explosion hits everything within 10 yards. Freeze a pack with Frost Nova first. Don't AoE 3 or fewer enemies: it drains your mana.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-abilities"
+   ]
+  },
+  {
+   "id": "robe-quest",
+   "level": 15,
+   "spec": "any",
+   "title": "Class quest: a robe",
+   "body": "At 15 a class quest chain rewards a chest piece: Alliance get the Manaweave Robe (needs 10 Linen Cloth and 6 Charged Rift Gems from Silver Stream Mine, Loch Modan), Horde get Lesser Spellfire Robes.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  {
+   "id": "blink-evocation-teleports",
+   "level": 20,
+   "spec": "any",
+   "title": "Blink, Evocation and teleports",
+   "body": "Big level. Blink escapes melee and roots and, on cooldown while running, is about 20% faster travel. Evocation restores most of your mana over 8 seconds: use it at about 5% mana. You can teleport to two capitals now (Stormwind and Ironforge, or Orgrimmar and Undercity), so bind your Hearthstone elsewhere.",
+   "unconfirmed": true,
+   "flag": "City teleport reagents in Forever not confirmed",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ]
+  },
+  {
+   "id": "blizzard-curse-shield",
+   "level": 20,
+   "spec": "any",
+   "title": "Blizzard, Remove Lesser Curse, Mana Shield",
+   "body": "Blizzard is your safe-distance AoE. Remove Lesser Curse makes you a curse dispeller in groups. Mana Shield is for emergencies only.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling"
+   ]
+  },
+  {
+   "id": "arcane-blast",
+   "level": 20,
+   "spec": "Arcane",
+   "title": "Arcane Blast",
+   "body": "Your 11-point talent. Cast it 1-3 times while fishing for Missile Barrage, then Arcane Missiles. Each stack adds 12% of your Intellect as spell damage for 18 seconds but costs 100% more, so let it drop between fights.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-6-2026"
+   ]
+  },
+  {
+   "id": "scorch",
+   "level": 22,
+   "spec": "Fire",
+   "title": "Scorch",
+   "body": "Scorch is Fire's leveling filler as the enemy closes in and a cheap finisher. Its crits build Heating Up.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  {
+   "id": "counterspell",
+   "level": 24,
+   "spec": "any",
+   "title": "Counterspell",
+   "body": "Counterspell interrupts a cast and locks that school for 10 seconds, off the global cooldown. Interrupt healers first.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "pyroblast",
+   "level": 24,
+   "spec": "Fire",
+   "title": "Pyroblast and Heating Up",
+   "body": "Pyroblast opens fights from max range. Once you have Heating Up, cast Fire Blast on cooldown and Pyroblast when you reach 3 stacks for a 1.5 second cast.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  {
+   "id": "arcane-wrath",
+   "level": 25,
+   "spec": "Arcane",
+   "title": "Arcane Wrath",
+   "body": "Your 16-point talent: a big nuke that scales with your maximum mana. Cast it after your opener and again on cooldown; spend Clearcasting on it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "id": "ice-block",
+   "level": 25,
+   "spec": "Frost",
+   "title": "Ice Block",
+   "body": "The 16-point Frost talent makes you immune to damage while you can't move or cast. Use it instead of dying.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "cone-of-cold",
+   "level": 26,
+   "spec": "any",
+   "title": "Cone of Cold",
+   "body": "Cone of Cold damages and slows enemies in front of you. Blizzard shortened its duration in Forever, so slow and kill rather than kite forever. The level-26 class quest (Astral Knot / Nether-lace garment) is also open; parts are dangerous solo.",
+   "unconfirmed": true,
+   "flag": "Exact duration only from datamining and Wowhead",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  {
+   "id": "ice-lance",
+   "level": 27,
+   "spec": "Frost",
+   "title": "Ice Lance",
+   "body": "Ice Lance deals 300% more damage to frozen targets and shares an 8 second cooldown with Fire Blast. Batch it with Frostbolt after a Frostbite freeze or Frost Nova.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "id": "mana-gems",
+   "level": 28,
+   "spec": "any",
+   "title": "Mana gems",
+   "body": "You can conjure a Mana Agate now (Jade at 38, Citrine at 48, Ruby at 58). Use it mid-fight before Evocation; it's off the global cooldown. Make a new one after each use.",
+   "unconfirmed": true,
+   "flag": "Trainer name may be 'Conjure Mana Gem' in Forever",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps"
+   ]
+  },
+  {
+   "id": "level-30",
+   "level": 30,
+   "spec": "any",
+   "title": "Ice Armor, third teleport, class wand",
+   "body": "Ice Armor replaces Frost Armor. You can teleport to Darnassus (Alliance) or Thunder Bluff (Horde). The Mage's Wand class chain opens (group content and level-40 areas) and rewards an Icefury, Nether Force or Ragefire Wand.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/mage-class-quests",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "frost-respec-30",
+   "level": 30,
+   "spec": "Frost",
+   "title": "Frost comes online",
+   "body": "Shatter makes Frost properly strong around 30. If you leveled as Arcane, Icy Veins says now is a good time to respec to Frost.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "mage-armor",
+   "level": 34,
+   "spec": "any",
+   "title": "Mage Armor",
+   "body": "Mage Armor keeps 50% of your Spirit regen going while you cast. With Arcane Meditation 3/3 it's 100%. Icy Veins: Fire stops drinking after every mob at this point.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  {
+   "id": "celestial-power",
+   "level": 35,
+   "spec": "any",
+   "title": "Class quest: Celestial Power",
+   "body": "The level-35 class chain (level-40 content, with an elite in Uldaman) rewards the Celestial Orb or Celestial Stave. Icy Veins recommends the orb for its on-use effect.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  {
+   "id": "fingers-of-frost",
+   "level": 37,
+   "spec": "Frost",
+   "title": "Fingers of Frost",
+   "body": "Chills can now give 1-2 Fingers of Frost charges that make the target count as frozen. Frostbolt on the first charge, Frostbolt + batched Ice Lance on the second.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70862-e74d4f16/mage.json"
+   ]
+  },
+  {
+   "id": "portals",
+   "level": 40,
+   "spec": "any",
+   "title": "Portals",
+   "body": "You learn your first portals at 40 (Stormwind and Ironforge, or Orgrimmar and Undercity) from the cities' portal trainers. Port your group or sell portals.",
+   "unconfirmed": true,
+   "flag": "Reagents in Forever not confirmed; Darnassus/Thunder Bluff portal at 50 vs 40 conflict",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling"
+   ]
+  },
+  {
+   "id": "frostfire-bolt",
+   "level": 40,
+   "spec": "any",
+   "title": "Frostfire Bolt",
+   "body": "New spell: counts as Fire and Frost, uses your better spell damage and the target's lower resistance, and slows plus burns. Fire uses it as a leveling opener; the Frostfire Bolt build uses it as its main spell.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "dual-spec",
+   "level": 40,
+   "spec": "any",
+   "title": "Dual Specialization",
+   "body": "Dual Specialization unlocks at 40. Keep a leveling or dungeon spec and try a hybrid layout alongside it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://foreverguide.net/classes/mage/",
+    "https://wowforeverplaybook.com/wow-forever-mage-changes"
+   ]
+  },
+  {
+   "id": "riding",
+   "level": 40,
+   "spec": "any",
+   "title": "Riding",
+   "body": "Apprentice Riding at 40: 60% speed, 100 gold to train, mount 20 gold (your first is free via a quest). There's no Mage class mount.",
+   "unconfirmed": true,
+   "flag": "Costs from Wowhead only",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts"
+   ]
+  },
+  {
+   "id": "ice-barrier",
+   "level": 47,
+   "spec": "Frost",
+   "title": "Ice Barrier",
+   "body": "Your 31-point talent: a shield that also gives +15% Frost damage for 1 minute on cast and +5% while it holds. Keep it up while you grind.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "id": "level-50",
+   "level": 50,
+   "spec": "any",
+   "title": "More portals, Dalaran, Morphaz",
+   "body": "The last portal (Darnassus or Thunder Bluff) comes at 50. Alliance Mages can learn Teleport: Dalaran (added in Forever). The Destroy Morphaz class chain (Sunken Temple) rewards Glacial Spike, Arcane Crystal Pendant or Fire Ruby.",
+   "unconfirmed": true,
+   "flag": "Dalaran level 50 vs 40 and portal level conflicts",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://db.icy-veins.com/wow-forever/spells/1297659",
+    "https://www.icy-veins.com/wow-forever/mage-class-quests"
+   ]
+  },
+  {
+   "id": "mana-ruby",
+   "level": 58,
+   "spec": "any",
+   "title": "Mana Ruby",
+   "body": "Your best gem. Carry one of each gem for long fights and use the best first.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "heating-up-arcane",
+   "level": 60,
+   "spec": "Arcane",
+   "title": "Arcane Fire",
+   "body": "At 60 Icy Veins' raid build reaches Heating Up in the Fire tree: Pyroblast at 3 stacks, Fire Blast on cooldown, Arcane Wrath, Missiles on Missile Barrage, and 4 Arcane Blast stacks.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents"
+   ]
+  },
+  {
+   "id": "raid-respec",
+   "level": 60,
+   "spec": "Frost",
+   "title": "Respec for raids",
+   "body": "Icy Veins' Frost leveling build doubles as an end-game dungeon build, but switch to a raid build (Cone of Cold - Arcane Meditation 18/0/33) for raids.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+    "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents"
+   ]
+  },
+  {
+   "id": "level-60",
+   "level": 60,
+   "spec": "any",
+   "title": "Level 60",
+   "body": "Fragmented Magic (soloable) rewards Polymorph: Pig. Journeyman Riding (100%) costs 1000 gold. Raids open later; pre-raid rotations in this addon are marked unconfirmed until tested.",
+   "unconfirmed": true,
+   "flag": "Riding costs from Wowhead only",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/mage-class-quests",
+    "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+    "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide"
+   ]
+  }
+ ],
+ "first_learn_hints": {
+  "Fireball": "Open fights with Fireball from max range; Fire keeps it as an opener and filler.",
+  "Frost Armor": "Keep Frost Armor up while leveling: it slows attackers and can proc Frostbite.",
+  "Arcane Intellect": "Keep Arcane Intellect on yourself and every caster in your group.",
+  "Conjure Water": "Conjure a stack of water at login; you never need to buy drinks.",
+  "Frostbolt": "Open from max range with Frostbolt: it slows, so the enemy takes longer to reach you.",
+  "Conjure Food": "Conjure food along with water at login.",
+  "Fire Blast": "Instant finisher you can cast on the move; shares a cooldown with Ice Lance.",
+  "Arcane Missiles": "Best used on Missile Barrage procs: free and fast.",
+  "Polymorph": "Sheep the extra enemy; damage breaks it and only one sheep at a time.",
+  "Frost Nova": "When enemies reach you: Frost Nova, step back, keep casting.",
+  "Arcane Explosion": "AoE around you; only worth it on 4+ enemies.",
+  "Blink": "Escape roots and melee; on cooldown while running it's about 20% faster travel.",
+  "Evocation": "Restores most of your mana over 8 s; use it near 5% mana, gem first.",
+  "Remove Lesser Curse": "Only Mages and Druids remove curses: watch your group for them.",
+  "Blizzard": "Safe-distance AoE; keep its rank current or its procs suffer.",
+  "Arcane Blast": "Cast 1-3 times while fishing for Missile Barrage, then let the stacks drop.",
+  "Arcane Wrath": "Big nuke on cooldown; spend Clearcasting on it.",
+  "Counterspell": "Interrupt healers and casters; it's off the global cooldown.",
+  "Pyroblast": "Open with it, then cast it at 3 Heating Up stacks.",
+  "Cone of Cold": "Slows the pack in front of you; shorter than in Classic.",
+  "Conjure Mana Agate": "Make a mana gem now and use it in fights before Evocation.",
+  "Conjure Mana Jade": "Better gem: carry one of each kind for long fights.",
+  "Conjure Mana Citrine": "Better gem: use the best one first.",
+  "Conjure Mana Ruby": "Your best gem: make one at login and after every use.",
+  "Ice Armor": "Frost's leveling armor from now on; Mage Armor when mana matters more.",
+  "Mage Armor": "50% of your Spirit regen while casting; 100% with Arcane Meditation.",
+  "Slow Fall": "Jump off cliffs safely; needs a Light Feather.",
+  "Dampen Magic": "Less magic damage while soloing; don't cast it on group members.",
+  "Amplify Magic": "More healing on a target in physical-damage fights.",
+  "Mana Shield": "Emergency only: it burns the mana you need to finish fights.",
+  "Fire Ward": "Absorbs Fire damage from Fire casters.",
+  "Frost Ward": "Absorbs Frost damage from Frost casters.",
+  "Scorch": "Fast Fire filler and finisher; raid Fire keeps 5 Improved Scorch stacks.",
+  "Flamestrike": "Pre-pull AoE; the burn lasts 8 s.",
+  "Frostfire Bolt": "New: hits as Fire and Frost, using your better spell damage.",
+  "Comprehend Scroll": "Read scrolls that creatures drop for buffs, effects or items.",
+  "Teleport: Stormwind": "Teleport to Stormwind; don't bind your Hearthstone there.",
+  "Teleport: Ironforge": "Teleport to Ironforge; don't bind your Hearthstone there.",
+  "Teleport: Darnassus": "Teleport to Darnassus; don't bind your Hearthstone there.",
+  "Teleport: Orgrimmar": "Teleport to Orgrimmar; don't bind your Hearthstone there.",
+  "Teleport: Undercity": "Teleport to Undercity; don't bind your Hearthstone there.",
+  "Teleport: Thunder Bluff": "Teleport to Thunder Bluff; don't bind your Hearthstone there.",
+  "Teleport: Dalaran": "Teleport to Dalaran; don't bind your Hearthstone there.",
+  "Portal: Stormwind": "Open a portal to Stormwind for your group.",
+  "Portal: Ironforge": "Open a portal to Ironforge for your group.",
+  "Portal: Darnassus": "Open a portal to Darnassus for your group.",
+  "Portal: Orgrimmar": "Open a portal to Orgrimmar for your group.",
+  "Portal: Undercity": "Open a portal to Undercity for your group.",
+  "Portal: Thunder Bluff": "Open a portal to Thunder Bluff for your group."
+ },
+ "rotation": {
+  "Arcane": {
+   "solo": {
+    "summary": "Frostbolt to slow, Arcane Wrath, Arcane Blast 1-3 times until Missile Barrage, Arcane Missiles, then Frost Nova, Arcane Wrath and Fire Blast. Wand to finish.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Pre-combat buff."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "From 34: with Arcane Meditation, 100% regen in combat."
+     },
+     {
+      "spell": "Frost Armor",
+      "when": "manual",
+      "note": "Before 34: keep Frost Armor up instead (the reminder bar tracks it)."
+     },
+     {
+      "spell": "Wand",
+      "when": "target_hp_below:15",
+      "note": "Finish low enemies with the wand; save Missile Barrage for the next pull."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free, fast missiles."
+     },
+     {
+      "spell": "Frostbolt",
+      "when": "out_of_combat",
+      "note": "Opener from max range (30 yd) to slow the enemy."
+     },
+     {
+      "spell": "Arcane Wrath",
+      "when": "ready",
+      "note": "After the opener and on cooldown. Best use of Clearcasting."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "stacks_below:Arcane Blast:3",
+      "note": "1-3 casts while fishing for Missile Barrage; then let the stacks drop."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "ready",
+      "note": "Instant damage while the enemy closes in."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Nearly empty: Evocation (between pulls if you can)."
+     },
+     {
+      "spell": "Wand",
+      "when": "mana_below:5",
+      "note": "Out of mana: wand."
+     },
+     {
+      "spell": "Frost Nova",
+      "when": "manual",
+      "note": "When the enemy reaches you: Nova, back up, Arcane Wrath."
+     },
+     {
+      "spell": "Arcane Explosion",
+      "when": "manual",
+      "note": "AoE: Nova the pack, Cone of Cold, then Arcane Explosion. Not on 3 or fewer."
+     },
+     {
+      "spell": "Frostbolt",
+      "when": "always",
+      "note": "Filler, and your nuke before Arcane Blast (20). It can proc Missile Barrage."
+     }
+    ],
+    "tips": [
+     "Each Arcane Blast stack costs 100% more mana: let it drop between fights.",
+     "Spend Clearcasting on a multi-stack Arcane Blast or Arcane Wrath.",
+     "Health is a resource: don't waste mana kiting one half-dead enemy.",
+     "Gem before Evocation once you have mana gems (28)."
+    ],
+    "unconfirmed": true,
+    "flag": "15% target-health wand mark is from the Icy Veins Fire leveling guide; 5% mana mark is Icy Veins' 'low enough for Evocation'",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/dps-leveling-tips",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+    ]
+   },
+   "dungeon": {
+    "summary": "Arcane Fire (Icy Veins): open with Pyroblast, Pyroblast at 3 Heating Up, Fire Blast and Arcane Wrath on cooldown, Arcane Missiles on Missile Barrage, Arcane Blast to keep 4 stacks. Arcane Explosion near the tank for AoE.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Buff the whole group."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "Group armor for regen."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "out_of_combat",
+      "note": "Precast opener (Arcane Fire build)."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "stacks_at_least:Heating Up:3",
+      "note": "Fast Pyroblast at 3 Heating Up."
+     },
+     {
+      "spell": "Arcane Power",
+      "when": "ready",
+      "note": "Burst cooldown; don't sit on it."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "ready",
+      "note": "On cooldown until 3 Heating Up."
+     },
+     {
+      "spell": "Arcane Wrath",
+      "when": "ready",
+      "note": "On cooldown."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "always",
+      "note": "Build to 4 stacks and keep them; refresh before the 18 s run out."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Gem first, then Evocation near empty."
+     },
+     {
+      "spell": "Presence of Mind",
+      "when": "manual",
+      "note": "AoE: Presence of Mind + Flamestrike when the first one ends."
+     },
+     {
+      "spell": "Flamestrike",
+      "when": "manual",
+      "note": "Pre-pull where the tank will stand, then Blink in."
+     },
+     {
+      "spell": "Arcane Explosion",
+      "when": "manual",
+      "note": "AoE near the tank, on 4+ enemies."
+     },
+     {
+      "spell": "Counterspell",
+      "when": "manual",
+      "note": "Interrupt casters and healers."
+     },
+     {
+      "spell": "Polymorph",
+      "when": "manual",
+      "note": "Sheep the marked target."
+     },
+     {
+      "spell": "Frostbolt",
+      "when": "always",
+      "note": "Before Arcane Blast (20): your filler."
+     },
+     {
+      "spell": "Wand",
+      "when": "mana_below:5",
+      "note": "Out of mana: wand."
+     }
+    ],
+    "tips": [
+     "Let the tank get threat first; Arcane burst pulls aggro easily.",
+     "Conjure water and buff the group before the first pull.",
+     "Remove Lesser Curse: only Mages and Druids can."
+    ],
+    "unconfirmed": true,
+    "flag": "Arcane Fire priority needs Heating Up (60); 5% mana mark is Icy Veins' Evocation advice",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-guide",
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+    ]
+   },
+   "raid": {
+    "summary": "Pre-raid guidance (Icy Veins Arcane Fire): Pyroblast opener, Pyroblast at 3 Heating Up > Fire Blast > Arcane Wrath > Arcane Missiles on Missile Barrage > Arcane Blast keeping 4 stacks.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "Regen for long fights."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "out_of_combat",
+      "note": "Precast opener."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "stacks_at_least:Heating Up:3",
+      "note": "Fast Pyroblast at 3 Heating Up."
+     },
+     {
+      "spell": "Arcane Power",
+      "when": "ready",
+      "note": "Use on cooldown (with Presence of Mind)."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "ready",
+      "note": "On cooldown until 3 Heating Up."
+     },
+     {
+      "spell": "Arcane Wrath",
+      "when": "ready",
+      "note": "On cooldown."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "always",
+      "note": "Keep 4 stacks; refresh within 18 s."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Gem first; Evocation only when nearly empty."
+     },
+     {
+      "spell": "Presence of Mind",
+      "when": "manual",
+      "note": "Burst or instant Flamestrike."
+     },
+     {
+      "spell": "Remove Lesser Curse",
+      "when": "manual",
+      "note": "Decurse when the fight has curses."
+     }
+    ],
+    "tips": [
+     "Raids open December 9: nothing here is tested on Forever bosses yet.",
+     "Carry one mana gem of each kind for long fights.",
+     "Wowhead's Arcane-only build is for Fire-immune bosses."
+    ],
+    "unconfirmed": true,
+    "flag": "Pre-raid guidance; raids not live yet",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/arcane-mage-ranged-dps-pve-spec-builds-talents",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/rotation-cooldowns-pve-dps",
+     "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+    ]
+   }
+  },
+  "Fire": {
+   "solo": {
+    "summary": "Open with Frostfire Bolt or Pyroblast (Fireball before them), Arcane Blast 1-2 times for Missile Barrage, Arcane Missiles, Fire Blast on cooldown, Pyroblast at 3 Heating Up, Scorch filler, wand to finish.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Pre-combat buff."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "From 34: fixes Fire's mana problem with Arcane Meditation."
+     },
+     {
+      "spell": "Frost Armor",
+      "when": "manual",
+      "note": "Before 34: keep Frost Armor up instead (the reminder bar tracks it)."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "stacks_at_least:Heating Up:3",
+      "note": "3 Heating Up stacks: fast Pyroblast."
+     },
+     {
+      "spell": "Wand",
+      "when": "target_hp_below:15",
+      "note": "Finish below 15% with the wand."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "ready",
+      "note": "On cooldown: always 1 Heating Up stack, 2 on a crit."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Nearly empty: Evocation."
+     },
+     {
+      "spell": "Wand",
+      "when": "mana_below:5",
+      "note": "Out of mana: wand."
+     },
+     {
+      "spell": "Frostfire Bolt",
+      "when": "out_of_combat",
+      "note": "Opener from max range (40+)."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "out_of_combat",
+      "note": "Opener if you don't have Frostfire Bolt."
+     },
+     {
+      "spell": "Fireball",
+      "when": "out_of_combat",
+      "note": "Opener before Pyroblast and Frostfire Bolt."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "stacks_below:Arcane Blast:2",
+      "note": "1-2 casts while fishing for Missile Barrage."
+     },
+     {
+      "spell": "Frost Nova",
+      "when": "manual",
+      "note": "AoE: Nova the pack first when solo."
+     },
+     {
+      "spell": "Flamestrike",
+      "when": "manual",
+      "note": "AoE under the frozen pack."
+     },
+     {
+      "spell": "Blast Wave",
+      "when": "manual",
+      "note": "AoE after Flamestrike (or Cone of Cold); don't overlap slows."
+     },
+     {
+      "spell": "Arcane Explosion",
+      "when": "manual",
+      "note": "Finish the pack."
+     },
+     {
+      "spell": "Mana Shield",
+      "when": "manual",
+      "note": "Near-death only."
+     },
+     {
+      "spell": "Scorch",
+      "when": "always",
+      "note": "Filler from 22, fast as the enemy closes in."
+     },
+     {
+      "spell": "Fireball",
+      "when": "always",
+      "note": "Filler before Scorch."
+     }
+    ],
+    "tips": [
+     "Avoid overkill: Scorch or wand a nearly dead enemy.",
+     "Cast long spells before the enemy reaches you, faster ones as it closes.",
+     "Before 34 you'll drink often; Mage Armor + Arcane Meditation fixes it."
+    ],
+    "unconfirmed": true,
+    "flag": "15% target-health wand mark is from the Icy Veins Fire leveling guide; 5% mana mark is Icy Veins' 'low enough for Evocation'",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/fire/dps-leveling-tips",
+     "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+    ]
+   },
+   "dungeon": {
+    "summary": "Deep Fire (Icy Veins): Pyroblast opener, Scorch to 5 Improved Scorch stacks, then Pyroblast at 3 Heating Up > Fire Blast > Arcane Blast (1-2 stacks) > Arcane Missiles on Missile Barrage > Fireball. Flamestrike, Blast Wave and Arcane Explosion for AoE.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Buff the whole group."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "Group armor for regen."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "out_of_combat",
+      "note": "Precast opener."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "stacks_at_least:Heating Up:3",
+      "note": "Fast Pyroblast at 3 Heating Up."
+     },
+     {
+      "spell": "Combustion",
+      "when": "ready",
+      "note": "Fire's damage cooldown."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "ready",
+      "note": "On cooldown: 1 stack guaranteed, 2 on crit."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "stacks_below:Arcane Blast:2",
+      "note": "Keep 1-2 stacks."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles."
+     },
+     {
+      "spell": "Scorch",
+      "when": "manual",
+      "note": "Keep 5 Improved Scorch stacks; refresh within 30 s."
+     },
+     {
+      "spell": "Frostfire Bolt",
+      "when": "manual",
+      "note": "Frostfire Bolt build: your filler instead of Fireball."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Gem first, then Evocation near empty."
+     },
+     {
+      "spell": "Flamestrike",
+      "when": "manual",
+      "note": "AoE: pre-pull, Blink in, Blast Wave, Flamestrike again."
+     },
+     {
+      "spell": "Blast Wave",
+      "when": "manual",
+      "note": "AoE on cooldown."
+     },
+     {
+      "spell": "Cone of Cold",
+      "when": "manual",
+      "note": "AoE after Blast Wave."
+     },
+     {
+      "spell": "Arcane Explosion",
+      "when": "manual",
+      "note": "AoE finisher."
+     },
+     {
+      "spell": "Counterspell",
+      "when": "manual",
+      "note": "Interrupt casters and healers."
+     },
+     {
+      "spell": "Polymorph",
+      "when": "manual",
+      "note": "Sheep the marked target."
+     },
+     {
+      "spell": "Fireball",
+      "when": "always",
+      "note": "Filler."
+     }
+    ],
+    "tips": [
+     "Ignite crits can overtake the tank's threat: let them build first.",
+     "Pushback: if something is hitting you, use instants.",
+     "Each Mage has their own Ignite and Improved Scorch now."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-guide",
+     "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
+     "https://www.wowhead.com/forever/guide/classes/mage/fire/rotation-cooldowns-pve-dps",
+     "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+    ]
+   },
+   "raid": {
+    "summary": "Pre-raid guidance (Icy Veins Deep Fire): Pyroblast opener, 5 Improved Scorch stacks, Pyroblast at 3 Heating Up > Fire Blast > Arcane Blast (1-2) > Missile Barrage > Fireball. Frostfire Bolt build: Frostfire Bolt instead of Fireball.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "Regen for long fights."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "out_of_combat",
+      "note": "Precast opener."
+     },
+     {
+      "spell": "Pyroblast",
+      "when": "stacks_at_least:Heating Up:3",
+      "note": "Fast Pyroblast at 3 Heating Up."
+     },
+     {
+      "spell": "Combustion",
+      "when": "ready",
+      "note": "On cooldown."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "ready",
+      "note": "On cooldown until 3 Heating Up."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "stacks_below:Arcane Blast:2",
+      "note": "Keep 1-2 stacks."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles."
+     },
+     {
+      "spell": "Scorch",
+      "when": "manual",
+      "note": "Keep 5 Improved Scorch stacks (refresh within 30 s)."
+     },
+     {
+      "spell": "Frostfire Bolt",
+      "when": "manual",
+      "note": "Frostfire Bolt build: batch an instant (Fire Blast) with the 2nd Fingers of Frost stack."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Gem first; Evocation only when nearly empty."
+     },
+     {
+      "spell": "Remove Lesser Curse",
+      "when": "manual",
+      "note": "Decurse when the fight has curses."
+     },
+     {
+      "spell": "Fireball",
+      "when": "always",
+      "note": "Filler."
+     }
+    ],
+    "tips": [
+     "Raids open December 9: nothing here is tested on Forever bosses yet.",
+     "Fire-immune bosses: Wowhead suggests an Arcane-only build."
+    ],
+    "unconfirmed": true,
+    "flag": "Pre-raid guidance; raids not live yet",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/fire-mage-ranged-dps-pve-spec-builds-talents",
+     "https://www.wowhead.com/forever/guide/classes/mage/fire/rotation-cooldowns-pve-dps",
+     "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+    ]
+   }
+  },
+  "Frost": {
+   "solo": {
+    "summary": "Max-range Frostbolt; on a freeze or Fingers of Frost, batch Ice Lance with Frostbolt. Arcane Missiles on Missile Barrage, 1 Arcane Blast stack, Frost Nova when they close in, Fire Blast or wand to finish.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Pre-combat buff."
+     },
+     {
+      "spell": "Ice Armor",
+      "when": "buff_missing",
+      "note": "From 30. Before that keep Frost Armor up (reminder bar)."
+     },
+     {
+      "spell": "Frost Armor",
+      "when": "manual",
+      "note": "Below 30: your armor. Mage Armor instead if mana matters more than melee hits."
+     },
+     {
+      "spell": "Ice Barrier",
+      "when": "buff_missing",
+      "note": "Keep it up: shield plus Frost damage bonus."
+     },
+     {
+      "spell": "Ice Lance",
+      "when": "frozen_or_proc:Fingers of Frost",
+      "note": "Batch with Frostbolt: press it just before Frostbolt lands."
+     },
+     {
+      "spell": "Cone of Cold",
+      "when": "target_frozen",
+      "note": "Frozen and Ice Lance on cooldown: batch Cone of Cold (enemy must be close and in front)."
+     },
+     {
+      "spell": "Fire Blast",
+      "when": "target_hp_below:15",
+      "note": "Finisher when the enemy is low and not frozen."
+     },
+     {
+      "spell": "Wand",
+      "when": "target_hp_below:15",
+      "note": "Or finish with the wand."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles; save it if the enemy is nearly dead."
+     },
+     {
+      "spell": "Arcane Blast",
+      "when": "stacks_below:Arcane Blast:1",
+      "note": "Keep 1 stack for the buff, no more."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Nearly empty: Evocation, ideally between pulls."
+     },
+     {
+      "spell": "Wand",
+      "when": "mana_below:5",
+      "note": "Out of mana: wand."
+     },
+     {
+      "spell": "Frost Nova",
+      "when": "manual",
+      "note": "When they get close: Nova, back up, Frostbolt + Ice Lance."
+     },
+     {
+      "spell": "Blizzard",
+      "when": "manual",
+      "note": "AoE packs when it's safe; Cone of Cold on cooldown."
+     },
+     {
+      "spell": "Frostbolt",
+      "when": "always",
+      "note": "Main spell: open at max range and keep casting."
+     }
+    ],
+    "tips": [
+     "Frostbite freezes on hit; Fingers of Frost procs on cast.",
+     "Two Fingers of Frost charges: Frostbolt on the first, Frostbolt + Ice Lance on the second.",
+     "Fire Blast shares Ice Lance's cooldown: don't waste it before a freeze.",
+     "If a frozen enemy is in melee, run or Blink out before casting."
+    ],
+    "unconfirmed": true,
+    "flag": "15% target-health wand mark is from the Icy Veins Fire leveling guide; 5% mana mark is Icy Veins' 'low enough for Evocation'",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+     "https://www.icy-veins.com/wow-forever/fire-mage-leveling",
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities"
+    ]
+   },
+   "dungeon": {
+    "summary": "Icy Veins Frost: Ice Barrier at pull, Frostbolt; Ice Lance on Fingers of Frost or frozen targets; Cone of Cold with the next Frostbolt at 5 Winter's Chill stacks. AoE: Cone of Cold on cooldown, Blizzard filler.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Buff the whole group."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "Icy Veins prefers Mage Armor in groups."
+     },
+     {
+      "spell": "Ice Barrier",
+      "when": "buff_missing",
+      "note": "At the pull; recast when Frigid Power has 3 s or less."
+     },
+     {
+      "spell": "Ice Lance",
+      "when": "frozen_or_proc:Fingers of Frost",
+      "note": "Batch with Frostbolt."
+     },
+     {
+      "spell": "Cone of Cold",
+      "when": "manual",
+      "note": "5 Winter's Chill stacks: batch with the next Frostbolt. 3+ targets: on cooldown."
+     },
+     {
+      "spell": "Arcane Missiles",
+      "when": "proc:Missile Barrage",
+      "note": "Free missiles (leveling/dungeon build)."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Gem first, then Evocation near empty."
+     },
+     {
+      "spell": "Cold Snap",
+      "when": "manual",
+      "note": "Reset Cone of Cold (or Ice Block) in big pulls."
+     },
+     {
+      "spell": "Blizzard",
+      "when": "manual",
+      "note": "AoE filler on 3+ targets."
+     },
+     {
+      "spell": "Frost Nova",
+      "when": "manual",
+      "note": "Freeze a pack that breaks loose."
+     },
+     {
+      "spell": "Ice Block",
+      "when": "manual",
+      "note": "If you pull aggro or a mechanic would kill you."
+     },
+     {
+      "spell": "Counterspell",
+      "when": "manual",
+      "note": "Interrupt casters and healers."
+     },
+     {
+      "spell": "Polymorph",
+      "when": "manual",
+      "note": "Sheep the marked target."
+     },
+     {
+      "spell": "Remove Lesser Curse",
+      "when": "manual",
+      "note": "Decurse the group."
+     },
+     {
+      "spell": "Frostbolt",
+      "when": "always",
+      "note": "Precast and filler."
+     },
+     {
+      "spell": "Wand",
+      "when": "mana_below:5",
+      "note": "Out of mana: wand."
+     }
+    ],
+    "tips": [
+     "The Icy Veins leveling build doubles as a dungeon build.",
+     "Allies' attacks may break a freeze before you cast; batch Ice Lance.",
+     "Big pulls draw aggro: Ice Barrier first, Ice Block if it goes wrong."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-guide",
+     "https://www.icy-veins.com/wow-forever/frost-mage-leveling",
+     "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+    ]
+   },
+   "raid": {
+    "summary": "Pre-raid guidance (Icy Veins): Ice Barrier at pull, precast Frostbolt. 5 Winter's Chill: batch Cone of Cold with the next Frostbolt > Fingers of Frost: batch Ice Lance with Frostbolt > recast Ice Barrier at 3 s Frigid Power > Frostbolt.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Arcane Intellect",
+      "when": "buff_missing",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Mage Armor",
+      "when": "buff_missing",
+      "note": "Or Ice Armor if mana is no issue."
+     },
+     {
+      "spell": "Ice Barrier",
+      "when": "buff_missing",
+      "note": "Recast when Frigid Power has 3 s or less."
+     },
+     {
+      "spell": "Cone of Cold",
+      "when": "manual",
+      "note": "At 5 Winter's Chill stacks, batch with the next Frostbolt."
+     },
+     {
+      "spell": "Ice Lance",
+      "when": "frozen_or_proc:Fingers of Frost",
+      "note": "Batch with Frostbolt."
+     },
+     {
+      "spell": "Evocation",
+      "when": "mana_below:5",
+      "note": "Gem first; ideally you never Evocate mid-fight."
+     },
+     {
+      "spell": "Cold Snap",
+      "when": "manual",
+      "note": "AoE: reset Cone of Cold."
+     },
+     {
+      "spell": "Blizzard",
+      "when": "manual",
+      "note": "AoE filler on 3+ targets."
+     },
+     {
+      "spell": "Ice Block",
+      "when": "manual",
+      "note": "Avoid mechanics like fears or recover from mistakes."
+     },
+     {
+      "spell": "Remove Lesser Curse",
+      "when": "manual",
+      "note": "Decurse when the fight has curses."
+     },
+     {
+      "spell": "Frostbolt",
+      "when": "always",
+      "note": "Precast and filler."
+     }
+    ],
+    "tips": [
+     "Raids open December 9: nothing here is tested on Forever bosses yet.",
+     "Icy Veins raid builds: Cone of Cold - Arcane Meditation (progression) or Cone of Cold - Incineration (most damage, least threat).",
+     "Use mana potions on cooldown and longer tools (gem, Evocation) around them."
+    ],
+    "unconfirmed": true,
+    "flag": "Pre-raid guidance; raids not live yet",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/frost-mage-ranged-dps-pve-spec-builds-talents",
+     "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+     "https://www.wowhead.com/forever/guide/classes/mage/frost/talent-builds-pve-dps",
+     "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en" data-faction="neutral">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parzelle's Addon · the Mage companion for WoW Forever</title>
+<meta name="description" content="Parzelle's Addon: the do-everything Mage companion for World of Warcraft: Forever. Rotation help, a Conjure button for water, food and mana gems, Polymorph tracking, portals and teleports, gear upgrade tips, leveling, talents and a full Learn the Mage mode.">
+<meta name="theme-color" content="#0b0806">
+<link rel="icon" href="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="extra.css">
+<script>
+  document.documentElement.classList.add("js");
+  try { var f = localStorage.getItem("parzelles-faction"); if (f) document.documentElement.dataset.faction = f; } catch (e) {}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Parzelle's Addon, back to top">
+    <img src="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg" alt="" width="26" height="26" style="border-radius: 4px; border: 1px solid #8a6526">
+    <span>Parzelle's Addon</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#conjure">Conjure Button</a>
+    <a href="#quests">Quests</a>
+    <a href="#loot">Loot</a>
+    <a href="#parzelle">Parzelle</a>
+    <a href="#tavern">Tavern</a>
+    <a href="https://github.com/ninepointlabs/parzelles-addon">GitHub</a>
+  </nav>
+  <div class="faction" role="group" aria-label="Choose your faction">
+    <button type="button" data-pick="alliance" aria-pressed="false" title="For the Alliance!">
+      <img src="https://omaforge.ninepointlabs.com/assets/art/alliance-crest-sm.webp" alt="Alliance" width="28" height="35">
+    </button>
+    <button type="button" data-pick="horde" aria-pressed="false" title="For the Horde!">
+      <img src="https://omaforge.ninepointlabs.com/assets/art/horde-sigil-sm.webp" alt="Horde" width="28" height="35">
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker">The Mage companion for World of Warcraft: Forever</p>
+    <h1 class="title">Parzelle's Addon</h1>
+    <p class="lede">
+      Arcane, Fire or Frost: pick your path and every page follows it. What to cast,
+      what to wear, where to quest, what to train, where to teleport and everything about
+      the class, in one window that shows you what to do next.
+    </p>
+    <ul class="specs" aria-label="Specs">
+      <li class="spec arcane"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg" alt="" width="30" height="30">Arcane</li>
+      <li class="spec fire"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_firebolt02.jpg" alt="" width="30" height="30">Fire</li>
+      <li class="spec frost"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg" alt="" width="30" height="30">Frost</li>
+    </ul>
+    <div class="cta">
+      <a class="wow-btn" href="#loot">Claim your loot</a>
+      <a class="wow-btn ghost" href="#conjure">Try the Conjure Button</a>
+    </div>
+    <p class="meta">Free and open source · MIT · WoW Forever only · <span data-version>v0.1.0</span></p>
+  </div>
+  <div class="loading" aria-hidden="true">
+    <p class="loading-tip"><b>Tip:</b> <span id="tip">The Rotation page only lists spells you can actually cast at your level.</span></p>
+    <div class="loading-bar"><div class="loading-fill"></div></div>
+  </div>
+</section>
+
+<div class="facts-band">
+  <div class="facts" aria-label="At a glance">
+    <div class="fact"><b>3</b><span>specs, one click apart</span></div>
+    <div class="fact"><b>8</b><span>screens in one window</span></div>
+    <div class="fact"><b>5</b><span>rotation views</span></div>
+    <div class="fact"><b>6</b><span>leveling tabs</span></div>
+    <div class="fact"><b>2</b><span>profiles, A and B</span></div>
+    <div class="fact"><b>1</b><span>button for water, food and gems</span></div>
+  </div>
+</div>
+
+<section class="section buff" id="conjure">
+  <div class="section-head">
+    <h2 class="heading">The Conjure Button</h2>
+    <p class="sub">Water, food and a mana gem, one press at a time.</p>
+  </div>
+
+  <div class="spotlight">
+    <div>
+      <h3>One button. Never out of water.</h3>
+      <p>A small button sits on your screen and shows how much conjured water, food and
+        mana gem you have in your bags. Each press casts the highest rank you know of
+        whatever you're shortest on, and the button moves straight on to the next thing.
+        Keep pressing until you're stocked up.</p>
+      <p class="steps-title">What it makes, in order</p>
+      <ol class="picks">
+        <li><b>A mana gem</b>, if you have none.</li>
+        <li><b>Water</b>, until you reach your target.</li>
+        <li><b>Food</b>, until you reach your target.</li>
+      </ol>
+      <p class="steps-title">It skips</p>
+      <ul class="rules">
+        <li>anything you're already stocked on (targets are yours to set in Settings)</li>
+        <li>anything you can't conjure yet: it uses only the spells you know</li>
+      </ul>
+      <p class="steps-title">Make it yours</p>
+      <ul class="rules">
+        <li>No key is bound by default. Pick one under <em>Settings › Conjure button › Set key</em>, or type <code>/parzelle conjure key</code>. Shift, Ctrl, Alt and extra mouse buttons work; Super combos are never used.</li>
+        <li>Drag the small bar above it to move it. <code>/parzelle conjure</code> shows or hides it.</li>
+        <li>It appears once you know a conjure spell. When you're low, Home and a line after login remind you.</li>
+      </ul>
+      <p class="steps-title">Blizzard's rules, kept</p>
+      <ul class="rules">
+        <li>One press, one cast. The addon never casts on its own, and it uses no macros.</li>
+        <li>Out of combat only: in combat the button is disarmed. Conjure between pulls.</li>
+      </ul>
+    </div>
+
+    <div class="demo" id="conjure-demo" tabindex="0" aria-label="Conjure Button demo: press the button or C">
+      <div class="demo-bar"><span>Try it</span><small>pretend bags · same order as the addon</small></div>
+      <ul class="party" aria-live="polite"></ul>
+      <div class="demo-combat"><span>Out of combat.</span><button type="button" class="wow-btn small ghost combat-toggle">Pull a mob</button></div>
+      <div class="demo-foot">
+        <button type="button" class="conjure-btn" aria-label="Conjure what you're shortest on"><span class="key">C</span></button>
+        <div class="demo-status"></div>
+      </div>
+      <p class="demo-note">A web demo of the addon's logic, not a screenshot of the game. The C key is just for the demo: in game you choose your own key.</p>
+    </div>
+  </div>
+  <div class="in-game">
+    <figure>
+      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/inv_drink_06.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>The Conjure button and its tooltip, in game</span></div>
+      <figcaption>In game: hover the button and its tooltip lists your stock against your targets.</figcaption>
+    </figure>
+    <figure>
+      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_food_33.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>One press later: the next item to conjure</span></div>
+      <figcaption>One press later: the stock goes up and the button already shows what's next.</figcaption>
+    </figure>
+  </div>
+  <p class="privacy">Screenshots are on their way. Other players' names will be pixelated.</p>
+</section>
+
+<section class="section quests" id="quests">
+  <div class="section-head">
+    <h2 class="heading">Quest Log</h2>
+    <p class="sub">Everything Parzelle's Addon does for your Mage, one quest at a time.</p>
+  </div>
+
+  <div class="questlog">
+    <div class="ql-bar">
+      <span class="ql-name">Quest Log</span>
+      <span class="ql-count"><span id="ql-done">0</span>/11 accepted</span>
+    </div>
+    <div class="ql-body">
+      <ol class="ql-list" id="ql-list" aria-label="Quests"></ol>
+
+      <div class="ql-pages">
+
+        <div class="quest" id="q-home" data-zone="The Violet Spire" data-level="10">
+          <h3>Know What to Do Next</h3>
+          <p>Every time you open the window, Home tells you what matters now: the spells
+            waiting at your trainer, how close you are to your riding gold, your next class
+            quest, and anything that needs attention, such as a missing buff, low conjured
+            stock, an upgrade in your bags or news you haven't read.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>See what to train now and at your next trainer visit</li>
+            <li>Track your savings for riding at 40 (100g) and 60 (1000g)</li>
+            <li>Never miss your next Mage class quest</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Three cards across the top: what your trainer has for you now (or at your next visit), your savings toward Apprentice Riding at 40 and Journeyman at 60 with a progress bar, and your next class quest.</p>
+            <p>Below them, <em>Needs attention</em> lists missing buffs, conjured food and water running low, upgrades sitting in your bags, unread news and new lessons, each with a button that takes you there. Next to it: your rotation at a glance.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="rare">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_09.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Codex of Next Steps</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-rare">Codex of Next Steps</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Shows what to do next, sorted by what matters.</span>
+                <i>"Type /parzelle. Start on Home."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Home: Do next cards, Needs attention and your rotation at a glance</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-rotation" data-zone="The Battlefield" data-level="12">
+          <h3>Cast the Right Spell</h3>
+          <p>Priority lists for solo leveling, dungeons and raids, for each spec, filtered to
+            the spells you can actually cast at your level. An optional on-screen helper
+            suggests your next spell and keeps your cooldowns in view. After each fight you
+            get a short summary and a mana tip. It only ever advises: nothing casts by
+            itself.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Follow Solo, Dungeon and Raid priorities for Arcane, Fire and Frost</li>
+            <li>See only spells your level and talents allow</li>
+            <li>Read the Crowd control and Mana tabs before a hard pull</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Each spec has Solo, Dungeon and Raid lists, plus <em>Crowd control</em> and <em>Mana</em> tabs. A step you can cast shows normally; one your level allows but you haven't trained yet is tagged <em>Train it</em>; spells from talents you haven't taken stay hidden until they apply.</p>
+            <p>The helper shows the next spell large with the two after it, plus a row of cooldowns. After a fight, chat gets a line of what you cast, the mana you spent and a tip, like finishing mobs with your wand so your mana comes back.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Whisper of the Next Cast</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Whisper of the Next Cast</b>
+                <span>Unique</span>
+                <span class="use">Use: Suggests your next spell. You still press the button.</span>
+                <i>"Frostbolt is ready."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Rotation: only the spells you can use, with the plan, tips and the helper toggle</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-conjure" data-zone="The Battlefield" data-level="14">
+          <h3>Water for the Road</h3>
+          <p>One small button on your screen counts your conjured water, food and mana gem.
+            Each press conjures whatever you're shortest on, at the highest rank you know:
+            a gem if you have none, then water up to your target, then food. Bind it to any
+            key you like.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Restock with a single press between pulls</li>
+            <li>Set your own targets and key in Settings</li>
+            <li>Never sit down to drink store-bought water again</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>See <a href="#conjure">the Conjure Button</a> above for the full order and a demo you can press.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="rare">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/inv_drink_06.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Ever-Conjured Waterskin</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-rare">Ever-Conjured Waterskin</b>
+                <span>Binds to a key</span>
+                <span class="use">Use: Conjures whatever you're shortest on.</span>
+                <i>"One press per cast, as the Kirin Tor intended."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>The Conjure button and its tooltip in game</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-sheep" data-zone="The Battlefield" data-level="16">
+          <h3>One Sheep at a Time</h3>
+          <p>Cast Polymorph and the on-screen helper shows who you sheeped and how long it
+            has left, and warns you if it breaks early. Frost Nova, Counterspell and Cone of
+            Cold cooldowns sit right next to it.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Keep an eye on your Polymorph's time left</li>
+            <li>Hear about it the moment it breaks early</li>
+            <li>Know when Frost Nova and Counterspell are ready</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>The tracker reads your own Polymorph on your target, focus, mouseover and nameplates. If the game hides the timer, the helper says so instead of guessing. The <em>Crowd control</em> tab on Rotation has the same view plus tips.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="uncommon">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_polymorph.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Shepherd's Hourglass</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-uncommon">Shepherd's Hourglass</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Tells you how long your sheep stays a sheep.</span>
+                <i>"Baa."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>The on-screen helper with a Polymorph timer and cooldowns</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-gear" data-zone="The Armory" data-level="20">
+          <h3>Upgrade or Vendor?</h3>
+          <p>Hover any item and the tooltip says whether it beats what you're wearing for
+            your spec, what improves and what you'd lose, and <em>Equip this</em> when it's
+            worth it. Upgrades sitting in your bags glow, and a new one gets a quick alert.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Compare every item with your equipped one, for your spec</li>
+            <li>Count fire, frost or arcane damage only for the spec that uses it</li>
+            <li>Spot upgrades in your bags at a glance</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Each spec's stat priority comes from the guides, and the addon turns it into weights for your spec. Fire damage counts for Fire, frost damage for Frost and arcane damage for Arcane; damage for another school is shown but not counted. Rings and trinkets are compared against the weaker of your two.</p>
+            <p><em>Equip this</em> only appears for an upgrade of 1% or more that you can wear right now. Otherwise you'll see "Upgrade once you reach level N".</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/inv_chest_cloth_17.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Appraiser's Robe</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Appraiser's Robe</b>
+                <span>Chest · Cloth</span>
+                <span class="use">Equip: Tells you which robe is better, and why.</span>
+                <i>"No separate upgrade addon needed."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Gear: the best item per slot at your level, and how to get it</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-drops" data-zone="The Armory" data-level="24">
+          <h3>Where the Loot Drops</h3>
+          <p>The Gear page lists the best recommended item for each slot at your level. Click
+            one to see who drops it and how often, which quest gives it and who starts that
+            quest, or what it takes to craft. Press <em>Mark on map</em> to put a pin on the
+            quest giver or the dungeon entrance.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Browse the best gear for your level, slot by slot</li>
+            <li>Find the boss, the quest giver or the recipe</li>
+            <li>Pin it on your map and follow the arrow</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>The views are <em>For my level</em>, <em>Best overall</em>, <em>By bracket</em>, <em>Consumables</em> and <em>Weights</em>.</p>
+            <p>Item sources come from the Icy Veins Forever database. Dungeon entrances come from the game's own map, so the pin lands where the game says the entrance is. If a source isn't published yet, the page says so.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="rare">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_map_01.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Map of Likely Loot</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-rare">Map of Likely Loot</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Marks the quest giver or dungeon entrance on your map.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Gear detail: how to get an item, with Mark on map</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-leveling" data-zone="The Long Road" data-level="30">
+          <h3>The Road to Sixty</h3>
+          <p>Your path laid out by level: upcoming trainer visits and milestones, zones and
+            dungeons for your level and faction, every spell rank and when you learn it, your
+            Mage class quests, and your riding trainer and first mount.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Plan your next trainer visits</li>
+            <li>Find zones and dungeons for your level and faction</li>
+            <li>Complete your class quests and claim your first mount</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p><em>Path</em> lists your next trainer visits and milestones by level. <em>Zones &amp; dungeons</em> highlights your bracket, <em>Trainer</em> shows every rank and when you learn it, and <em>Class quests</em> ticks off the ones you've done. <em>Riding &amp; gold</em> shows your trainer, your vendor and your first-mount quest. <em>Portals &amp; teleports</em> is next in the log.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="uncommon">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/ability_mount_ridinghorse.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Reins of the Long Road</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-uncommon">Reins of the Long Road</b>
+                <span>Requires level 40</span>
+                <span class="use">Use: Reminds you how much gold you still need.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Leveling, Trainer: next visit, total cost and every spell rank</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-portals" data-zone="The Long Road" data-level="40" data-new>
+          <h3>Portals &amp; Teleports</h3>
+          <p>Every teleport and portal for your faction, with the level you learn it, whether
+            you know it, and the reagent it needs. A small travel bar gives you one button
+            per teleport or portal you know: one click, one cast.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>See which cities you can reach, and when</li>
+            <li>Count your reagents before you need them</li>
+            <li>Open the travel bar and click your way home</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Only your own faction's cities are listed. Reagent counts come from your bags; where the research couldn't confirm that Forever still uses a reagent, the page flags it as <em>not confirmed for Forever</em> instead of guessing.</p>
+            <p>The travel bar is its own small frame, filled and opened out of combat. And a tip from the page: don't set your hearthstone to a city you can teleport to. Bind it to the inn where you're questing.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_arcane_portalstormwind.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Keystone of Many Cities</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Keystone of Many Cities</b>
+                <span>Your faction only</span>
+                <span class="use">Use: One button per teleport and portal you know.</span>
+                <i>"Your hearthstone has other plans."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Leveling, Portals &amp; teleports, with the travel bar</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-talents" data-zone="The Long Road" data-level="40">
+          <h3>A Build You Can See</h3>
+          <p>Recommended builds for your spec, drawn on Forever's own talent trees with points
+            per talent and the in-game tooltips. With dual spec, talent spec one and two each
+            keep their own Mage profile, and the addon follows whichever you switch to.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>See every recommended build on the real talent trees</li>
+            <li>Read what each build takes, talent by talent</li>
+            <li>Switch specs and let the addon follow</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Pick a build and it appears on Forever's three trees, with points per talent and the game's own tooltip on hover. Below it, a list says what the build takes. A build that no longer fits the current trees shows its link instead of a wrong picture.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_firebolt02.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Twin Tomes of Talent</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Twin Tomes of Talent</b>
+                <span>Unique · Dual spec</span>
+                <span class="use">Use: Shows a build point by point on Forever's trees.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Talents: a build drawn on Forever's three trees</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-learn" data-zone="The Library" data-level="10">
+          <h3>Learn the Mage</h3>
+          <p>Every spell and talent explained: what it does, when to use it and which rank.
+            Then how the class works, including Forever's new Comprehension tradeskill,
+            playing in a group, leveling each spec and the common mistakes. New lessons
+            unlock as you level, and the first time you learn a spell you get a short hint.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Read about every spell and talent</li>
+            <li>Unlock lessons as you level</li>
+            <li>Learn your role in a group</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>The sections are <em>Lessons</em>, <em>Spells</em>, <em>Talents</em>, <em>How the class works</em> (mana, downranking, crowd control, Comprehension and more), <em>In a group</em>, <em>Leveling</em> (tips for each spec) and <em>Common mistakes</em>. Anything the sources couldn't confirm is marked.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="legendary">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_07.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Tome of the Whole Mage</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-legendary">Tome of the Whole Mage</b>
+                <span>Soulbound</span>
+                <span class="use">Use: Teaches you everything there is about the class.</span>
+                <i>"Unconfirmed facts are marked. The arcane rewards precision."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Learn the Mage: lessons unlocked so far, and what unlocks next</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-news" data-zone="The Library" data-level="18">
+          <h3>Nothing Forgotten</h3>
+          <p>Reminders for Arcane Intellect, your armor spell, Ice Barrier, your conjured
+            stock, reagents and your wand. What's new collects Forever and Mage changes, and
+            an optional companion script on your PC keeps that list current. Every fact
+            carries its source, and where the sources disagree or say nothing, the addon
+            tells you instead of guessing.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Keep your buffs, armor and wand in order</li>
+            <li>Catch every Mage change in What's new</li>
+            <li>Check the source behind any fact</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Reminders appear on Home and as a small pop-up out of combat; choose which ones in Settings. Each page has a <em>Sources &amp; notes</em> link with the sources it uses and any open questions. The search box at the top of the sidebar finds any spell, talent, item, quest or dungeon.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="uncommon">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/inv_scroll_05.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Scroll of Honest Notes</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-uncommon">Scroll of Honest Notes</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Shows where every fact came from.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>What's new: Forever and Mage changes, newest first</span></div></figure>
+        </div>
+
+      </div>
+    </div>
+    <div class="ql-foot">
+      <button type="button" class="wow-btn small" id="accept">Accept</button>
+      <button type="button" class="wow-btn small ghost" id="next">Next quest ›</button>
+    </div>
+  </div>
+</section>
+
+<section class="section origin-section" id="parzelle">
+  <div class="section-head">
+    <h2 class="heading">The Mage Who Started It All</h2>
+    <p class="sub">Every addon has a first player. This one has a name.</p>
+  </div>
+  <div class="origin">
+    <figure class="portrait">
+      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Portrait coming soon</b></div>
+      <figcaption>Parzelle Starfall<span>High Order Skyborne Mage of World of Warcraft: Forever</span></figcaption>
+    </figure>
+    <div class="origin-text">
+      <h3>Meet Parzelle Starfall</h3>
+      <p>Parzelle Starfall is the Mage this addon is named for: a High Order Skyborne who
+        started out on Zephras Isle. At level 8 she hadn't picked a spec yet.</p>
+      <p>Parzelle's Addon is built for her and tested on her.</p>
+      <p>If you see a Skyborne Mage handing out water and opening portals, say hello.</p>
+      <p class="signoff">May your mana never run dry.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section loot-section" id="loot">
+  <div class="section-head">
+    <h2 class="heading">Claim Your Loot</h2>
+    <p class="sub">Releases are published on <a href="https://github.com/ninepointlabs/parzelles-addon/releases">GitHub Releases</a>. For World of Warcraft: Forever only.</p>
+  </div>
+
+  <div class="loot">
+    <div class="loot-bar"><span>Loot</span><span class="loot-from">Parzelle's Addon <span data-version>v0.1.0</span></span></div>
+
+    <div class="loot-item" data-quality="legendary">
+      <img src="https://omaforge.ninepointlabs.com/assets/ui/omaforge.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+      <div class="loot-text">
+        <b class="q-legendary">With OmaForge on Linux</b>
+        <span>Legendary · installs it, then <code>omaforge update -c forever</code> keeps it current</span>
+<pre><code>omaforge install -c forever github:ninepointlabs/parzelles-addon</code></pre>
+      </div>
+      <div class="loot-actions">
+        <a class="wow-btn small ghost" href="https://omaforge.ninepointlabs.com/">Get OmaForge</a>
+        <button type="button" class="wow-btn small ghost" data-copy>Copy</button>
+      </div>
+    </div>
+
+    <div class="loot-item" data-quality="epic">
+      <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_bag_10.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+      <div class="loot-text">
+        <b class="q-epic">The zip, by hand</b>
+        <span>Epic · any OS · extract into your Forever AddOns folder</span>
+<pre><code>World of Warcraft/_forever_/Interface/AddOns/ParzellesAddon</code></pre>
+      </div>
+      <div class="loot-actions">
+        <a class="wow-btn small" data-download="zip" href="https://github.com/ninepointlabs/parzelles-addon/releases">Download</a>
+      </div>
+    </div>
+
+    <div class="loot-item" data-quality="uncommon">
+      <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_rune_01.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+      <div class="loot-text">
+        <b class="q-uncommon">Then, in game</b>
+        <span>Uncommon · reload, open it and pick your spec</span>
+<pre><code>/reload
+/parzelle</code></pre>
+      </div>
+      <div class="loot-actions">
+        <button type="button" class="wow-btn small ghost" data-copy>Copy</button>
+      </div>
+    </div>
+  </div>
+  <p class="loot-note" data-prerelease>The first release, v0.1.0, isn't published yet. Once it is, the OmaForge command and the download above will fetch it.</p>
+  <p class="loot-note">Classic Era and retail clients won't load it: it's built for Forever's Interface 16001.</p>
+</section>
+
+<section class="section tavern" id="tavern">
+  <div class="section-head">
+    <h2 class="heading">The Tavern</h2>
+    <p class="sub">Questions, answered by the innkeeper.</p>
+  </div>
+
+  <div class="gossip">
+    <div class="gossip-bar"><img src="https://render.worldofwarcraft.com/us/icons/56/inv_drink_06.jpg" alt="" width="32" height="32" loading="lazy" decoding="async"><span>Innkeeper Emberwick</span></div>
+    <div class="gossip-body parchment">
+      <p class="greeting">Well met, traveler! Pull up a chair. No need to buy water, I hear you make your own. What would you like to know?</p>
+
+      <details>
+        <summary>Is it allowed?</summary>
+        <p>Yes. It's advice and information, and it plays by Blizzard's addon rules. The only
+          things that ever cast a spell are your own clicks or key presses on the Conjure
+          button and the travel bar, one cast each, out of combat. No macros, nothing
+          automatic.</p>
+      </details>
+      <details>
+        <summary>Will it play the game for me?</summary>
+        <p>No. Blizzard doesn't allow that, and it wouldn't be much fun. The rotation helper
+          suggests, and the Polymorph tracker watches. You press the buttons.</p>
+      </details>
+      <details>
+        <summary>Does it work on Classic Era or retail?</summary>
+        <p>No. It's built for World of Warcraft: Forever only, and other clients won't load
+          it. That's on purpose: Forever's spells, talents, quests and gear all differ from
+          Classic.</p>
+      </details>
+      <details>
+        <summary>Which specs does it support?</summary>
+        <p>Arcane, Fire and Frost. Pick one and every page follows it. With dual spec,
+          talent spec one and two each keep their own profile, and the addon switches when
+          you do.</p>
+      </details>
+      <details>
+        <summary>Why doesn't the Conjure button have a key?</summary>
+        <p>None is bound by default, so it never steals a key you already use. Pick one under
+          <em>Settings › Conjure button › Set key</em>, or type
+          <code>/parzelle conjure key</code>. Super combos are never offered: on many Linux
+          desktops they belong to the desktop.</p>
+      </details>
+      <details>
+        <summary>Where does the information come from?</summary>
+        <p>From Blizzard's own articles and development notes, Icy Veins and Wowhead. Every
+          fact keeps its source and the date it was checked: look for the
+          <em>Sources &amp; notes</em> link on each page. Where the sources disagree or say
+          nothing yet, such as which reagents Forever's portals still need, the addon says so
+          instead of guessing.</p>
+      </details>
+      <details>
+        <summary>How does What's new stay current?</summary>
+        <p>Addons can't go online from inside the game. New releases carry updated research,
+          and an optional companion script on your PC can refresh the list in between: it
+          reads public news feeds and writes a file the addon shows after a
+          <code>/reload</code>.</p>
+      </details>
+      <details>
+        <summary>Is this made by Blizzard?</summary>
+        <p>No. Parzelle's Addon is an unofficial, free and open source fan project by
+          <a href="https://ninepointlabs.com/">Nine Point Labs</a>, from the makers of
+          <a href="https://myazerothlife.com/">My Azeroth Life</a> and
+          <a href="https://omaforge.ninepointlabs.com/">OmaForge</a>. It isn't affiliated
+          with or endorsed by Blizzard Entertainment.</p>
+      </details>
+      <a class="gossip-bye" href="#top">Farewell.</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="crests" aria-hidden="true">
+    <img src="https://omaforge.ninepointlabs.com/assets/art/alliance-crest-sm.webp" alt="" width="40" height="50" loading="lazy" decoding="async">
+    <img src="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" style="border-radius: 50%; border: 1px solid #8a6526">
+    <img src="https://omaforge.ninepointlabs.com/assets/art/horde-sigil-sm.webp" alt="" width="40" height="50" loading="lazy" decoding="async">
+  </div>
+  <nav class="footer-links" aria-label="Links">
+    <a href="https://github.com/ninepointlabs/parzelles-addon">Source</a>
+    <a href="https://github.com/ninepointlabs/parzelles-addon/releases">Releases</a>
+    <a href="https://github.com/ninepointlabs/parzelles-addon/issues">Issues</a>
+    <a href="https://myazerothlife.com/">My Azeroth Life</a>
+    <a href="https://omaforge.ninepointlabs.com/">OmaForge</a>
+  </nav>
+  <p class="legal">
+    Parzelle's Addon is an unofficial fan project, not affiliated with or endorsed by Blizzard
+    Entertainment. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or
+    registered trademarks of Blizzard Entertainment, Inc. Game artwork, icons and the Alliance
+    and Horde emblems © Blizzard Entertainment, Inc. (artwork via
+    <a href="https://github.com/ninepointlabs/omaforge/blob/main/site/SOURCES.md">omaforge's sources</a>;
+    icons from Blizzard's public icon CDN). Parzelle's Addon itself is MIT licensed.
+  </p>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<p class="zone-text" id="zone-text" aria-live="polite"></p>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+  <img alt="">
+  <p>Esc or click to close</p>
+</dialog>
+
+<script src="app.js" defer></script>
+<script src="demo.js" defer></script>
+</body>
+</html>
