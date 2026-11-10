@@ -110,6 +110,16 @@ local function compareChip(id, c, atLevel)
     return { text = "Same", kind = "neutral" }
 end
 
+-- Items the research marks as one faction's only (e.g. Staff of Orgrimmar from
+-- Ragefire Chasm) aren't offered to the other faction.
+local function otherFaction(rec)
+    local f = rec and rec.faction
+    if not f or f == "Both" then return false end
+    local mine = UnitFactionGroup("player")
+    return mine ~= nil and f ~= mine
+end
+ns.GearOtherFaction = otherFaction
+
 -- Every researched item (gear lists + wands), deduped.
 local function candidates()
     local seen, out = {}, {}
@@ -125,10 +135,10 @@ local function candidates()
     local spec = ns.DB.ActiveSpec()
     for bracket, list in pairs(ns.Data.GearBrackets) do
         for _, g in ipairs(list) do
-            if not g.spec or not spec or g.spec == spec then add(g.item_id, g.name, g.source, bracket) end
+            if (not g.spec or not spec or g.spec == spec) and not otherFaction(g) then add(g.item_id, g.name, g.source, bracket) end
         end
     end
-    for _, w in ipairs(ns.Data.Wands) do add(w.item_id, w.name, w.source ~= "" and w.source or "wand list", nil) end
+    for _, w in ipairs(ns.Data.Wands) do if not otherFaction(w) then add(w.item_id, w.name, w.source ~= "" and w.source or "wand list", nil) end end
     return out
 end
 

@@ -768,6 +768,16 @@ test("talent builds decode onto Forever's trees", function()
     end
 end)
 
+test("gear: the other faction's items aren't suggested", function()
+    eq(ns.GearOtherFaction({ faction = "Horde" }), true, "Alliance player, Horde-only item")
+    eq(ns.GearOtherFaction({ faction = "Alliance" }), false)
+    eq(ns.GearOtherFaction({ faction = "Both" }), false)
+    eq(ns.GearOtherFaction({}), false)
+    local staff
+    for _, list in pairs(ns.Data.GearBrackets) do for _, g in ipairs(list) do if g.name == "Staff of Orgrimmar" then staff = g end end end
+    truthy(staff and staff.faction == "Horde", "research marks Staff of Orgrimmar Horde-only")
+end)
+
 test("gear: my-level view vs best overall", function()
     S.level = 24
     ns.Data.GearBrackets["level 20"] = ns.Data.GearBrackets["level 20"] or {}
