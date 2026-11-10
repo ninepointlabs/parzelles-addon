@@ -96,7 +96,7 @@ Re-run `omaforge clients` before any tag.
   - Contents: 49 spells including 13 teleports/portals, 44 quests all with IDs, 22 builds, 28 gear rows, 9 wands, 31 conflicts and 26 gaps.
 - **`research/raw/` (11 MB) is gitignored**, the same decision as Andric's Addon: the pages are third-party copyrighted HTML. They stay on TUF only.
 - **Icy Veins build links:** each character after `#tc-` is one talent point, given by that talent's `urlId` in the calculator data for the link's version. `tools/fetch_talents.py` now stores `url_id`, and `tools/ivcalc.py` decodes and validates the links. Prerequisite arrows (e.g. Arcane Power needs Presence of Mind) aren't in the tree data, so they aren't validated.
-- **Please decide:** the Teleport: Dalaran facts (Alliance, level 50, Rune of Teleportation) come from one db.icy-veins page. The research agent fetched it once with a full browser user-agent to get past a Cloudflare challenge. A second attempt like that was refused by the permission system, after which db.icy-veins wasn't used. Keep that data, or drop it until it can be confirmed another way?
+- **Teleport: Dalaran (Tim, 2026-11-10: keep, flag unconfirmed):** its facts (Alliance, level 50, Rune of Teleportation) come from one db.icy-veins page. A research agent fetched that page once with a full browser user-agent to get past a Cloudflare challenge. The records in `data.json` carry `unconfirmed` and a `flag`, and Leveling › Portals & teleports shows the flag next to the spell.
 
 ### Gaps the addon flags instead of filling (full list in Settings › About the data)
 

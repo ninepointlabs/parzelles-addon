@@ -594,6 +594,8 @@ ns.Data.Spells = {
     id_source = "https://db.icy-veins.com/wow-forever/spells/1297659",
     source_url = "https://db.icy-veins.com/wow-forever/spells/1297659",
     checked = "2026-11-10",
+    unconfirmed = true,
+    flag = "Unconfirmed: level 50, Alliance and Rune of Teleportation come from a single db.icy-veins page (fetched once past a Cloudflare check); Icy Veins' leveling page says 40.",
     talent = false,
     display = "Teleport: Dalaran",
   },
@@ -1279,6 +1281,8 @@ ns.Data.TeleportsPortals = {
     notes = "db.icy-veins: Requires Level 50, Faction Alliance, Reagents: Rune of Teleportation, 10 s cast, 120 Mana, added in 1.60.1.70532. Icy Veins Frost leveling milestones list it at 40 (conflict).",
     source_url = "https://db.icy-veins.com/wow-forever/spells/1297659",
     checked = "2026-11-10",
+    unconfirmed = true,
+    flag = "Unconfirmed: level 50, Alliance and Rune of Teleportation come from a single db.icy-veins page (fetched once past a Cloudflare check); Icy Veins' leveling page says 40.",
   },
   {
     name = "Portal: Stormwind",

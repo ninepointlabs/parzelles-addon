@@ -459,6 +459,10 @@ test("portals & teleports: own faction only, travel bar of secure buttons", func
     M.texts = {}
     ns.UI.Open("leveling", "Portals & teleports")
     truthy(textHas("Travel bar"))
+    local dal
+    for _, e in ipairs(refreshed.teleport) do if e.rec.name == "Teleport: Dalaran" then dal = e.rec end end
+    truthy(dal and dal.unconfirmed, "Teleport: Dalaran kept but flagged unconfirmed")
+    truthy(textHas("single db.icy-veins page"), "flag shown in game")
     for _, txt in ipairs(M.texts) do truthy(not txt:find("Orgrimmar", 1, true), "Horde city shown: " .. txt) end
     S.combat = true
     ns.TravelBar.Hide()

@@ -161,6 +161,10 @@ UI.LevelingSections["Portals & teleports"] = function(L, c)
             elseif p.reagent_status == "unknown" or p.reagent == nil then
                 table.insert(sub, "Reagent: not confirmed for Forever")
             end
+            if p.unconfirmed then
+                table.insert(sub, UI.FLAG_ICON .. " " .. UI.Hex(UI.C.warn) .. (p.flag or "Unconfirmed") .. "|r")
+                L:Note(p.name .. ": " .. (p.flag or "unconfirmed"))
+            end
             L:Spell(p.spell_id, p.name, table.concat(sub, "\n"), p.level and ("level " .. p.level) or nil, nil, { chip = chip })
             L:Source(p)
         end
