@@ -399,6 +399,8 @@ Parzelle's Addon is built for her and tested on her, and every screenshot here i
 
 If you see a Skyborne Mage handing out water and opening portals, say hello.
 
+Playing a Priest? Try the sister addon, **[Andric's Addon](https://andricsaddon.myazerothlife.com/)**.
+
 *May your mana never run dry.*
 
 <br clear="right">
