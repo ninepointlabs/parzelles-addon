@@ -12,7 +12,7 @@ Arcane, Fire or Frost: pick your path and every page follows it. What to cast, w
 where to quest, what to train, where to teleport and everything about the class, in one window
 that shows you what to do next.
 
-[![Version](https://img.shields.io/badge/version-v0.1.0%20%C2%B7%20not%20released%20yet-8a5cf0)](#install)
+[![Latest release](https://img.shields.io/github/v/release/ninepointlabs/parzelles-addon?label=release&color=8a5cf0)](https://github.com/ninepointlabs/parzelles-addon/releases/latest)
 [![WoW Forever](https://img.shields.io/badge/WoW-Forever%20%C2%B7%2016001-8a6526)](#requirements)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
@@ -56,9 +56,8 @@ that shows you what to do next.
 
 ## Install
 
-The first release, **v0.1.0**, isn't published yet. Releases will appear on
-[GitHub Releases](https://github.com/ninepointlabs/parzelles-addon/releases); the commands below
-work once v0.1.0 is out.
+Every version is on [GitHub Releases](https://github.com/ninepointlabs/parzelles-addon/releases)
+(latest: **v0.1.0**). For World of Warcraft: Forever only.
 
 ### Requirements
 

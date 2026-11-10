@@ -2,13 +2,19 @@
 
 **What it is:** the WoW Forever-only, do-everything Mage companion for Parzelle Starfall (High Order Skyborne, Alliance). It follows the final structure, window design, README and website style of Andric's Addon v0.2.2.
 
-**Repo:** `ninepointlabs/parzelles-addon` (public; topics not set yet). Local checkout: `/home/tim/Projects/parzelles-addon`.
+**Repo:** `ninepointlabs/parzelles-addon` (public; topics `wow-addon`, `world-of-warcraft`). Local checkout: `/home/tim/Projects/parzelles-addon`.
 **Branching:** Tim decided on 2026-11-10 (8:11 AM CT) to commit straight to `main`, like Andric's later changes, with no PR. `feature/initial-addon` was fast-forwarded into `main`.
-**Not done (not authorized):** no tag, no release, no custom domain, DNS records or Pages custom-domain setting (only `docs/CNAME` exists), no email or social posts. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
+**Current release:** `v0.1.0` (2026-11-10, at Tim's request), https://github.com/ninepointlabs/parzelles-addon/releases/tag/v0.1.0. Tag `v0.1.0` is on `1bed857`.
+- Before tagging, `omaforge clients` reported Forever `1.60.1.70862` / Interface `16001`, matching both `.toc` files.
+- The release workflow passed. Its assets are `ParzellesAddon-v0.1.0.zip` (170 KB; `docs/`, `research/`, `tools/` and `tests/` excluded; TOC `## Version: v0.1.0`) and `release.json` = `{"flavor":"forever","interface":16001}`.
+- Topics `wow-addon` and `world-of-warcraft` are set, and `omaforge search parzelle` finds `github:ninepointlabs/parzelles-addon`.
+- **Install:** `omaforge install -c forever github:ninepointlabs/parzelles-addon`, then `omaforge update -c forever` for later versions.
+
+**Not done (not authorized):** no custom domain, DNS records or Pages custom-domain setting (only `docs/CNAME` exists), no email or social posts. Before any future tag, re-run `omaforge clients` and bump `## Interface` in both `.toc` files to match.
 
 **Tim's decisions (2026-11-10, 8:11 AM CT):**
 1. Keep the name Parzelle's Addon, the slash commands `/parzelle` and `/mage`, and the repo `ninepointlabs/parzelles-addon`.
-2. Commit straight to `main`, with no tag or release until Tim asks.
+2. Commit straight to `main`, with no tag or release until Tim asks. Tim then asked for v0.1.0 and the topics the same morning.
 3. Leveling focus is Frost (the picker recommends it). TBC-only rows such as Water Elemental and the Shattrath portals stay out.
 4. The Conjure button makes whatever she's lowest on: mana gem first, then water, then food. This is the built behaviour: gem if she has none, otherwise water below its target, otherwise food.
 
