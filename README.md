@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg" alt="" width="56" height="56">
-<img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_firebolt02.jpg" alt="" width="56" height="56">
-<img src="https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg" alt="" width="56" height="56">
+<a href="#the-mage-who-started-it-all"><img src="docs/img/parzelle-face.webp" alt="Parzelle Starfall, a High Order Skyborne Mage" width="140" height="140"></a>
 
 # Parzelle's Addon
 
 **The do-everything Mage companion for World of Warcraft: Forever.**
+
+*Named for **Parzelle Starfall**, High Order Skyborne Mage.*
 
 Arcane, Fire or Frost: pick your path and every page follows it. What to cast, what to wear,
 where to quest, what to train, where to teleport and everything about the class, in one window
@@ -16,7 +16,7 @@ that shows you what to do next.
 [![WoW Forever](https://img.shields.io/badge/WoW-Forever%20%C2%B7%2016001-8a6526)](#requirements)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-**[Website](https://parzellesaddon.myazerothlife.com)** ·
+**[Website](https://parzelles-addon.myazerothlife.com)** ·
 **[Install](#install)** ·
 **[Features](#features)** ·
 **[The mage buttons](#the-mage-buttons)** ·
@@ -25,8 +25,10 @@ that shows you what to do next.
 
 </div>
 
-> **Screenshots coming soon.** They'll be added once the first in-game shots are taken.
-> Other players' names will be pixelated.
+<p align="center"><img src="docs/img/home.webp" alt="Parzelle's Addon Home screen: Needs attention, your rotation at a glance and the latest changes" width="760"></p>
+
+> Screenshots from Parzelle's game at level 8, cropped so no other players' names show.
+> More on the **[website](https://parzelles-addon.myazerothlife.com)**.
 
 ---
 
@@ -117,6 +119,9 @@ What matters right now, every time you open the window:
 
 Three buttons on one small bar: **Conjure**, **Arcane Intellect** and **Hand out**.
 
+<p align="center"><img src="docs/img/mage-bar.webp" alt="The mage bar in game: Conjure (water 19/20), Arcane Intellect (all buffed) and Hand out with water and food counts" width="420">
+<img src="docs/img/mage-bar-tooltip.webp" alt="Parzelle casting Arcane Intellect, with the buff button's tooltip" width="360"></p>
+
 #### Conjure
 
 A small button on your screen that shows how much **conjured water, food and mana gem** you have in
@@ -170,9 +175,11 @@ their own `/cast` line (no macros in your macro list, no `/click`). What they ca
 only change out of combat. Trading needs your clicks too: the addon opens and fills the trade
 window, but the final **Trade** click is always yours.
 
-<sub>There's a [live demo](https://parzellesaddon.myazerothlife.com/#conjure) of the order on the website.</sub>
+<sub>There's a [live demo](https://parzelles-addon.myazerothlife.com/#conjure) of the order on the website.</sub>
 
 ### Rotation, crowd control and mana
+
+<p align="center"><img src="docs/img/rotation.webp" alt="Rotation for a level 8 Frost Mage: only the spells you can use, with the plan and tips" width="640"></p>
 
 - Priority lists for **Solo**, **Dungeon** and **Raid**, for each spec, plus **Crowd control** and
   **Mana** sub-tabs.
@@ -214,6 +221,8 @@ locations come from the game's own map.
 
 ### Leveling
 
+<p align="center"><img src="docs/img/leveling.webp" alt="Leveling, Path: the next trainer visits and quests by level, where to quest, and the Frost talent path" width="640"></p>
+
 Sub-tabs: **Path** (your next trainer visits and milestones by level) · **Zones & dungeons** (for your
 level and faction) · **Trainer** (every spell rank and the level you learn it) · **Class quests** (your
 Mage class quests, ticked off when done) · **Riding & gold** (savings goals, your riding trainer,
@@ -232,6 +241,8 @@ vendor and first-mount quest) · **Portals & teleports** (below).
 
 ### Talents
 
+<p align="center"><img src="docs/img/talents.webp" alt="Talents: the Frost leveling build drawn on Forever's three trees" width="640"></p>
+
 Recommended builds for your spec, **drawn on Forever's own talent trees**. You see points per talent,
 the game's tooltip on hover, and a list of what the build takes. Each build is checked against the
 current trees, and one that no longer fits shows its link instead of a wrong picture.
@@ -239,6 +250,8 @@ current trees, and one that no longer fits shows its link instead of a wrong pic
 ### Learn the Mage
 
 Everything about the class, unlocked as you level:
+
+<p align="center"><img src="docs/img/learn.webp" alt="Learn the Mage: lessons unlocked by level 8" width="640"></p>
 
 | Section | What's in it |
 |---|---|
@@ -377,14 +390,18 @@ Entertainment.
 
 ## The Mage who started it all
 
+<img src="docs/img/parzelle.webp" alt="Parzelle Starfall, a blue-haired High Order Skyborne Mage in World of Warcraft: Forever" width="280" align="right">
+
 **Parzelle Starfall** is the Mage this addon is named for: a High Order Skyborne who started out on
 Zephras Isle. At level 8 she hadn't picked a spec yet.
 
-Parzelle's Addon is built for her and tested on her.
+Parzelle's Addon is built for her and tested on her, and every screenshot here is from her game.
 
 If you see a Skyborne Mage handing out water and opening portals, say hello.
 
 *May your mana never run dry.*
+
+<br clear="right">
 
 ---
 
@@ -403,7 +420,7 @@ If you see a Skyborne Mage handing out water and opening portals, say hello.
 | `content/learn.json` | Teaching text and rotation priorities, sourced and flagged ([format](content/README.md)) |
 | `tools/` | Data generator, fetchers, dev install script, and the [change poller](tools/mage-changes-poller/README.md) |
 | `tests/` | Headless Lua tests with a strict WoW API mock |
-| `docs/` | The [website](https://parzellesaddon.myazerothlife.com) (GitHub Pages) |
+| `docs/` | The [website](https://parzelles-addon.myazerothlife.com) (GitHub Pages) |
 
 ### Common tasks
 

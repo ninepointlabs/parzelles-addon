@@ -1,4 +1,4 @@
-// parzellesaddon.myazerothlife.com: quest log, loot, toasts and other small joys.
+// parzelles-addon.myazerothlife.com: quest log, loot, toasts and other small joys.
 // Adapted from omaforge.ninepointlabs.com's app.js (Nine Point Labs, MIT).
 
 (() => {

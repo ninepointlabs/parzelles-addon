@@ -160,3 +160,10 @@
   .in-game, .origin { grid-template-columns: 1fr; }
   .portrait { max-width: 340px; margin: 0 auto; }
 }
+
+/* Hero: Parzelle's portrait and full name */
+.hero-portrait { display: inline-block; margin-bottom: 14px; }
+.hero-portrait img { display: block; width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold-2); box-shadow: 0 0 0 3px #000, 0 0 0 5px var(--bronze), 0 12px 30px rgba(0, 0, 0, 0.7); }
+.named-for { margin: 0.5em 0 0; color: var(--parch); font: italic 400 clamp(1rem, 2vw, 1.25rem) var(--body); text-shadow: 0 2px 8px #000; }
+.named-for a { color: var(--gold); }
+@media (max-width: 560px) { .hero-portrait img { width: 92px; height: 92px; } }

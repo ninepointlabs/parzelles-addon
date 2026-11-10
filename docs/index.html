@@ -25,7 +25,7 @@
     <span>Parzelle's Addon</span>
   </a>
   <nav class="nav" aria-label="Sections">
-    <a href="#conjure">Conjure Button</a>
+    <a href="#conjure">Mage Buttons</a>
     <a href="#quests">Quests</a>
     <a href="#loot">Loot</a>
     <a href="#parzelle">Parzelle</a>
@@ -47,8 +47,10 @@
 <section class="hero" id="top">
   <div class="hero-art" aria-hidden="true"></div>
   <div class="hero-inner">
+    <a class="hero-portrait" href="#parzelle"><img src="img/parzelle-face.webp" alt="Parzelle Starfall, a High Order Skyborne Mage" width="140" height="140" decoding="async"></a>
     <p class="kicker">The Mage companion for World of Warcraft: Forever</p>
     <h1 class="title">Parzelle's Addon</h1>
+    <p class="named-for">Named for <a href="#parzelle">Parzelle Starfall</a>, High Order Skyborne Mage</p>
     <p class="lede">
       Arcane, Fire or Frost: pick your path and every page follows it. What to cast,
       what to wear, where to quest, what to train, where to teleport and everything about
@@ -63,7 +65,7 @@
       <a class="wow-btn" href="#loot">Claim your loot</a>
       <a class="wow-btn ghost" href="#conjure">Try the Conjure Button</a>
     </div>
-    <p class="meta">Free and open source · MIT · WoW Forever only · <span data-version>v0.1.0</span></p>
+    <p class="meta">Free and open source · MIT · WoW Forever only · <span data-version>v0.1.1</span> · <a href="https://github.com/ninepointlabs/parzelles-addon">GitHub</a> · <a href="https://github.com/ninepointlabs/parzelles-addon/releases">Releases</a></p>
   </div>
   <div class="loading" aria-hidden="true">
     <p class="loading-tip"><b>Tip:</b> <span id="tip">The Rotation page only lists spells you can actually cast at your level.</span></p>
@@ -78,14 +80,14 @@
     <div class="fact"><b>5</b><span>rotation views</span></div>
     <div class="fact"><b>6</b><span>leveling tabs</span></div>
     <div class="fact"><b>2</b><span>profiles, A and B</span></div>
-    <div class="fact"><b>1</b><span>button for water, food and gems</span></div>
+    <div class="fact"><b>3</b><span>mage buttons: conjure, buff, hand out</span></div>
   </div>
 </div>
 
 <section class="section buff" id="conjure">
   <div class="section-head">
-    <h2 class="heading">The Conjure Button</h2>
-    <p class="sub">Water, food and a mana gem, one press at a time.</p>
+    <h2 class="heading">The Mage Buttons</h2>
+    <p class="sub">Conjure, buff and hand out: water, food, a mana gem and Arcane Intellect, one press at a time.</p>
   </div>
 
   <div class="spotlight">
@@ -137,15 +139,15 @@
   </div>
   <div class="in-game">
     <figure>
-      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/inv_drink_06.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>The Conjure button and its tooltip, in game</span></div>
-      <figcaption>In game: hover the button and its tooltip lists your stock against your targets.</figcaption>
+      <button type="button" data-zoom><img src="img/mage-bar.webp" alt="The mage bar in game: Conjure showing water 19 of 20, Arcane Intellect showing all buffed, and Hand out with Parzelle's water and food counts" width="698" height="216" loading="lazy" decoding="async"></button>
+      <figcaption>In game: Conjure (water 19/20), Arcane Intellect (all buffed) and Hand out, side by side on one bar.</figcaption>
     </figure>
     <figure>
-      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_food_33.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>One press later: the next item to conjure</span></div>
-      <figcaption>One press later: the stock goes up and the button already shows what's next.</figcaption>
+      <button type="button" data-zoom><img src="img/mage-bar-tooltip.webp" alt="Parzelle casting Arcane Intellect, with the buff button's tooltip saying everyone nearby is buffed" width="609" height="509" loading="lazy" decoding="async"></button>
+      <figcaption>Parzelle buffing: the Arcane Intellect button's tooltip says who's next, or that everyone nearby is buffed.</figcaption>
     </figure>
   </div>
-  <p class="privacy">Screenshots are on their way. Other players' names will be pixelated.</p>
+  <p class="privacy">Screenshots from Parzelle's game, cropped so no other players' names show.</p>
 </section>
 
 <section class="section quests" id="quests">
@@ -192,7 +194,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Home: Do next cards, Needs attention and your rotation at a glance</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/home.webp" alt="Home: Needs attention (Arcane Intellect and armor missing, conjured stock low, news and lessons), your solo rotation at a glance and the latest changes" width="1139" height="780" loading="lazy" decoding="async"></button></figure>
         </div>
 
         <div class="quest" id="q-rotation" data-zone="The Battlefield" data-level="12">
@@ -224,7 +226,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Rotation: only the spells you can use, with the plan, tips and the helper toggle</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/rotation.webp" alt="Rotation for a level 8 Frost Mage: only the spells you can use, with the plan, tips and a spell tooltip" width="1138" height="767" loading="lazy" decoding="async"></button></figure>
         </div>
 
         <div class="quest" id="q-conjure" data-zone="The Battlefield" data-level="14">
@@ -254,7 +256,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>The Conjure button and its tooltip in game</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/mage-bar-tooltip.webp" alt="The mage bar in game, with the Arcane Intellect button tooltip" width="609" height="509" loading="lazy" decoding="async"></button></figure>
         </div>
 
         <div class="quest" id="q-sheep" data-zone="The Battlefield" data-level="16">
@@ -371,7 +373,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Leveling, Trainer: next visit, total cost and every spell rank</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/leveling.webp" alt="Leveling, Path: you are here at level 8, the next trainer visits and quests, where to quest and the Frost talent path" width="1141" height="769" loading="lazy" decoding="async"></button></figure>
         </div>
 
         <div class="quest" id="q-portals" data-zone="The Long Road" data-level="40" data-new>
@@ -429,7 +431,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Talents: a build drawn on Forever's three trees</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/talents.webp" alt="Talents: the Frost leveling build drawn on Forever's three trees" width="1134" height="765" loading="lazy" decoding="async"></button></figure>
         </div>
 
         <div class="quest" id="q-learn" data-zone="The Library" data-level="10">
@@ -459,7 +461,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>Learn the Mage: lessons unlocked so far, and what unlocks next</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/learn.webp" alt="Learn the Mage: the lessons unlocked by level 8, newest first" width="1135" height="768" loading="lazy" decoding="async"></button></figure>
         </div>
 
         <div class="quest" id="q-news" data-zone="The Library" data-level="18">
@@ -489,7 +491,7 @@
               </div>
             </div>
           </div>
-          <figure class="shot"><div class="soon"><b>Screenshot coming soon</b><span>What's new: Forever and Mage changes, newest first</span></div></figure>
+          <figure class="shot"><button type="button" data-zoom><img src="img/news.webp" alt="What's new: Forever and Mage changes, newest first" width="1142" height="770" loading="lazy" decoding="async"></button></figure>
         </div>
 
       </div>
@@ -508,14 +510,16 @@
   </div>
   <div class="origin">
     <figure class="portrait">
-      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Portrait coming soon</b></div>
+      <button type="button" data-zoom style="all: unset; cursor: zoom-in; display: block"><img src="img/parzelle.webp" alt="Parzelle Starfall, a blue-haired High Order Skyborne Mage in World of Warcraft: Forever" width="641" height="814" loading="lazy" decoding="async"></button>
       <figcaption>Parzelle Starfall<span>High Order Skyborne Mage of World of Warcraft: Forever</span></figcaption>
     </figure>
     <div class="origin-text">
       <h3>Meet Parzelle Starfall</h3>
       <p>Parzelle Starfall is the Mage this addon is named for: a High Order Skyborne who
         started out on Zephras Isle. At level 8 she hadn't picked a spec yet.</p>
-      <p>Parzelle's Addon is built for her and tested on her.</p>
+      <p>Parzelle's Addon is built for her and tested on her. The screenshots on this page are
+        hers: her Home screen at level 8, her first lessons, her Frost talent path, and the mage
+        bar buffing her with Arcane Intellect.</p>
       <p>If you see a Skyborne Mage handing out water and opening portals, say hello.</p>
       <p class="signoff">May your mana never run dry.</p>
     </div>
@@ -529,7 +533,7 @@
   </div>
 
   <div class="loot">
-    <div class="loot-bar"><span>Loot</span><span class="loot-from">Parzelle's Addon <span data-version>v0.1.0</span></span></div>
+    <div class="loot-bar"><span>Loot</span><span class="loot-from">Parzelle's Addon <span data-version>v0.1.1</span></span></div>
 
     <div class="loot-item" data-quality="legendary">
       <img src="https://omaforge.ninepointlabs.com/assets/ui/omaforge.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
@@ -569,7 +573,7 @@
       </div>
     </div>
   </div>
-  <p class="loot-note" data-prerelease>The first release, v0.1.0, isn't published yet. Once it is, the OmaForge command and the download above will fetch it.</p>
+  <p class="loot-note">Every release, with its notes: <a href="https://github.com/ninepointlabs/parzelles-addon/releases">GitHub Releases</a>. Source: <a href="https://github.com/ninepointlabs/parzelles-addon">ninepointlabs/parzelles-addon</a>.</p>
   <p class="loot-note">Classic Era and retail clients won't load it: it's built for Forever's Interface 16001.</p>
 </section>
 

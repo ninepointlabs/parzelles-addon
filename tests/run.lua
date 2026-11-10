@@ -832,7 +832,7 @@ test("About names Parzelle Starfall", function()
     M.texts = {}
     SlashCmdList.PARZELLESADDON("about")
     truthy(textHas("Parzelle Starfall"), "About tab shows Parzelle's full name")
-    truthy(textHas("parzellesaddon.myazerothlife.com"), "website link")
+    truthy(textHas("parzelles-addon.myazerothlife.com"), "website link")
 end)
 
 test("slash commands", function()

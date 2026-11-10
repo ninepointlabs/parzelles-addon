@@ -148,8 +148,9 @@ Re-run `omaforge clients` before any tag.
 - **Rotation thresholds** come from the sources: Evocation at ~5% mana (Icy Veins), wand when the target is below 15% (Icy Veins Fire). Pyroblast fires at 3 Heating Up stacks. Raid rotations are flagged as pre-raid guidance.
 - **Skyborne race token:** the client race string isn't researched, so anything containing "Skyborne" maps to Skyborne.
 - **Website (`docs/`):** same OmaForge-style CSS/JS; art is linked, not copied. Sections: hero, Conjure button spotlight with a demo, quest log, "The Mage Who Started It All", loot window and tavern FAQ.
-  - There are no screenshots yet, only placeholders. Other players' names must be pixelated when screenshots are added.
-  - `docs/` is excluded from the zip, and `docs/CNAME` = `parzellesaddon.myazerothlife.com`.
+  - Other players' names must be pixelated when screenshots are added.
+  - `docs/` is excluded from the zip, and `docs/CNAME` = `parzelles-addon.myazerothlife.com`. Tim chose the hyphenated domain on 2026-11-10 (was `parzellesaddon`); every link in the site, README, STATUS and the addon's About page uses it. The `.toc` `X-Website` stays the GitHub repo, the same as Andric's.
+  - Real screenshots since 2026-11-10 (Tim's 10:09–10:48 AM shots, copied as webp to `docs/img/`; originals untouched): Parzelle's portrait (hero + "The Mage Who Started It All"), Home, Rotation, Leveling path, Talents, Learn, What's new, and the mage bar with the Arcane Intellect tooltip. Still placeholders: Gear (the shot showed Staff of Orgrimmar to an Alliance character, fixed in `b526bfb`; needs a fresh shot), the helper with a Polymorph timer, Portals & travel bar.
   - Flavour names (Innkeeper "Emberwick", item names) are invented for the site.
 - **autonomix-cli** isn't listed, because this addon ships no Linux executables.
 
