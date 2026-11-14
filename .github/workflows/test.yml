@@ -1,8 +1,10 @@
 name: Test
 
-# PRs only: branch pushes duplicated every run (and doubled exposure to
-# occasional lua.org download timeouts in gh-actions-lua).
+# Every push to main and every PR. Pushes are limited to main so a PR's
+# branch doesn't run twice; Lua now comes from apt, not lua.org downloads.
 on:
+  push:
+    branches: [main]
   pull_request:
 
 jobs:
